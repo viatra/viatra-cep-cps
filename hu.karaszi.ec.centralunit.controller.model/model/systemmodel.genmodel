@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.karaszi.ec.centralunit.controller.model/src"
+    modelPluginID="hu.karaszi.ec.centralunit.controller.model" modelName="Systemmodel"
+    modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>systemmodel.ecore</foreignModel>
+  <genPackages prefix="Systemmodel" disposableProviderFactory="true" ecorePackage="systemmodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//ActuatorState">
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorState/ON"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorState/OFF"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//SensorState">
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/LOW_FATAL"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/LOW_CRITICAL"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/HIGH_CRITICAL"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/HIGH_FATAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//DeviceHealth"/>
+    <genClasses image="false" ecoreClass="systemmodel.ecore#//Device">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/health"/>
+    </genClasses>
+    <genClasses ecoreClass="systemmodel.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//Sensor/sensortype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//Sensor/affectedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/minReadable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/maxReadable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/lastMeasurement"/>
+    </genClasses>
+    <genClasses ecoreClass="systemmodel.ecore#//Actuator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/performance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//Actuator/actuatorType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//Actuator/affects"/>
+    </genClasses>
+    <genClasses ecoreClass="systemmodel.ecore#//ActuatorType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//ActuatorType/isAdjustable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//ActuatorType/actuator"/>
+    </genClasses>
+    <genClasses ecoreClass="systemmodel.ecore#//SensorType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//SensorType/sensor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="systemmodel.ecore#//Template"/>
+    <genClasses image="false" ecoreClass="systemmodel.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//NamedElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//NamedElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

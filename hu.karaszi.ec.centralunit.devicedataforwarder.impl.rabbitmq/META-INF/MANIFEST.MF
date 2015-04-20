@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RabbitMQDeviceDataSender
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.devicedataforwarder.impl.rabbitmq
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: hu.karaszi.ec.centralunit.devicedataforwarder.api,
+ javax.persistence;version="2.1.0"

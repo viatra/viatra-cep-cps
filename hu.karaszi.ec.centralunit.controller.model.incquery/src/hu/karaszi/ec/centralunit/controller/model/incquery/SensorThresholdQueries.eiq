@@ -1,0 +1,7 @@
+package hu.karaszi.ec.centralunit.controller.model.incquery
+
+import "systemmodel.meta"
+
+pattern sensorInNormalRange (sensor : Sensor) {
+	Sensor.state(sensor, ::NORMAL);
+}

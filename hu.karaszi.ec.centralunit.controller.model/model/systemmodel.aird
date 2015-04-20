@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:types="http://www.eclipse.org/xtext/common/JavaVMTypes" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_ri3GgOdGEeSVtM8jxNXveQ" selectedViews="_ruLlsOdGEeSVtM8jxNXveQ" version="8.1.1">
+  <models xmi:type="ecore:EPackage" href="systemmodel.ecore#/"/>
+  <models xmi:type="genmodel:GenModel" href="systemmodel.genmodel#/"/>
+  <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.SuppressWarnings#java.lang.SuppressWarnings"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BaseGeneratedEMFQuerySpecification#org.eclipse.incquery.runtime.api.impl.BaseGeneratedEMFQuerySpecification"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.exception.IncQueryException#org.eclipse.incquery.runtime.exception.IncQueryException"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.Override#java.lang.Override"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IncQueryEngine#org.eclipse.incquery.runtime.api.IncQueryEngine"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Object#java.lang.Object"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BaseGeneratedEMFPQuery#org.eclipse.incquery.runtime.api.impl.BaseGeneratedEMFPQuery"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.String#java.lang.String"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.List#java.util.List"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Set#java.util.Set"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IMatchProcessor#org.eclipse.incquery.runtime.api.IMatchProcessor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.Sensor#systemmodel.Sensor"/>
+  <models xmi:type="types:JvmPrimitiveType" href="java:/Primitives#boolean"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BasePatternMatch#org.eclipse.incquery.runtime.api.impl.BasePatternMatch"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BaseMatcher#org.eclipse.incquery.runtime.api.impl.BaseMatcher"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.Deprecated#java.lang.Deprecated"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.notify.Notifier#org.eclipse.emf.common.notify.Notifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Collection#java.util.Collection"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IQuerySpecification#org.eclipse.incquery.runtime.api.IQuerySpecification"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BaseGeneratedPatternGroup#org.eclipse.incquery.runtime.api.impl.BaseGeneratedPatternGroup"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.annotation.Target#java.lang.annotation.Target"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.lang.annotation.ElementType#java.lang.annotation.ElementType"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.annotation.Retention#java.lang.annotation.Retention"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.lang.annotation.RetentionPolicy#java.lang.annotation.RetentionPolicy"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.annotation.Annotation#java.lang.annotation.Annotation"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.annotation.Documented#java.lang.annotation.Documented"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Enum#java.lang.Enum"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Comparable#java.lang.Comparable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Serializable#java.io.Serializable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.CloneNotSupportedException#java.lang.CloneNotSupportedException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Class#java.lang.Class"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectInputStream#java.io.ObjectInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.IOException#java.io.IOException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ClassNotFoundException#java.lang.ClassNotFoundException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectStreamException#java.io.ObjectStreamException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Exception#java.lang.Exception"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Throwable#java.lang.Throwable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.StackTraceElement#java.lang.StackTraceElement"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.PrintStream#java.io.PrintStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.PrintWriter#java.io.PrintWriter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectOutputStream#java.io.ObjectOutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FilterOutputStream#java.io.FilterOutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Appendable#java.lang.Appendable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Closeable#java.io.Closeable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.OutputStream#java.io.OutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FileNotFoundException#java.io.FileNotFoundException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.File#java.io.File"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.UnsupportedEncodingException#java.io.UnsupportedEncodingException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.Charset#java.nio.charset.Charset"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.CharSequence#java.lang.CharSequence"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Locale#java.util.Locale"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.OutputStreamWriter#java.io.OutputStreamWriter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Formatter#java.util.Formatter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.BufferedWriter#java.io.BufferedWriter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.AutoCloseable#java.lang.AutoCloseable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Flushable#java.io.Flushable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.SecureRandom#java.security.SecureRandom"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URI#java.net.URI"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FilenameFilter#java.io.FilenameFilter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FileFilter#java.io.FileFilter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.Path#java.nio.file.Path"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.MalformedURLException#java.net.MalformedURLException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URL#java.net.URL"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.Unsafe#sun.misc.Unsafe"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FileSystem#java.io.FileSystem"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Random#java.util.Random"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.regex.Pattern#java.util.regex.Pattern"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.SecureRandomSpi#java.security.SecureRandomSpi"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Provider#java.security.Provider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.NoSuchAlgorithmException#java.security.NoSuchAlgorithmException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.NoSuchProviderException#java.security.NoSuchProviderException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.MessageDigest#java.security.MessageDigest"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Spliterator#java.util.Spliterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleConsumer#java.util.function.DoubleConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntConsumer#java.util.function.IntConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongConsumer#java.util.function.LongConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.DoubleStream#java.util.stream.DoubleStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.IntStream#java.util.stream.IntStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.LongStream#java.util.stream.LongStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.atomic.AtomicLong#java.util.concurrent.atomic.AtomicLong"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectStreamField#java.io.ObjectStreamField"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Double#java.lang.Double"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.Consumer#java.util.function.Consumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Integer#java.lang.Integer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Long#java.lang.Long"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Comparator#java.util.Comparator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Number#java.lang.Number"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.NumberFormatException#java.lang.NumberFormatException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.IllegalArgumentException#java.lang.IllegalArgumentException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.RuntimeException#java.lang.RuntimeException"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.FunctionalInterface#java.lang.FunctionalInterface"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.math.BigInteger#java.math.BigInteger"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.StringBuilder#java.lang.StringBuilder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.AbstractStringBuilder#java.lang.AbstractStringBuilder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.StringBuffer#java.lang.StringBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.Function#java.util.function.Function"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToDoubleFunction#java.util.function.ToDoubleFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToIntFunction#java.util.function.ToIntFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToLongFunction#java.util.function.ToLongFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.BaseStream#java.util.stream.BaseStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoublePredicate#java.util.function.DoublePredicate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.OptionalDouble#java.util.OptionalDouble"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.Stream#java.util.stream.Stream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.Supplier#java.util.function.Supplier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ObjDoubleConsumer#java.util.function.ObjDoubleConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.BiConsumer#java.util.function.BiConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleFunction#java.util.function.DoubleFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleSupplier#java.util.function.DoubleSupplier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleUnaryOperator#java.util.function.DoubleUnaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.PrimitiveIterator#java.util.PrimitiveIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleToIntFunction#java.util.function.DoubleToIntFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleToLongFunction#java.util.function.DoubleToLongFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.DoubleBinaryOperator#java.util.function.DoubleBinaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.DoubleSummaryStatistics#java.util.DoubleSummaryStatistics"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Iterator#java.util.Iterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Runnable#java.lang.Runnable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.Predicate#java.util.function.Predicate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.stream.Collector#java.util.stream.Collector"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Optional#java.util.Optional"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.UnaryOperator#java.util.function.UnaryOperator"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/java.lang.SafeVarargs#java.lang.SafeVarargs"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.BinaryOperator#java.util.function.BinaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.BiFunction#java.util.function.BiFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntFunction#java.util.function.IntFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntPredicate#java.util.function.IntPredicate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ObjIntConsumer#java.util.function.ObjIntConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.OptionalInt#java.util.OptionalInt"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntSupplier#java.util.function.IntSupplier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntUnaryOperator#java.util.function.IntUnaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntToDoubleFunction#java.util.function.IntToDoubleFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntToLongFunction#java.util.function.IntToLongFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.IntBinaryOperator#java.util.function.IntBinaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.IntSummaryStatistics#java.util.IntSummaryStatistics"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongPredicate#java.util.function.LongPredicate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ObjLongConsumer#java.util.function.ObjLongConsumer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.OptionalLong#java.util.OptionalLong"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongFunction#java.util.function.LongFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongSupplier#java.util.function.LongSupplier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongUnaryOperator#java.util.function.LongUnaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongToDoubleFunction#java.util.function.LongToDoubleFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongToIntFunction#java.util.function.LongToIntFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.LongBinaryOperator#java.util.function.LongBinaryOperator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.LongSummaryStatistics#java.util.LongSummaryStatistics"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Field#java.lang.reflect.Field"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/sun.reflect.CallerSensitive#sun.reflect.CallerSensitive"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.AccessibleObject#java.lang.reflect.AccessibleObject"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Member#java.lang.reflect.Member"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.FieldAccessor#sun.reflect.FieldAccessor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Map#java.util.Map"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.IllegalAccessException#java.lang.IllegalAccessException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.AnnotatedType#java.lang.reflect.AnnotatedType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.factory.GenericsFactory#sun.reflect.generics.factory.GenericsFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.FieldRepository#sun.reflect.generics.repository.FieldRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Type#java.lang.reflect.Type"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.AnnotatedElement#java.lang.reflect.AnnotatedElement"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.SecurityException#java.lang.SecurityException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Permission#java.security.Permission"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.ReflectionFactory#sun.reflect.ReflectionFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Guard#java.security.Guard"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.PermissionCollection#java.security.PermissionCollection"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Enumeration#java.util.Enumeration"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.PrivilegedAction#java.security.PrivilegedAction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Constructor#java.lang.reflect.Constructor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Method#java.lang.reflect.Method"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.ConstructorAccessor#sun.reflect.ConstructorAccessor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Executable#java.lang.reflect.Executable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.MethodAccessor#sun.reflect.MethodAccessor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.LangReflectAccess#sun.reflect.LangReflectAccess"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.ConstructorRepository#sun.reflect.generics.repository.ConstructorRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.TypeVariable#java.lang.reflect.TypeVariable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.InstantiationException#java.lang.InstantiationException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.InvocationTargetException#java.lang.reflect.InvocationTargetException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.GenericDeclRepository#sun.reflect.generics.repository.GenericDeclRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.MethodTypeSignature#sun.reflect.generics.tree.MethodTypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.AbstractRepository#sun.reflect.generics.repository.AbstractRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.Signature#sun.reflect.generics.tree.Signature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.visitor.Reifier#sun.reflect.generics.visitor.Reifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.Tree#sun.reflect.generics.tree.Tree"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.visitor.TypeTreeVisitor#sun.reflect.generics.visitor.TypeTreeVisitor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.TypeArgument#sun.reflect.generics.tree.TypeArgument"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ArrayTypeSignature#sun.reflect.generics.tree.ArrayTypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.BooleanSignature#sun.reflect.generics.tree.BooleanSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.BottomSignature#sun.reflect.generics.tree.BottomSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ByteSignature#sun.reflect.generics.tree.ByteSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.CharSignature#sun.reflect.generics.tree.CharSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ClassTypeSignature#sun.reflect.generics.tree.ClassTypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.DoubleSignature#sun.reflect.generics.tree.DoubleSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.FloatSignature#sun.reflect.generics.tree.FloatSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.FormalTypeParameter#sun.reflect.generics.tree.FormalTypeParameter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.IntSignature#sun.reflect.generics.tree.IntSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.LongSignature#sun.reflect.generics.tree.LongSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ShortSignature#sun.reflect.generics.tree.ShortSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.SimpleClassTypeSignature#sun.reflect.generics.tree.SimpleClassTypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.TypeVariableSignature#sun.reflect.generics.tree.TypeVariableSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.VoidDescriptor#sun.reflect.generics.tree.VoidDescriptor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.Wildcard#sun.reflect.generics.tree.Wildcard"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.TypeTree#sun.reflect.generics.tree.TypeTree"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.FieldTypeSignature#sun.reflect.generics.tree.FieldTypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.TypeSignature#sun.reflect.generics.tree.TypeSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.BaseType#sun.reflect.generics.tree.BaseType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ReturnType#sun.reflect.generics.tree.ReturnType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.visitor.Visitor#sun.reflect.generics.visitor.Visitor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.tree.ClassSignature#sun.reflect.generics.tree.ClassSignature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.GenericDeclaration#java.lang.reflect.GenericDeclaration"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ReflectiveOperationException#java.lang.ReflectiveOperationException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.MethodRepository#sun.reflect.generics.repository.MethodRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.Parameter#java.lang.reflect.Parameter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.ParameterizedType#java.lang.reflect.ParameterizedType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.reflect.WildcardType#java.lang.reflect.WildcardType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.regex.Matcher#java.util.regex.Matcher"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Character#java.lang.Character"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Cloneable#java.lang.Cloneable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.HashMap#java.util.HashMap"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.util.regex.UnicodeProp#java.util.regex.UnicodeProp"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.regex.PatternSyntaxException#java.util.regex.PatternSyntaxException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.regex.MatchResult#java.util.regex.MatchResult"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.AbstractMap#java.util.AbstractMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.AbstractSet#java.util.AbstractSet"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.LinkedHashMap#java.util.LinkedHashMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.AbstractCollection#java.util.AbstractCollection"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Properties#java.util.Properties"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Key#java.security.Key"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ref.Reference#java.lang.ref.Reference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Boolean#java.lang.Boolean"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.InputStream#java.io.InputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.Debug#sun.security.util.Debug"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Hashtable#java.util.Hashtable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Reader#java.io.Reader"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.InvalidPropertiesFormatException#java.util.InvalidPropertiesFormatException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.spi.XmlPropertiesProvider#sun.util.spi.XmlPropertiesProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ClassLoader#java.lang.ClassLoader"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Writer#java.io.Writer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Dictionary#java.util.Dictionary"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.StreamCorruptedException#java.io.StreamCorruptedException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Readable#java.lang.Readable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.CharBuffer#java.nio.CharBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.Buffer#java.nio.Buffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.ByteOrder#java.nio.ByteOrder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.NotSerializableException#java.io.NotSerializableException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Void#java.lang.Void"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.CodeSource#java.security.CodeSource"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.ProtectionDomain#java.security.ProtectionDomain"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.Certificate#java.security.cert.Certificate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ClassFormatError#java.lang.ClassFormatError"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.ByteBuffer#java.nio.ByteBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Package#java.lang.Package"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.URLClassPath#sun.misc.URLClassPath"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.AssertionStatusDirectives#java.lang.AssertionStatusDirectives"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Vector#java.util.Vector"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Stack#java.util.Stack"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ConcurrentHashMap#java.util.concurrent.ConcurrentHashMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.CodeSigner#java.security.CodeSigner"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateFactory#java.security.cert.CertificateFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.SocketPermission#java.net.SocketPermission"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertPath#java.security.cert.CertPath"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Timestamp#java.security.Timestamp"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateEncodingException#java.security.cert.CertificateEncodingException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateException#java.security.cert.CertificateException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.GeneralSecurityException#java.security.GeneralSecurityException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Date#java.util.Date"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.Instant#java.time.Instant"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.BaseCalendar#sun.util.calendar.BaseCalendar"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.Temporal#java.time.temporal.Temporal"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalAdjuster#java.time.temporal.TemporalAdjuster"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.ZoneOffset#java.time.ZoneOffset"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.OffsetDateTime#java.time.OffsetDateTime"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.ZoneId#java.time.ZoneId"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.ZonedDateTime#java.time.ZonedDateTime"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalAccessor#java.time.temporal.TemporalAccessor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalField#java.time.temporal.TemporalField"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalUnit#java.time.temporal.TemporalUnit"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalAmount#java.time.temporal.TemporalAmount"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.Clock#java.time.Clock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.TemporalQuery#java.time.temporal.TemporalQuery"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.temporal.ValueRange#java.time.temporal.ValueRange"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.DataInput#java.io.DataInput"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.InvalidObjectException#java.io.InvalidObjectException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.DataOutput#java.io.DataOutput"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.zone.ZoneRules#java.time.zone.ZoneRules"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ConcurrentMap#java.util.concurrent.ConcurrentMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.zone.ZoneOffsetTransition#java.time.zone.ZoneOffsetTransition"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.zone.ZoneOffsetTransitionRule#java.time.zone.ZoneOffsetTransitionRule"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.LocalDateTime#java.time.LocalDateTime"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.Duration#java.time.Duration"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.Month#java.time.Month"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.DayOfWeek#java.time.DayOfWeek"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.LocalTime#java.time.LocalTime"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.format.TextStyle#java.time.format.TextStyle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.LocalDate#java.time.LocalDate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.OffsetTime#java.time.OffsetTime"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimeFormatter#java.time.format.DateTimeFormatter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.ChronoLocalDate#java.time.chrono.ChronoLocalDate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.IsoChronology#java.time.chrono.IsoChronology"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.Era#java.time.chrono.Era"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.Period#java.time.Period"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.ChronoLocalDateTime#java.time.chrono.ChronoLocalDateTime"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.Chronology#java.time.chrono.Chronology"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.ChronoPeriod#java.time.chrono.ChronoPeriod"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.ChronoZonedDateTime#java.time.chrono.ChronoZonedDateTime"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.temporal.ChronoField#java.time.temporal.ChronoField"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.format.ResolverStyle#java.time.format.ResolverStyle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.chrono.AbstractChronology#java.time.chrono.AbstractChronology"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.chrono.IsoEra#java.time.chrono.IsoEra"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectInput#java.io.ObjectInput"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectOutput#java.io.ObjectOutput"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.Format#java.text.Format"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.FieldPosition#java.text.FieldPosition"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.ParseException#java.text.ParseException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.ParsePosition#java.text.ParsePosition"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimeFormatterBuilder#java.time.format.DateTimeFormatterBuilder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DecimalStyle#java.time.format.DecimalStyle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimeParseException#java.time.format.DateTimeParseException"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.format.FormatStyle#java.time.format.FormatStyle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimeParseContext#java.time.format.DateTimeParseContext"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.AttributedCharacterIterator#java.text.AttributedCharacterIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.CharacterIterator#java.text.CharacterIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimePrintContext#java.time.format.DateTimePrintContext"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.math.BigDecimal#java.math.BigDecimal"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.time.format.SignStyle#java.time.format.SignStyle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.DateTimeTextProvider#java.time.format.DateTimeTextProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ref.SoftReference#java.lang.ref.SoftReference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.math.MathContext#java.math.MathContext"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.math.RoundingMode#java.math.RoundingMode"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.math.MutableBigInteger#java.math.MutableBigInteger"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ThreadLocal#java.lang.ThreadLocal"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ref.WeakReference#java.lang.ref.WeakReference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Thread#java.lang.Thread"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.atomic.AtomicInteger#java.util.concurrent.atomic.AtomicInteger"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ref.ReferenceQueue#java.lang.ref.ReferenceQueue"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.InterruptedException#java.lang.InterruptedException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.AccessControlContext#java.security.AccessControlContext"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ThreadGroup#java.lang.ThreadGroup"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.nio.ch.Interruptible#sun.nio.ch.Interruptible"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.RuntimePermission#java.lang.RuntimePermission"/>
+  <models xmi:type="types:JvmAnnotationType" href="java:/Objects/sun.misc.Contended#sun.misc.Contended"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.DomainCombiner#java.security.DomainCombiner"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.AccessControlException#java.security.AccessControlException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.BasicPermission#java.security.BasicPermission"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.DateTimeException#java.time.DateTimeException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.time.format.Parsed#java.time.format.Parsed"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.ArrayList#java.util.ArrayList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.AbstractList#java.util.AbstractList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.RandomAccess#java.util.RandomAccess"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.ListIterator#java.util.ListIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.AbstractCalendar#sun.util.calendar.AbstractCalendar"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.CalendarDate#sun.util.calendar.CalendarDate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.TimeZone#java.util.TimeZone"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.CalendarSystem#sun.util.calendar.CalendarSystem"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.Era#sun.util.calendar.Era"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.calendar.Gregorian#sun.util.calendar.Gregorian"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateFactorySpi#java.security.cert.CertificateFactorySpi"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CRLException#java.security.cert.CRLException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CRL#java.security.cert.CRL"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.UnknownHostException#java.net.UnknownHostException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.InetAddress#java.net.InetAddress"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.net.spi.nameservice.NameService#sun.net.spi.nameservice.NameService"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.NetworkInterface#java.net.NetworkInterface"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.InetAddressImpl#java.net.InetAddressImpl"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.SocketException#java.net.SocketException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.InterfaceAddress#java.net.InterfaceAddress"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.Inet4Address#java.net.Inet4Address"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.Principal#java.security.Principal"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/javax.security.auth.Subject#javax.security.auth.Subject"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/javax.security.auth.AuthPermission#javax.security.auth.AuthPermission"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.LinkedList#java.util.LinkedList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.PrivilegedExceptionAction#java.security.PrivilegedExceptionAction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.PrivilegedActionException#java.security.PrivilegedActionException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.AbstractSequentialList#java.util.AbstractSequentialList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Deque#java.util.Deque"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Queue#java.util.Queue"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.PublicKey#java.security.PublicKey"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.InvalidKeyException#java.security.InvalidKeyException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.SignatureException#java.security.SignatureException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.KeyException#java.security.KeyException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.LinkageError#java.lang.LinkageError"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Error#java.lang.Error"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.DoubleBuffer#java.nio.DoubleBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.FloatBuffer#java.nio.FloatBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.IntBuffer#java.nio.IntBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.LongBuffer#java.nio.LongBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.ShortBuffer#java.nio.ShortBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.Manifest#java.util.jar.Manifest"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FilterInputStream#java.io.FilterInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.Attributes#java.util.jar.Attributes"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.DataOutputStream#java.io.DataOutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.Resource#sun.misc.Resource"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URLStreamHandler#java.net.URLStreamHandler"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.JarFile#java.util.jar.JarFile"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.JarEntry#java.util.jar.JarEntry"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.JarIndex#sun.misc.JarIndex"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.MetaIndex#sun.misc.MetaIndex"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.misc.JavaUtilZipFileAccess#sun.misc.JavaUtilZipFileAccess"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URLStreamHandlerFactory#java.net.URLStreamHandlerFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URLConnection#java.net.URLConnection"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.Proxy#java.net.Proxy"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.UnknownServiceException#java.net.UnknownServiceException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.ContentHandler#java.net.ContentHandler"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.FileNameMap#java.net.FileNameMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.ContentHandlerFactory#java.net.ContentHandlerFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.net.www.MessageHeader#sun.net.www.MessageHeader"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.SocketAddress#java.net.SocketAddress"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZipFile#java.util.zip.ZipFile"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZipEntry#java.util.zip.ZipEntry"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.JarVerifier#java.util.jar.JarVerifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZipConstants#java.util.zip.ZipConstants"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.InflaterInputStream#java.util.zip.InflaterInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.Inflater#java.util.zip.Inflater"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZipException#java.util.zip.ZipException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZipCoder#java.util.zip.ZipCoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.DataFormatException#java.util.zip.DataFormatException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.zip.ZStreamRef#java.util.zip.ZStreamRef"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.CharsetDecoder#java.nio.charset.CharsetDecoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.CharsetEncoder#java.nio.charset.CharsetEncoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.CharacterCodingException#java.nio.charset.CharacterCodingException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.CoderResult#java.nio.charset.CoderResult"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.CodingErrorAction#java.nio.charset.CodingErrorAction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.FileTime#java.nio.file.attribute.FileTime"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.util.concurrent.TimeUnit#java.util.concurrent.TimeUnit"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.ManifestEntryVerifier#sun.security.util.ManifestEntryVerifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ByteArrayOutputStream#java.io.ByteArrayOutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.ManifestDigester#sun.security.util.ManifestDigester"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.SignatureFileVerifier#sun.security.util.SignatureFileVerifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.jar.JarException#java.util.jar.JarException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.SignerInfo#sun.security.pkcs.SignerInfo"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.PKCS7#sun.security.pkcs.PKCS7"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.DerEncoder#sun.security.util.DerEncoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.DerInputStream#sun.security.util.DerInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.ParsingException#sun.security.pkcs.ParsingException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.x509.X500Name#sun.security.x509.X500Name"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.x509.AlgorithmId#sun.security.x509.AlgorithmId"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.PKCS9Attributes#sun.security.pkcs.PKCS9Attributes"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.DerOutputStream#sun.security.util.DerOutputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.X509Certificate#java.security.cert.X509Certificate"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.timestamp.TimestampToken#sun.security.timestamp.TimestampToken"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.DerInputBuffer#sun.security.util.DerInputBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.DerValue#sun.security.util.DerValue"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.ObjectIdentifier#sun.security.util.ObjectIdentifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.BitArray#sun.security.util.BitArray"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ByteArrayInputStream#java.io.ByteArrayInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ArrayIndexOutOfBoundsException#java.lang.ArrayIndexOutOfBoundsException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.IndexOutOfBoundsException#java.lang.IndexOutOfBoundsException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.x509.GeneralNameInterface#sun.security.x509.GeneralNameInterface"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.x509.RDN#sun.security.x509.RDN"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.x509.AVA#sun.security.x509.AVA"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/javax.security.auth.x500.X500Principal#javax.security.auth.x500.X500Principal"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.UnsupportedOperationException#java.lang.UnsupportedOperationException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Byte#java.lang.Byte"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.NotActiveException#java.io.NotActiveException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.AlgorithmParameters#java.security.AlgorithmParameters"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.AlgorithmParametersSpi#java.security.AlgorithmParametersSpi"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.spec.AlgorithmParameterSpec#java.security.spec.AlgorithmParameterSpec"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.spec.InvalidParameterSpecException#java.security.spec.InvalidParameterSpecException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.PKCS9Attribute#sun.security.pkcs.PKCS9Attribute"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.ByteArrayLexOrder#sun.security.util.ByteArrayLexOrder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.util.ByteArrayTagOrder#sun.security.util.ByteArrayTagOrder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.X509Extension#java.security.cert.X509Extension"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateExpiredException#java.security.cert.CertificateExpiredException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateNotYetValidException#java.security.cert.CertificateNotYetValidException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.CertificateParsingException#java.security.cert.CertificateParsingException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.pkcs.ContentInfo#sun.security.pkcs.ContentInfo"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.X509CRL#java.security.cert.X509CRL"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.timestamp.Timestamper#sun.security.timestamp.Timestamper"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.cert.X509CRLEntry#java.security.cert.X509CRLEntry"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.security.cert.CRLReason#java.security.cert.CRLReason"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.timestamp.TSRequest#sun.security.timestamp.TSRequest"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.security.timestamp.TSResponse#sun.security.timestamp.TSResponse"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.CountedCompleter#java.util.concurrent.CountedCompleter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToDoubleBiFunction#java.util.function.ToDoubleBiFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToIntBiFunction#java.util.function.ToIntBiFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.function.ToLongBiFunction#java.util.function.ToLongBiFunction"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.atomic.AtomicReference#java.util.concurrent.atomic.AtomicReference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.ReentrantLock#java.util.concurrent.locks.ReentrantLock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ForkJoinTask#java.util.concurrent.ForkJoinTask"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.Future#java.util.concurrent.Future"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.RunnableFuture#java.util.concurrent.RunnableFuture"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.Callable#java.util.concurrent.Callable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ExecutionException#java.util.concurrent.ExecutionException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.TimeoutException#java.util.concurrent.TimeoutException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ForkJoinPool#java.util.concurrent.ForkJoinPool"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.AbstractExecutorService#java.util.concurrent.AbstractExecutorService"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ForkJoinWorkerThread#java.util.concurrent.ForkJoinWorkerThread"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.ExecutorService#java.util.concurrent.ExecutorService"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.Executor#java.util.concurrent.Executor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.Lock#java.util.concurrent.locks.Lock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.AbstractQueuedSynchronizer#java.util.concurrent.locks.AbstractQueuedSynchronizer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.Condition#java.util.concurrent.locks.Condition"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.AbstractOwnableSynchronizer#java.util.concurrent.locks.AbstractOwnableSynchronizer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.NullPointerException#java.lang.NullPointerException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.MessageDigestSpi#java.security.MessageDigestSpi"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.security.DigestException#java.security.DigestException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.net.URISyntaxException#java.net.URISyntaxException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.Iterable#java.lang.Iterable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.Watchable#java.nio.file.Watchable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.FileSystem#java.nio.file.FileSystem"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.WatchService#java.nio.file.WatchService"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.WatchEvent#java.nio.file.WatchEvent"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.WatchKey#java.nio.file.WatchKey"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.nio.file.LinkOption#java.nio.file.LinkOption"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.FileStore#java.nio.file.FileStore"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.PathMatcher#java.nio.file.PathMatcher"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.UserPrincipalLookupService#java.nio.file.attribute.UserPrincipalLookupService"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.spi.FileSystemProvider#java.nio.file.spi.FileSystemProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.FileStoreAttributeView#java.nio.file.attribute.FileStoreAttributeView"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.FileAttributeView#java.nio.file.attribute.FileAttributeView"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.AttributeView#java.nio.file.attribute.AttributeView"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.GroupPrincipal#java.nio.file.attribute.GroupPrincipal"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.UserPrincipal#java.nio.file.attribute.UserPrincipal"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/java.nio.file.AccessMode#java.nio.file.AccessMode"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.CopyOption#java.nio.file.CopyOption"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.FileAttribute#java.nio.file.attribute.FileAttribute"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.OpenOption#java.nio.file.OpenOption"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.AsynchronousFileChannel#java.nio.channels.AsynchronousFileChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.SeekableByteChannel#java.nio.channels.SeekableByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.DirectoryStream#java.nio.file.DirectoryStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.FileChannel#java.nio.channels.FileChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.file.attribute.BasicFileAttributes#java.nio.file.attribute.BasicFileAttributes"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.AsynchronousChannel#java.nio.channels.AsynchronousChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.FileLock#java.nio.channels.FileLock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.CompletionHandler#java.nio.channels.CompletionHandler"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.Channel#java.nio.channels.Channel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.ByteChannel#java.nio.channels.ByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.ReadableByteChannel#java.nio.channels.ReadableByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.WritableByteChannel#java.nio.channels.WritableByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.spi.AbstractInterruptibleChannel#java.nio.channels.spi.AbstractInterruptibleChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.GatheringByteChannel#java.nio.channels.GatheringByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.ScatteringByteChannel#java.nio.channels.ScatteringByteChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.MappedByteBuffer#java.nio.MappedByteBuffer"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.InterruptibleChannel#java.nio.channels.InterruptibleChannel"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.AsynchronousCloseException#java.nio.channels.AsynchronousCloseException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.channels.ClosedChannelException#java.nio.channels.ClosedChannelException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FileDescriptor#java.io.FileDescriptor"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.SyncFailedException#java.io.SyncFailedException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.SecurityManager#java.lang.SecurityManager"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.nio.charset.spi.CharsetProvider#java.nio.charset.spi.CharsetProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.SortedMap#java.util.SortedMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.InternalLocaleBuilder#sun.util.locale.InternalLocaleBuilder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.LocaleObjectCache#sun.util.locale.LocaleObjectCache"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.BaseLocale#sun.util.locale.BaseLocale"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.LocaleExtensions#sun.util.locale.LocaleExtensions"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.provider.LocaleServiceProviderPool#sun.util.locale.provider.LocaleServiceProviderPool"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.LocaleNameProvider#java.util.spi.LocaleNameProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.MessageFormat#java.text.MessageFormat"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.MissingResourceException#java.util.MissingResourceException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.LocaleSyntaxException#sun.util.locale.LocaleSyntaxException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.LanguageTag#sun.util.locale.LanguageTag"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.ParseStatus#sun.util.locale.ParseStatus"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.StringTokenIterator#sun.util.locale.StringTokenIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.Extension#sun.util.locale.Extension"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.LocaleServiceProvider#java.util.spi.LocaleServiceProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.provider.LocaleProviderAdapter#sun.util.locale.provider.LocaleProviderAdapter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.BreakIteratorProvider#java.text.spi.BreakIteratorProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.CalendarDataProvider#java.util.spi.CalendarDataProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.CalendarNameProvider#java.util.spi.CalendarNameProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.spi.CalendarProvider#sun.util.spi.CalendarProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.CollatorProvider#java.text.spi.CollatorProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.CurrencyNameProvider#java.util.spi.CurrencyNameProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.DateFormatProvider#java.text.spi.DateFormatProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.DateFormatSymbolsProvider#java.text.spi.DateFormatSymbolsProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.DecimalFormatSymbolsProvider#java.text.spi.DecimalFormatSymbolsProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.provider.LocaleResources#sun.util.locale.provider.LocaleResources"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.spi.NumberFormatProvider#java.text.spi.NumberFormatProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.TimeZoneNameProvider#java.util.spi.TimeZoneNameProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.BreakIterator#java.text.BreakIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Calendar#java.util.Calendar"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.DateFormatSymbols#java.text.DateFormatSymbols"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.Collator#java.text.Collator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.CollationKey#java.text.CollationKey"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.DateFormat#java.text.DateFormat"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.NumberFormat#java.text.NumberFormat"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.Currency#java.util.Currency"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.DataInputStream#java.io.DataInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.HashSet#java.util.HashSet"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.text.DecimalFormatSymbols#java.text.DecimalFormatSymbols"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.locale.provider.ResourceBundleBasedAdapter#sun.util.locale.provider.ResourceBundleBasedAdapter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.ResourceBundle#java.util.ResourceBundle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.resources.LocaleData#sun.util.resources.LocaleData"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.spi.ResourceBundleControlProvider#java.util.spi.ResourceBundleControlProvider"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.resources.OpenListResourceBundle#sun.util.resources.OpenListResourceBundle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.resources.TimeZoneNamesBundle#sun.util.resources.TimeZoneNamesBundle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.util.resources.ParallelListResourceBundle#sun.util.resources.ParallelListResourceBundle"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.atomic.AtomicMarkableReference#java.util.concurrent.atomic.AtomicMarkableReference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.nio.cs.StreamEncoder#sun.nio.cs.StreamEncoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectStreamConstants#java.io.ObjectStreamConstants"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectStreamClass#java.io.ObjectStreamClass"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.Externalizable#java.io.Externalizable"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.SerialCallbackContext#java.io.SerialCallbackContext"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.SerializablePermission#java.io.SerializablePermission"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.InvalidClassException#java.io.InvalidClassException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.annotation.AnnotationType#sun.reflect.annotation.AnnotationType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.ConstantPool#sun.reflect.ConstantPool"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.NoSuchMethodException#java.lang.NoSuchMethodException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.NoSuchFieldException#java.lang.NoSuchFieldException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.reflect.generics.repository.ClassRepository#sun.reflect.generics.repository.ClassRepository"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ClassValue#java.lang.ClassValue"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.WeakHashMap#java.util.WeakHashMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.ObjectInputValidation#java.io.ObjectInputValidation"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BaseQuerySpecification#org.eclipse.incquery.runtime.api.impl.BaseQuerySpecification"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.scope.IncQueryScope#org.eclipse.incquery.runtime.api.scope.IncQueryScope"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.ExceptionInInitializerError#java.lang.ExceptionInInitializerError"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IncQueryMatcher#org.eclipse.incquery.runtime.api.IncQueryMatcher"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IPatternMatch#org.eclipse.incquery.runtime.api.IPatternMatch"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.internal.apiimpl.EngineContextFactory#org.eclipse.incquery.runtime.internal.apiimpl.EngineContextFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.scope.IBaseIndex#org.eclipse.incquery.runtime.api.scope.IBaseIndex"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.scope.IncQueryBaseIndexChangeListener#org.eclipse.incquery.runtime.api.scope.IncQueryBaseIndexChangeListener"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.scope.IIndexingErrorListener#org.eclipse.incquery.runtime.api.scope.IIndexingErrorListener"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.scope.IInstanceObserver#org.eclipse.incquery.runtime.api.scope.IInstanceObserver"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.Device#systemmodel.Device"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.EList#org.eclipse.emf.common.util.EList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.Actuator#systemmodel.Actuator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.SensorType#systemmodel.SensorType"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/systemmodel.SensorState#systemmodel.SensorState"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.NamedElement#systemmodel.NamedElement"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/systemmodel.DeviceHealth#systemmodel.DeviceHealth"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EObject#org.eclipse.emf.ecore.EObject"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.TreeIterator#org.eclipse.emf.common.util.TreeIterator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EClass#org.eclipse.emf.ecore.EClass"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EStructuralFeature#org.eclipse.emf.ecore.EStructuralFeature"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EReference#org.eclipse.emf.ecore.EReference"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EOperation#org.eclipse.emf.ecore.EOperation"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.resource.Resource#org.eclipse.emf.ecore.resource.Resource"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EClassifier#org.eclipse.emf.ecore.EClassifier"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EAttribute#org.eclipse.emf.ecore.EAttribute"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EGenericType#org.eclipse.emf.ecore.EGenericType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.ENamedElement#org.eclipse.emf.ecore.ENamedElement"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EPackage#org.eclipse.emf.ecore.EPackage"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.ETypeParameter#org.eclipse.emf.ecore.ETypeParameter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EModelElement#org.eclipse.emf.ecore.EModelElement"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EAnnotation#org.eclipse.emf.ecore.EAnnotation"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.EMap#org.eclipse.emf.common.util.EMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EFactory#org.eclipse.emf.ecore.EFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EDataType#org.eclipse.emf.ecore.EDataType"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.InternalEObject#org.eclipse.emf.ecore.InternalEObject"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.notify.NotificationChain#org.eclipse.emf.common.notify.NotificationChain"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.URI#org.eclipse.emf.common.util.URI"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.notify.Notification#org.eclipse.emf.common.notify.Notification"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.Pool#org.eclipse.emf.common.util.Pool"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.SegmentSequence#org.eclipse.emf.common.util.SegmentSequence"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.CommonUtil#org.eclipse.emf.common.util.CommonUtil"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.WeakInterningHashSet#org.eclipse.emf.common.util.WeakInterningHashSet"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.ReentrantReadWriteLock#java.util.concurrent.locks.ReentrantReadWriteLock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.InterningSet#org.eclipse.emf.common.util.InterningSet"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.util.concurrent.locks.ReadWriteLock#java.util.concurrent.locks.ReadWriteLock"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.lang.IllegalMonitorStateException#java.lang.IllegalMonitorStateException"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.ETypedElement#org.eclipse.emf.ecore.ETypedElement"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.util.FeatureMap#org.eclipse.emf.ecore.util.FeatureMap"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.util.InternalEList#org.eclipse.emf.ecore.util.InternalEList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.util.EContentsEList#org.eclipse.emf.ecore.util.EContentsEList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.util.AbstractSequentialInternalEList#org.eclipse.emf.ecore.util.AbstractSequentialInternalEList"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.EParameter#org.eclipse.emf.ecore.EParameter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.resource.ResourceSet#org.eclipse.emf.ecore.resource.ResourceSet"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.notify.AdapterFactory#org.eclipse.emf.common.notify.AdapterFactory"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.resource.URIConverter#org.eclipse.emf.ecore.resource.URIConverter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.notify.Adapter#org.eclipse.emf.common.notify.Adapter"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.InputStreamReader#java.io.InputStreamReader"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.resource.ContentHandler#org.eclipse.emf.ecore.resource.ContentHandler"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.ecore.resource.URIHandler#org.eclipse.emf.ecore.resource.URIHandler"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/sun.nio.cs.StreamDecoder#sun.nio.cs.StreamDecoder"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/java.io.FileInputStream#java.io.FileInputStream"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.emf.common.util.Enumerator#org.eclipse.emf.common.util.Enumerator"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.ActuatorType#systemmodel.ActuatorType"/>
+  <models xmi:type="types:JvmEnumerationType" href="java:/Objects/systemmodel.ActuatorState#systemmodel.ActuatorState"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/systemmodel.Template#systemmodel.Template"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.internal.apiimpl.QueryResultWrapper#org.eclipse.incquery.runtime.internal.apiimpl.QueryResultWrapper"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.impl.BasePatternGroup#org.eclipse.incquery.runtime.api.impl.BasePatternGroup"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IQueryGroup#org.eclipse.incquery.runtime.api.IQueryGroup"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.AdvancedIncQueryEngine#org.eclipse.incquery.runtime.api.AdvancedIncQueryEngine"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IncQueryEngineLifecycleListener#org.eclipse.incquery.runtime.api.IncQueryEngineLifecycleListener"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IMatchUpdateListener#org.eclipse.incquery.runtime.api.IMatchUpdateListener"/>
+  <models xmi:type="types:JvmGenericType" href="java:/Objects/org.eclipse.incquery.runtime.api.IncQueryModelUpdateListener#org.eclipse.incquery.runtime.api.IncQueryModelUpdateListener"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_ruLlsOdGEeSVtM8jxNXveQ" initialized="true">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_r1qGsOdGEeSVtM8jxNXveQ" name="systemmodel class diagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_r2DIQOdGEeSVtM8jxNXveQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_r2DvUOdGEeSVtM8jxNXveQ" type="Sirius" element="_r1qGsOdGEeSVtM8jxNXveQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_vqaKsOdGEeSVtM8jxNXveQ" type="2003" element="_vpj2IOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_vqbY0OdGEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_vqdOAOdGEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_pX9qUOdIEeSVtM8jxNXveQ" type="3010" element="_pX1ugOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_pX9qUedIEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_vqdOAedGEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_vqdOAudGEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_vqaKsedGEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8" italic="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vqaKsudGEeSVtM8jxNXveQ" x="370" y="160" width="188" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_197-QOdGEeSVtM8jxNXveQ" type="2003" element="_19nOIOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_198lUOdGEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_198lUedGEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_HEh2UOdIEeSVtM8jxNXveQ" type="3010" element="_HEZ6gOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_HEh2UedIEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mCJ0AOdnEeSNTqS0cJCaOg" type="3010" element="_mBhh4OdnEeSNTqS0cJCaOg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mCJ0AednEeSNTqS0cJCaOg"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_qaS48OdnEeSNTqS0cJCaOg" type="3010" element="_qZ86sOdnEeSNTqS0cJCaOg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_qaS48ednEeSNTqS0cJCaOg"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_1at5cOdnEeSNTqS0cJCaOg" type="3010" element="_1aczsOdnEeSNTqS0cJCaOg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1at5cednEeSNTqS0cJCaOg"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_198lUudGEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_198lU-dGEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_197-QedGEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_197-QudGEeSVtM8jxNXveQ" x="440" y="315" width="198" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3ciDMOdGEeSVtM8jxNXveQ" type="2003" element="_3cb8kOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_3ciDM-dGEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_3ciqQOdGEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ZUJd4OdHEeSVtM8jxNXveQ" type="3010" element="_ZUA7AOdHEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ZUJd4edHEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_k6aWYOdHEeSVtM8jxNXveQ" type="3010" element="_k6RzgOdHEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_k6aWYedHEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_3ciqQedGEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_3ciqQudGEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3ciDMedGEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ciDMudGEeSVtM8jxNXveQ" x="155" y="315" width="163" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WXZ_8OdHEeSVtM8jxNXveQ" type="2003" element="_WW-iIOdHEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_WXZ_8-dHEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_WXanAOdHEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_XbCAIOdHEeSVtM8jxNXveQ" type="3010" element="_XavsQOdHEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_XbCAIedHEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_YGafcOdHEeSVtM8jxNXveQ" type="3010" element="_YGWOAOdHEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_YGafcedHEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_WXanAedHEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_WXanAudHEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_WXZ_8edHEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WXZ_8udHEeSVtM8jxNXveQ" x="20" y="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_24dQUOdHEeSVtM8jxNXveQ" type="2003" element="_24RqIOdHEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_24dQU-dHEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_24dQVOdHEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_-5txAOdHEeSVtM8jxNXveQ" type="3010" element="_-5fukOdHEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-5txAedHEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_BEYRwOdIEeSVtM8jxNXveQ" type="3010" element="_BEMrkOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BEYRwedIEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_CKQ7wOdIEeSVtM8jxNXveQ" type="3010" element="_CKEugOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_CKQ7wedIEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DO1-MOdIEeSVtM8jxNXveQ" type="3010" element="_DOv3kOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DO1-MedIEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Ew6N4OdIEeSVtM8jxNXveQ" type="3010" element="_EwySEOdIEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Ew6N4edIEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_24dQVedHEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_24dQVudHEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_24dQUedHEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_24dQUudHEeSVtM8jxNXveQ" x="20" y="85"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qqSN0OdIEeSVtM8jxNXveQ" type="2003" element="_qqMHMOdIEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_qqS04OdIEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_qqS04edIEeSVtM8jxNXveQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_qqS04udIEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_qqS04-dIEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qqSN0edIEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qqSN0udIEeSVtM8jxNXveQ" x="140" y="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QX2w8OdKEeSVtM8jxNXveQ" type="2003" element="_QXu1IOdKEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_QX3_EOdKEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_QX3_EedKEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_WTlIgOdKEeSVtM8jxNXveQ" type="3010" element="_WTb-kOdKEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_WTlIgedKEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_QX3_EudKEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_QX3_E-dKEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QX2w8edKEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QX2w8udKEeSVtM8jxNXveQ" x="850" y="315" width="163" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cDQysOdLEeSVtM8jxNXveQ" type="2003" element="_cDLTIOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_cDRZwOdLEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_cDRZwedLEeSVtM8jxNXveQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_cDRZwudLEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_cDRZw-dLEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_cDQysedLEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDQysudLEeSVtM8jxNXveQ" x="690" y="315" width="120" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fbbBUOdLEeSVtM8jxNXveQ" type="2003" element="_fbTskOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_fbbBU-dLEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_fbbBVOdLEeSVtM8jxNXveQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_fbbBVedLEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_fbbBVudLEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_fbbBUedLEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8" italic="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fbbBUudLEeSVtM8jxNXveQ" x="758" y="159" width="120" height="100"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2aJm4OdLEeSVtM8jxNXveQ" type="2003" element="_2aCSIOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_2aJm4-dLEeSVtM8jxNXveQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_2aJm5OdLEeSVtM8jxNXveQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_4ZExsOdLEeSVtM8jxNXveQ" type="3010" element="_SHfikOdKEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_4ZExsedLEeSVtM8jxNXveQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_4jM-EOdLEeSVtM8jxNXveQ" type="3010" element="_UqYWEOdKEeSVtM8jxNXveQ">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_4jM-EedLEeSVtM8jxNXveQ"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_2aJm5edLEeSVtM8jxNXveQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_2aJm5udLEeSVtM8jxNXveQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2aJm4edLEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8" italic="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2aJm4udLEeSVtM8jxNXveQ" x="607" y="22" width="120" height="100"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_r2DvUedGEeSVtM8jxNXveQ"/>
+          <edges xmi:type="notation:Edge" xmi:id="_zOhVMOdHEeSVtM8jxNXveQ" type="4001" element="_zOTSwOdHEeSVtM8jxNXveQ" source="_197-QOdGEeSVtM8jxNXveQ" target="_vqaKsOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_zOh8QOdHEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zOh8QedHEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_zOijUOdHEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zOijUedHEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_zOjKYOdHEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zOjKYedHEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_zOhVMedHEeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_zOhVMudHEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zOhVM-dHEeSVtM8jxNXveQ" points="[290, 220, 290, 220]$[400, 60, 400, 60]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zOqfIOdHEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zOqfIedHEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_0AgLwOdHEeSVtM8jxNXveQ" type="4001" element="_0AdvgOdHEeSVtM8jxNXveQ" source="_3ciDMOdGEeSVtM8jxNXveQ" target="_vqaKsOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_0AgLxOdHEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0AgLxedHEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0AgLxudHEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0AgLx-dHEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0AgLyOdHEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0AgLyedHEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_0AgLwedHEeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_0AgLwudHEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0AgLw-dHEeSVtM8jxNXveQ" points="[530, 220, 530, 220]$[400, 60, 400, 60]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0AgLyudHEeSVtM8jxNXveQ" id="(0.49693251533742333,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0AgLy-dHEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_wNnooOdKEeSVtM8jxNXveQ" type="4001" element="_wNV70OdKEeSVtM8jxNXveQ" source="_3ciDMOdGEeSVtM8jxNXveQ" target="_QX2w8OdKEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_wNoPsOdKEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNoPsedKEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_wNoPsudKEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNoPs-dKEeSVtM8jxNXveQ" x="-5" y="-34"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_wNoPtOdKEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wNoPtedKEeSVtM8jxNXveQ" x="-4" y="-34"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_wNnooedKEeSVtM8jxNXveQ" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_wNnooudKEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wNnoo-dKEeSVtM8jxNXveQ" points="[-63, 7, -531, 81]$[-63, 59, -531, 133]$[537, 59, 69, 133]$[537, 7, 69, 81]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wNo2wOdKEeSVtM8jxNXveQ" id="(0.8957055214723927,0.93)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wNo2wedKEeSVtM8jxNXveQ" id="(0.07975460122699386,0.18)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_t6YlQOdLEeSVtM8jxNXveQ" type="4001" element="_t6O0QOdLEeSVtM8jxNXveQ" source="_197-QOdGEeSVtM8jxNXveQ" target="_cDQysOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_t6ZMUOdLEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t6ZMUedLEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_t6ZMUudLEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t6ZMU-dLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_t6ZMVOdLEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t6ZMVedLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_t6YlQedLEeSVtM8jxNXveQ" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_t6YlQudLEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_t6YlQ-dLEeSVtM8jxNXveQ" points="[27, 49, -184, 49]$[27, 61, -184, 61]$[191, 61, -20, 61]$[191, 49, -20, 49]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t6ZMVudLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t6ZMV-dLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_55L5kOdLEeSVtM8jxNXveQ" type="4001" element="_55I2QOdLEeSVtM8jxNXveQ" source="_fbbBUOdLEeSVtM8jxNXveQ" target="_2aJm4OdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_55L5lOdLEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_55L5ledLEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_55L5ludLEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_55L5l-dLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_55L5mOdLEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_55L5medLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_55L5kedLEeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_55L5kudLEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_55L5k-dLEeSVtM8jxNXveQ" points="[758, 59, 758, 59]$[607, 22, 607, 22]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_55MgoOdLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_55MgoedLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_7JRBYOdLEeSVtM8jxNXveQ" type="4001" element="_7JK6wOdLEeSVtM8jxNXveQ" source="_vqaKsOdGEeSVtM8jxNXveQ" target="_2aJm4OdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_7JRocedLEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7JRocudLEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_7JRoc-dLEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7JRodOdLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_7JRodedLEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7JRodudLEeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_7JRBYedLEeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_7JRBYudLEeSVtM8jxNXveQ" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7JRocOdLEeSVtM8jxNXveQ" points="[370, 60, 370, 60]$[607, 22, 607, 22]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7JRod-dLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7JSPgOdLEeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_I1jLMOdMEeSVtM8jxNXveQ" type="4001" element="_I1aoUOdMEeSVtM8jxNXveQ" source="_197-QOdGEeSVtM8jxNXveQ" target="_3ciDMOdGEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_I1jLNOdMEeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1jLNedMEeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_I1jyQOdMEeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1jyQedMEeSVtM8jxNXveQ" x="16" y="-16"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_I1jyQudMEeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1jyQ-dMEeSVtM8jxNXveQ" x="-20" y="14"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_I1jLMedMEeSVtM8jxNXveQ" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_I1jLMudMEeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I1jLM-dMEeSVtM8jxNXveQ" points="[-25, 34, 46, 34]$[-54, 34, 17, 34]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I1jyROdMEeSVtM8jxNXveQ" id="(0.13131313131313133,0.17)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I1jyRedMEeSVtM8jxNXveQ" id="(0.8957055214723927,0.17)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_bAPAsOdREeSVtM8jxNXveQ" type="4001" element="_bAMkcOdREeSVtM8jxNXveQ" source="_cDQysOdLEeSVtM8jxNXveQ" target="_fbbBUOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_bAPnwOdREeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bAPnwedREeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_bAPnwudREeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bAPnw-dREeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_bAPnxOdREeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bAPnxedREeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_bAPAsedREeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_bAPAsudREeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bAPAs-dREeSVtM8jxNXveQ" points="[690, 315, 690, 315]$[758, 159, 758, 159]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bAPnxudREeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bAPnx-dREeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_coafcOdREeSVtM8jxNXveQ" type="4001" element="_coW1EOdREeSVtM8jxNXveQ" source="_QX2w8OdKEeSVtM8jxNXveQ" target="_fbbBUOdLEeSVtM8jxNXveQ">
+            <children xmi:type="notation:Node" xmi:id="_cobGgOdREeSVtM8jxNXveQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cobGgedREeSVtM8jxNXveQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cobGgudREeSVtM8jxNXveQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cobGg-dREeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_cobGhOdREeSVtM8jxNXveQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cobGhedREeSVtM8jxNXveQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_coafcedREeSVtM8jxNXveQ" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_coafcudREeSVtM8jxNXveQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_coafc-dREeSVtM8jxNXveQ" points="[850, 315, 850, 315]$[758, 159, 758, 159]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cobGhudREeSVtM8jxNXveQ" id="(0.49693251533742333,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cobGh-dREeSVtM8jxNXveQ" id="(0.5,0.5)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_AxUoUOdHEeSVtM8jxNXveQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_AxVPYOdHEeSVtM8jxNXveQ">
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_f-u5AudnEeSNTqS0cJCaOg" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <beginLabelStyleDescription xmi:type="style:BeginLabelStyleDescription" xmi:id="_f-vgEOdnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false" labelExpression="service:renderEOpposite">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_f-vgEednEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_f-wHIudnEeSNTqS0cJCaOg" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <beginLabelStyleDescription xmi:type="style:BeginLabelStyleDescription" xmi:id="_f-wHI-dnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false" labelExpression="service:renderEOpposite">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_f-wHJOdnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_zJI-kOdKEeSVtM8jxNXveQ">
+            <key xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_f-u5AOdnEeSNTqS0cJCaOg">
+              <key xmi:type="ecore:EReference" href="systemmodel.ecore#//Actuator/actuatorType"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_f-u5AednEeSNTqS0cJCaOg" key="_wNV70OdKEeSVtM8jxNXveQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_f-vgEudnEeSNTqS0cJCaOg" value="_f-u5AudnEeSNTqS0cJCaOg">
+                  <key xmi:type="ecore:EPackage" href="systemmodel.ecore#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_f-wHIOdnEeSNTqS0cJCaOg">
+              <key xmi:type="ecore:EReference" href="systemmodel.ecore#//Sensor/sensortype"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_f-wHIednEeSNTqS0cJCaOg" key="_t6O0QOdLEeSVtM8jxNXveQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_f-wHJednEeSNTqS0cJCaOg" value="_f-wHIudnEeSNTqS0cJCaOg">
+                  <key xmi:type="ecore:EPackage" href="systemmodel.ecore#/"/>
+                </value>
+              </value>
+            </value>
+          </cache>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_vpj2IOdGEeSVtM8jxNXveQ" name="Device" tooltipText="" outgoingEdges="_7JK6wOdLEeSVtM8jxNXveQ" incomingEdges="_zOTSwOdHEeSVtM8jxNXveQ _0AdvgOdHEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Device"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//Device"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_74mzoOdLEeSVtM8jxNXveQ" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_74mzoedLEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_74mzoudLEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_74mzo-dLEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_74mzpOdLEeSVtM8jxNXveQ" red="228" green="228" blue="228"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pX1ugOdIEeSVtM8jxNXveQ" name="health : DeviceHealth" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Device/health"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Device/health"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Bb_rEOdJEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Bb_rEedJEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Bb_rEudJEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_Bb_rE-dJEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_19nOIOdGEeSVtM8jxNXveQ" name="Sensor" tooltipText="" outgoingEdges="_zOTSwOdHEeSVtM8jxNXveQ _t6O0QOdLEeSVtM8jxNXveQ _I1aoUOdMEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Sensor"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//Sensor"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_21RL4OdnEeSNTqS0cJCaOg" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_21RL4ednEeSNTqS0cJCaOg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_21RL4udnEeSNTqS0cJCaOg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_21RL4-dnEeSNTqS0cJCaOg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_21RL5OdnEeSNTqS0cJCaOg" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_HEZ6gOdIEeSVtM8jxNXveQ" name="state : SensorState = NORMAL" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/state"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/state"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IBbjcOdIEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_IBbjcedIEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_IBbjcudIEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_IBbjc-dIEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_mBhh4OdnEeSNTqS0cJCaOg" name="minReadable : EDouble = 0.0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@119b40b2{platform:/resource/hu.karaszi.ec.centralunit.controller.model/model/systemmodel.ecore#//Sensor/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/minReadable"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/minReadable"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_pkWvcOdnEeSNTqS0cJCaOg" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_pkWvcednEeSNTqS0cJCaOg"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_pkWvcudnEeSNTqS0cJCaOg"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_pkWvc-dnEeSNTqS0cJCaOg"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_qZ86sOdnEeSNTqS0cJCaOg" name="maxReadable : EDouble = 0.0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@2ae1f2d9{platform:/resource/hu.karaszi.ec.centralunit.controller.model/model/systemmodel.ecore#//Sensor/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/maxReadable"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/maxReadable"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ryTNsOdnEeSNTqS0cJCaOg" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_ryTNsednEeSNTqS0cJCaOg"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_ryTNsudnEeSNTqS0cJCaOg"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_ryTNs-dnEeSNTqS0cJCaOg"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_1aczsOdnEeSNTqS0cJCaOg" name="lastMeasurement : EDouble = 0.0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@7f9dc000{platform:/resource/hu.karaszi.ec.centralunit.controller.model/model/systemmodel.ecore#//Sensor/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/lastMeasurement"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Sensor/lastMeasurement"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_21TBEOdnEeSNTqS0cJCaOg" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_21TBEednEeSNTqS0cJCaOg"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_21TBEudnEeSNTqS0cJCaOg"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_21TBE-dnEeSNTqS0cJCaOg"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3cb8kOdGEeSVtM8jxNXveQ" name="Actuator" tooltipText="" outgoingEdges="_0AdvgOdHEeSVtM8jxNXveQ _wNV70OdKEeSVtM8jxNXveQ" incomingEdges="_I1aoUOdMEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Actuator"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//Actuator"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_55CIledLEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_55CIludLEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_55CIl-dLEeSVtM8jxNXveQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_55CImOdLEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_55CImedLEeSVtM8jxNXveQ" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ZUA7AOdHEeSVtM8jxNXveQ" name="state : ActuatorState = ON" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Actuator/state"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Actuator/state"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_bIOqoOdHEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_bIOqoedHEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_bIOqoudHEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_bIOqo-dHEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_k6RzgOdHEeSVtM8jxNXveQ" name="performance : EInt = 0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Actuator/performance"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//Actuator/performance"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_mvtEEOdHEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_mvtEEedHEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_mvtEEudHEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_mvtEE-dHEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_WW-iIOdHEeSVtM8jxNXveQ" name="ActuatorState" tooltipText="">
+        <target xmi:type="ecore:EEnum" href="systemmodel.ecore#//ActuatorState"/>
+        <semanticElements xmi:type="ecore:EEnum" href="systemmodel.ecore#//ActuatorState"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WW-iIedHEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_WW-iIudHEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_WW-iI-dHEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WW-iJOdHEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WW-iJedHEeSVtM8jxNXveQ" red="221" green="236" blue="202"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XavsQOdHEeSVtM8jxNXveQ" name="ON" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//ActuatorState/ON"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//ActuatorState/ON"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_XavsQedHEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_XavsQudHEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_XavsQ-dHEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_XavsROdHEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_YGWOAOdHEeSVtM8jxNXveQ" name="OFF" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//ActuatorState/OFF"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//ActuatorState/OFF"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_YGWOAedHEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_YGWOAudHEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_YGWOA-dHEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_YGWOBOdHEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zOTSwOdHEeSVtM8jxNXveQ" sourceNode="_19nOIOdGEeSVtM8jxNXveQ" targetNode="_vpj2IOdGEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Sensor"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//Sensor/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_21WEYOdnEeSNTqS0cJCaOg" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_21WEYednEeSNTqS0cJCaOg" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_21WEYudnEeSNTqS0cJCaOg" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_21WEY-dnEeSNTqS0cJCaOg"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_21WEZOdnEeSNTqS0cJCaOg" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_21WEZednEeSNTqS0cJCaOg"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0AdvgOdHEeSVtM8jxNXveQ" sourceNode="_3cb8kOdGEeSVtM8jxNXveQ" targetNode="_vpj2IOdGEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Actuator"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//Actuator/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_55IPNudLEeSVtM8jxNXveQ" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_55IPN-dLEeSVtM8jxNXveQ" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_55IPOOdLEeSVtM8jxNXveQ" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_55IPOedLEeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_55IPOudLEeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_55IPO-dLEeSVtM8jxNXveQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_24RqIOdHEeSVtM8jxNXveQ" name="SensorState" tooltipText="">
+        <target xmi:type="ecore:EEnum" href="systemmodel.ecore#//SensorState"/>
+        <semanticElements xmi:type="ecore:EEnum" href="systemmodel.ecore#//SensorState"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_24RqIedHEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_24RqIudHEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_24RqI-dHEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_24RqJOdHEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_24RqJedHEeSVtM8jxNXveQ" red="221" green="236" blue="202"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-5fukOdHEeSVtM8jxNXveQ" name="LOW_FATAL" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/LOW_FATAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/LOW_FATAL"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-5fukedHEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-5fukudHEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_-5fuk-dHEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_-5fulOdHEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BEMrkOdIEeSVtM8jxNXveQ" name="LOW_CRITICAL" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/LOW_CRITICAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/LOW_CRITICAL"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BEMrkedIEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BEMrkudIEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BEMrk-dIEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_BEMrlOdIEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_CKEugOdIEeSVtM8jxNXveQ" name="NORMAL" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/NORMAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/NORMAL"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_CKEugedIEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_CKEugudIEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_CKEug-dIEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_CKEuhOdIEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DOv3kOdIEeSVtM8jxNXveQ" name="HIGH_CRITICAL" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/HIGH_CRITICAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/HIGH_CRITICAL"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_DOv3kedIEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_DOv3kudIEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_DOv3k-dIEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_DOv3lOdIEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_EwySEOdIEeSVtM8jxNXveQ" name="HIGH_FATAL" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/HIGH_FATAL"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="systemmodel.ecore#//SensorState/HIGH_FATAL"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Ewy5IOdIEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Ewy5IedIEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Ewy5IudIEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_Ewy5I-dIEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_qqMHMOdIEeSVtM8jxNXveQ" name="DeviceHealth" tooltipText="">
+        <target xmi:type="ecore:EEnum" href="systemmodel.ecore#//DeviceHealth"/>
+        <semanticElements xmi:type="ecore:EEnum" href="systemmodel.ecore#//DeviceHealth"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_qqMHMedIEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_qqMHMudIEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_qqMHM-dIEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_qqMHNOdIEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_qqMHNedIEeSVtM8jxNXveQ" red="221" green="236" blue="202"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_QXu1IOdKEeSVtM8jxNXveQ" name="ActuatorType" tooltipText="" outgoingEdges="_coW1EOdREeSVtM8jxNXveQ" incomingEdges="_wNV70OdKEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//ActuatorType"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//ActuatorType"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_jUxt8OdKEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_jUxt8edKEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_jUxt8udKEeSVtM8jxNXveQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_jUxt8-dKEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_jUxt9OdKEeSVtM8jxNXveQ" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_WTb-kOdKEeSVtM8jxNXveQ" name="isAdjustable : EBoolean = false" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//ActuatorType/isAdjustable"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//ActuatorType/isAdjustable"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_hs9bkOdKEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_hs9bkedKEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_hs9bkudKEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_hs9bk-dKEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_wNV70OdKEeSVtM8jxNXveQ" sourceNode="_3cb8kOdGEeSVtM8jxNXveQ" targetNode="_QXu1IOdKEeSVtM8jxNXveQ" beginLabel="[0..*] actuator" endLabel="[1..1] actuatorType">
+        <target xmi:type="ecore:EReference" href="systemmodel.ecore#//Actuator/actuatorType"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//ActuatorType/actuator"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//Actuator/actuatorType"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_f-vgE-dnEeSNTqS0cJCaOg" description="_f-u5AudnEeSNTqS0cJCaOg" sourceArrow="InputArrow" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_f-vgFOdnEeSNTqS0cJCaOg"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_f-vgFednEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_f-vgFudnEeSNTqS0cJCaOg"/>
+          </beginLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_f-vgF-dnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_f-vgGOdnEeSNTqS0cJCaOg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_cDLTIOdLEeSVtM8jxNXveQ" name="SensorType" tooltipText="" outgoingEdges="_bAMkcOdREeSVtM8jxNXveQ" incomingEdges="_t6O0QOdLEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//SensorType"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//SensorType"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_cDLTIedLEeSVtM8jxNXveQ" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_cDLTIudLEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_cDLTI-dLEeSVtM8jxNXveQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cDLTJOdLEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_cDLTJedLEeSVtM8jxNXveQ" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_fbTskOdLEeSVtM8jxNXveQ" name="Template" tooltipText="" outgoingEdges="_55I2QOdLEeSVtM8jxNXveQ" incomingEdges="_bAMkcOdREeSVtM8jxNXveQ _coW1EOdREeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Template"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//Template"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_fbU6sOdLEeSVtM8jxNXveQ" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_fbU6sedLEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_fbU6sudLEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_fbU6s-dLEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_fbU6tOdLEeSVtM8jxNXveQ" red="228" green="228" blue="228"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_t6O0QOdLEeSVtM8jxNXveQ" sourceNode="_19nOIOdGEeSVtM8jxNXveQ" targetNode="_cDLTIOdLEeSVtM8jxNXveQ" beginLabel="[0..*] sensor" endLabel="[1..1] sensortype">
+        <target xmi:type="ecore:EReference" href="systemmodel.ecore#//Sensor/sensortype"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//SensorType/sensor"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//Sensor/sensortype"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_f-wHJudnEeSNTqS0cJCaOg" description="_f-wHIudnEeSNTqS0cJCaOg" sourceArrow="InputArrow" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_f-wHJ-dnEeSNTqS0cJCaOg"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_f-wHKOdnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_f-wHKednEeSNTqS0cJCaOg"/>
+          </beginLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_f-wHKudnEeSNTqS0cJCaOg" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_f-wHK-dnEeSNTqS0cJCaOg"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_2aCSIOdLEeSVtM8jxNXveQ" name="NamedElement" tooltipText="" incomingEdges="_55I2QOdLEeSVtM8jxNXveQ _7JK6wOdLEeSVtM8jxNXveQ" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//NamedElement"/>
+        <semanticElements xmi:type="ecore:EClass" href="systemmodel.ecore#//NamedElement"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_2aCSIedLEeSVtM8jxNXveQ" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_2aCSIudLEeSVtM8jxNXveQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_2aCSI-dLEeSVtM8jxNXveQ" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_2aCSJOdLEeSVtM8jxNXveQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_2aCSJedLEeSVtM8jxNXveQ" red="228" green="228" blue="228"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_SHfikOdKEeSVtM8jxNXveQ" name="id : ELong = 0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//NamedElement/id"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//NamedElement/id"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_jUyVAOdKEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_jUyVAedKEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_jUyVAudKEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_jUyVA-dKEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_UqYWEOdKEeSVtM8jxNXveQ" name="name : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="systemmodel.ecore#//NamedElement/name"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="systemmodel.ecore#//NamedElement/name"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_idpRoOdKEeSVtM8jxNXveQ" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_idpRoedKEeSVtM8jxNXveQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_idpRoudKEeSVtM8jxNXveQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_idpRo-dKEeSVtM8jxNXveQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_55I2QOdLEeSVtM8jxNXveQ" sourceNode="_fbTskOdLEeSVtM8jxNXveQ" targetNode="_2aCSIOdLEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Template"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//Template/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_55I2QedLEeSVtM8jxNXveQ" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_55I2QudLEeSVtM8jxNXveQ" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_55I2Q-dLEeSVtM8jxNXveQ" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_55I2ROdLEeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_55I2RedLEeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_55I2RudLEeSVtM8jxNXveQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7JK6wOdLEeSVtM8jxNXveQ" sourceNode="_vpj2IOdGEeSVtM8jxNXveQ" targetNode="_2aCSIOdLEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//Device"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//Device/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_74p28OdLEeSVtM8jxNXveQ" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_74p28edLEeSVtM8jxNXveQ" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_74p28udLEeSVtM8jxNXveQ" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_74p28-dLEeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_74p29OdLEeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_74p29edLEeSVtM8jxNXveQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_I1aoUOdMEeSVtM8jxNXveQ" sourceNode="_19nOIOdGEeSVtM8jxNXveQ" targetNode="_3cb8kOdGEeSVtM8jxNXveQ" beginLabel="[0..*] affects" endLabel="[0..*] affectedBy">
+        <target xmi:type="ecore:EReference" href="systemmodel.ecore#//Sensor/affectedBy"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//Sensor/affectedBy"/>
+        <semanticElements xmi:type="ecore:EReference" href="systemmodel.ecore#//Actuator/affects"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_I1aoUedMEeSVtM8jxNXveQ" sourceArrow="InputArrow" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_I1aoUudMEeSVtM8jxNXveQ"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_I1aoU-dMEeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_I1aoVOdMEeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_I1aoVedMEeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_I1aoVudMEeSVtM8jxNXveQ"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_bAMkcOdREeSVtM8jxNXveQ" sourceNode="_cDLTIOdLEeSVtM8jxNXveQ" targetNode="_fbTskOdLEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//SensorType"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//SensorType/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_bAMkcedREeSVtM8jxNXveQ" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_bAMkcudREeSVtM8jxNXveQ" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_bAMkc-dREeSVtM8jxNXveQ" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_bAMkdOdREeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_bAMkdedREeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_bAMkdudREeSVtM8jxNXveQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_coW1EOdREeSVtM8jxNXveQ" sourceNode="_QXu1IOdKEeSVtM8jxNXveQ" targetNode="_fbTskOdLEeSVtM8jxNXveQ">
+        <target xmi:type="ecore:EClass" href="systemmodel.ecore#//ActuatorType"/>
+        <semanticElements xmi:type="ecore:EGenericType" href="systemmodel.ecore#//ActuatorType/@eGenericSuperTypes.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_coW1EedREeSVtM8jxNXveQ" targetArrow="InputClosedArrow" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_coW1EudREeSVtM8jxNXveQ" red="136" green="136" blue="136"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_coW1E-dREeSVtM8jxNXveQ" labelFormat="italic" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_coW1FOdREeSVtM8jxNXveQ"/>
+          </beginLabelStyle>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_coW1FedREeSVtM8jxNXveQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_coW1FudREeSVtM8jxNXveQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_r1qGtedGEeSVtM8jxNXveQ"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+      <target xmi:type="ecore:EPackage" href="systemmodel.ecore#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

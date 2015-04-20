@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest receiver remote service">
+   <property name="service.exported.interfaces" value="hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver" />
+   <property name="service.exported.configs" value="org.apache.cxf.rs" />
+   <property name="service.exported.intents" value="HTTP" />
+   <property name="org.apache.cxf.rs.address" value="http://localhost:9090/receiver" />
+   <property name="org.apache.cxf.rs.provider" value="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+   <service>
+      <provide interface="hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver"/>
+   </service>
+   <implementation class="hu.karaszi.ec.centralunit.interfaces.devices.rest.impl.RestDeviceDataReceiverImpl"/>
+
+   <reference bind="setDeviceDataForwarder" cardinality="0..1" interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder" name="DeviceDataForwarder" policy="dynamic" unbind="unsetDeviceDataForwarder"/>
+</scr:component>

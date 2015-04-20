@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="RabbitMQ processor for received device data messages">
+   <implementation class="hu.karaszi.ec.centralunit.devicedataforwarder.impl.rabbitmq.RabbitMQDeviceDataForwarder"/>
+   <service>
+      <provide interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder"/>
+   </service>
+   
+   <reference bind="setEntityManager" cardinality="0..1" interface="javax.persistence.EntityManagerFactory" name="EntityManagerFactory" target="(osgi.unit.name=environmentcontroller)" policy="dynamic" unbind="unsetEntityManager"/>
+</scr:component>

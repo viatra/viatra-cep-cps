@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DataAccessLayer
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.dal
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: javax.persistence;version="2.1.0"
+Export-Package: hu.karaszi.ec.centralunit.dal,
+ hu.karaszi.ec.centralunit.dal.devices,
+ hu.karaszi.ec.centralunit.dal.measurements
+Meta-Persistence: META-INF/persistence.xml
