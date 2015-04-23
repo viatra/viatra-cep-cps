@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="systemmodel" nsURI="systemmodel.meta" nsPrefix="hu.karaszi.ec.centralunit.controller.model">
   <eClassifiers xsi:type="ecore:EClass" name="Device" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" eType="#//DeviceHealth"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" eType="#//DeviceStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Device">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//SensorState"
@@ -26,6 +26,7 @@
   <eClassifiers xsi:type="ecore:EEnum" name="ActuatorState">
     <eLiterals name="ON"/>
     <eLiterals name="OFF"/>
+    <eLiterals name="UNKNOWN"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SensorState">
     <eLiterals name="LOW_FATAL"/>
@@ -34,7 +35,12 @@
     <eLiterals name="HIGH_CRITICAL"/>
     <eLiterals name="HIGH_FATAL"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DeviceHealth"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DeviceStatus">
+    <eLiterals name="OK"/>
+    <eLiterals name="DEGRADED"/>
+    <eLiterals name="ERROR"/>
+    <eLiterals name="UNKNOWN"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActuatorType" eSuperTypes="#//Template">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAdjustable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actuator" upperBound="-1"

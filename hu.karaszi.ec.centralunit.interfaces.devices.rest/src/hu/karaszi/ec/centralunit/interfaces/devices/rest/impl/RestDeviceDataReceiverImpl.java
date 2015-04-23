@@ -20,7 +20,7 @@ public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	@Override
 	public void receiveOperationalStatus(OperationalStatusBean data) {
 		if (forwarder != null) {
-			forwarder.forwardOperationalStatus(data.source, data.status, data.date);
+			forwarder.forwardDeviceStatus(data.source, data.status, data.date);
 		} else {
 			//TODO: log missing service
 		}

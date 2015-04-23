@@ -5,5 +5,5 @@
       <provide interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder"/>
    </service>
    
-   <reference bind="setEntityManager" cardinality="0..1" interface="javax.persistence.EntityManagerFactory" name="EntityManagerFactory" target="(osgi.unit.name=environmentcontroller)" policy="dynamic" unbind="unsetEntityManager"/>
+   <reference bind="setDeviceManager" cardinality="0..1" interface="hu.karaszi.ec.centralunit.dal.DeviceManager" name="DeviceManager" policy="dynamic" unbind="unsetDeviceManager"/>
 </scr:component>

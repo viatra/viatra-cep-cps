@@ -5,5 +5,9 @@ Bundle-SymbolicName: hu.karaszi.ec.centralunit.devicedataforwarder.impl.rabbitmq
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Service-Component: OSGI-INF/*.xml
-Import-Package: hu.karaszi.ec.centralunit.devicedataforwarder.api,
- javax.persistence;version="2.1.0"
+Import-Package: com.rabbitmq.client;version="3.5.1",
+ hu.karaszi.ec.centralunit.dal,
+ hu.karaszi.ec.centralunit.data,
+ hu.karaszi.ec.centralunit.devicedataforwarder.api,
+ javax.persistence;version="2.1.0",
+ org.osgi.service.component;version="1.2.2"

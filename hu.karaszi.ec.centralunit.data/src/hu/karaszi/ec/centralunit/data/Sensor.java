@@ -1,16 +1,17 @@
-package hu.karaszi.ec.centralunit.dal.devices;
+package hu.karaszi.ec.centralunit.data;
 
-import hu.karaszi.ec.centralunit.dal.measurements.Measurement;
-import hu.karaszi.ec.centralunit.dal.measurements.Unit;
-
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
+@SuppressWarnings("serial")
 @Entity
-public class Sensor extends Device {
+public class Sensor extends Device implements Serializable {
 	private double lowerFatalThreshold;
 	private double lowerCriticalThreshold;
 	private double lowerNormalThreshold;
@@ -22,12 +23,13 @@ public class Sensor extends Device {
 	private double maxReadable;
 
 	private double hysteresis;
-	@OneToOne
+	@ManyToOne
 	private Unit unit;
-	private int scale;
 	@OneToMany
-	private List<Measurement> measurements;
-
+	private List<Measurement> measurements = new ArrayList<Measurement>();
+	@ManyToMany
+	private List<Actuator> affectedBy = new ArrayList<Actuator>();
+	
 	public double getLowerFatalThreshold() {
 		return lowerFatalThreshold;
 	}
@@ -108,19 +110,19 @@ public class Sensor extends Device {
 		this.unit = unit;
 	}
 
-	public int getScale() {
-		return scale;
-	}
-
-	public void setScale(int scale) {
-		this.scale = scale;
-	}
-
 	public List<Measurement> getMeasurements() {
 		return measurements;
 	}
 
 	public void setMeasurements(List<Measurement> measurements) {
 		this.measurements = measurements;
+	}
+	
+	public List<Actuator> getAffectedBy() {
+		return affectedBy;
+	}
+	
+	public void setAffectedBy(List<Actuator> affectedBy) {
+		this.affectedBy = affectedBy;
 	}
 }

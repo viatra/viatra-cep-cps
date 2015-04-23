@@ -10,6 +10,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//ActuatorState">
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorState/ON"/>
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorState/OFF"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorState/UNKNOWN"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//SensorState">
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/LOW_FATAL"/>
@@ -18,7 +19,12 @@
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/HIGH_CRITICAL"/>
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//SensorState/HIGH_FATAL"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//DeviceHealth"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//DeviceStatus">
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceStatus/OK"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceStatus/DEGRADED"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceStatus/ERROR"/>
+      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceStatus/UNKNOWN"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="systemmodel.ecore#//Device">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/health"/>
     </genClasses>

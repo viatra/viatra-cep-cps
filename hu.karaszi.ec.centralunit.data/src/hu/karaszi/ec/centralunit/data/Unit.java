@@ -1,6 +1,4 @@
-package hu.karaszi.ec.centralunit.dal.measurements;
-
-import hu.karaszi.ec.centralunit.dal.NamedEntity;
+package hu.karaszi.ec.centralunit.data;
 
 import javax.persistence.Entity;
 

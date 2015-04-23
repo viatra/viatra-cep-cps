@@ -1,27 +1,23 @@
-package hu.karaszi.ec.centralunit.dal;
+package hu.karaszi.ec.centralunit.data;
 
-import java.util.Date;
-
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @MappedSuperclass
 public abstract class NamedEntity {
 	@Id
 	@GeneratedValue
 	protected long id;
+	@Column(unique=true)
 	protected String name;
-	@Temporal(TemporalType.TIMESTAMP)
-	protected Date created;
 
 	public long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	protected void setId(long id) {
 		this.id = id;
 	}
 
@@ -31,13 +27,5 @@ public abstract class NamedEntity {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Date getCreated() {
-		return created;
-	}
-
-	public void setCreated(Date created) {
-		this.created = created;
 	}
 }

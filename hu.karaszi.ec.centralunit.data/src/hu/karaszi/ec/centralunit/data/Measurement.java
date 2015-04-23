@@ -1,23 +1,28 @@
-package hu.karaszi.ec.centralunit.dal.measurements;
+package hu.karaszi.ec.centralunit.data;
 
-import hu.karaszi.ec.centralunit.dal.NamedEntity;
-
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@SuppressWarnings("serial")
 @Entity
-public class Measurement extends NamedEntity {
+public class Measurement implements Serializable {
+	@Id
+	@GeneratedValue
+	protected long id;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date timestamp;
 	private double value;
 	private int scale;
-	@OneToOne
-	private Unit unit;
-
+	@ManyToOne
+	private Sensor sensor;
+	
 	public Date getTimestamp() {
 		return timestamp;
 	}
@@ -42,11 +47,19 @@ public class Measurement extends NamedEntity {
 		this.scale = scale;
 	}
 
-	public Unit getUnit() {
-		return unit;
+	public long getId() {
+		return id;
 	}
-
-	public void setUnit(Unit unit) {
-		this.unit = unit;
+	
+	protected void setId(long id) {
+		this.id = id;
+	}
+	
+	public Sensor getSensor() {
+		return sensor;
+	}
+	
+	public void setSensor(Sensor sensor) {
+		this.sensor = sensor;
 	}
 }
