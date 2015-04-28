@@ -8,3 +8,4 @@ Import-Package: hu.karaszi.ec.centralunit.data,
  javax.persistence;version="2.1.0"
 Export-Package: hu.karaszi.ec.centralunit.dal
 Service-Component: OSGI-INF/*.xml
+Meta-Persistence: META-INF/persistence.xml

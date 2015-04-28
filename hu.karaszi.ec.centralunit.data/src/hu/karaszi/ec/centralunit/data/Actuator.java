@@ -13,6 +13,7 @@ public class Actuator extends Device {
 	private ActuatorState state;
 	@ManyToMany
 	private List<Sensor> affects = new ArrayList<Sensor>();
+	private ActuatorEffect effect;
 	
 	public int getPerformance() {
 		return performance;
@@ -32,5 +33,13 @@ public class Actuator extends Device {
 	
 	public List<Sensor> getAffects() {
 		return affects;
+	}
+
+	public ActuatorEffect getEffect() {
+		return effect;
+	}
+
+	public void setEffect(ActuatorEffect effect) {
+		this.effect = effect;
 	}
 }

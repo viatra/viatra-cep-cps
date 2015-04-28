@@ -2,6 +2,22 @@ package hu.karaszi.ec.centralunit.controller.model.incquery
 
 import "systemmodel.meta"
 
+pattern sensorInLowFatalRange (sensor : Sensor) {
+	Sensor.currentRange(sensor, ::LOW_FATAL);
+}
+
+pattern sensorInLowCriticalRange (sensor : Sensor) {
+	Sensor.currentRange(sensor, ::LOW_CRITICAL);
+}
+
 pattern sensorInNormalRange (sensor : Sensor) {
-	Sensor.state(sensor, ::NORMAL);
+	Sensor.currentRange(sensor, ::NORMAL);
+}
+
+pattern sensorInHighCriticalRange (sensor : Sensor) {
+	Sensor.currentRange(sensor, ::HIGH_CRITICAL);
+}
+
+pattern sensorInHighFatalRange (sensor : Sensor) {
+	Sensor.currentRange(sensor, ::HIGH_FATAL);
 }

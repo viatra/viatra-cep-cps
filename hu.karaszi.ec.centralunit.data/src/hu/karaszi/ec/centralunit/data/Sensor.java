@@ -14,11 +14,10 @@ import javax.persistence.OneToMany;
 public class Sensor extends Device implements Serializable {
 	private double lowerFatalThreshold;
 	private double lowerCriticalThreshold;
-	private double lowerNormalThreshold;
-	private double upperNormalThreshold;
 	private double upperCriticalThreshold;
 	private double upperFatalThreshold;
-
+	private SensorRange currentRange; 
+	
 	private double minReadable;
 	private double maxReadable;
 
@@ -44,22 +43,6 @@ public class Sensor extends Device implements Serializable {
 
 	public void setLowerCriticalThreshold(double lowerCriticalThreshold) {
 		this.lowerCriticalThreshold = lowerCriticalThreshold;
-	}
-
-	public double getLowerNormalThreshold() {
-		return lowerNormalThreshold;
-	}
-
-	public void setLowerNormalThreshold(double lowerNormalThreshold) {
-		this.lowerNormalThreshold = lowerNormalThreshold;
-	}
-
-	public double getUpperNormalThreshold() {
-		return upperNormalThreshold;
-	}
-
-	public void setUpperNormalThreshold(double upperNormalThreshold) {
-		this.upperNormalThreshold = upperNormalThreshold;
 	}
 
 	public double getUpperCriticalThreshold() {
@@ -124,5 +107,13 @@ public class Sensor extends Device implements Serializable {
 	
 	public void setAffectedBy(List<Actuator> affectedBy) {
 		this.affectedBy = affectedBy;
+	}
+
+	public SensorRange getCurrentRange() {
+		return currentRange;
+	}
+
+	public void setCurrentRange(SensorRange currentRange) {
+		this.currentRange = currentRange;
 	}
 }

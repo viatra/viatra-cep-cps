@@ -23,8 +23,12 @@ public class DeviceManagerImpl implements DeviceManager {
 	
 	@Override
 	public Device getDevice(String name) {
-		TypedQuery<Device> q = em.createQuery("SELECT d FROM Device d WHERE d.name = :name", Device.class);
-		return q.setParameter("name", name).getSingleResult();
+		Device device = getSensor(name);
+		if (device == null) {
+			TypedQuery<Actuator> actuatorQuery = em.createQuery("SELECT d FROM Sensor d WHERE d.name = :name", Actuator.class);
+			device = actuatorQuery.setParameter("name", name).getSingleResult();
+		}
+		return device;
 	}
 	
 	@Override
@@ -51,5 +55,11 @@ public class DeviceManagerImpl implements DeviceManager {
 		transaction.begin();
 		em.merge(actuator);
 		transaction.commit();
+	}
+
+	@Override
+	public Sensor getSensor(String name) {
+		TypedQuery<Sensor> sensorQuery = em.createQuery("SELECT d FROM Sensor d WHERE d.name = :name", Sensor.class);
+		return sensorQuery.setParameter("name", name).getSingleResult();		
 	}
 }

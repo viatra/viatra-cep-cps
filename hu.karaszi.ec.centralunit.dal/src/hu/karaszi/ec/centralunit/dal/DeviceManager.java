@@ -10,4 +10,5 @@ public interface DeviceManager {
 	public Actuator getActuator(long id);
 	public void updateSensor(Sensor sensor);
 	public void updateActuator(Actuator actuator);
+	public Sensor getSensor(String name);
 }

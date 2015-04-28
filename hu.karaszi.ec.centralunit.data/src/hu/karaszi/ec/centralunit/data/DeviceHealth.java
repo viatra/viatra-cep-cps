@@ -1,7 +1,8 @@
 package hu.karaszi.ec.centralunit.data;
 
-public enum ActuatorState {
-	ON,
-	OFF,
+public enum DeviceHealth {
+	OK,
+	DEGRADED,
+	ERROR,
 	UNKNOWN
 }

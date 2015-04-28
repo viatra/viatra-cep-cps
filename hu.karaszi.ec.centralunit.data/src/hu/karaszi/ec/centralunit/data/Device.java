@@ -10,7 +10,7 @@ public abstract class Device extends NamedEntity implements Serializable {
 	protected String protocol;
 	protected String address;
 	protected String description;
-	protected DeviceStatus deviceStatus;
+	protected DeviceHealth deviceHealth;
 	protected DeviceState deviceState;
 
 	public String getDescription() {
@@ -37,12 +37,12 @@ public abstract class Device extends NamedEntity implements Serializable {
 		this.address = address;
 	}
 
-	public DeviceStatus getDeviceStatus() {
-		return deviceStatus;
+	public DeviceHealth getDeviceHealth() {
+		return deviceHealth;
 	}
 	
-	public void setDeviceStatus(DeviceStatus deviceStatus) {
-		this.deviceStatus = deviceStatus;
+	public void setDeviceHealth(DeviceHealth deviceHealth) {
+		this.deviceHealth = deviceHealth;
 	}
 	
 	public DeviceState getDeviceState() {
