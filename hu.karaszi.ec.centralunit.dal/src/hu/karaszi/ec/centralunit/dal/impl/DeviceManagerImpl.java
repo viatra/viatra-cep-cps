@@ -1,17 +1,19 @@
 package hu.karaszi.ec.centralunit.dal.impl;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.TypedQuery;
-
 import hu.karaszi.ec.centralunit.dal.DeviceManager;
 import hu.karaszi.ec.centralunit.data.Actuator;
 import hu.karaszi.ec.centralunit.data.Device;
 import hu.karaszi.ec.centralunit.data.Sensor;
 
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+
 public class DeviceManagerImpl implements DeviceManager {
-	EntityManager em;
+	private EntityManager em;
 	
 	public void setEntityManager(EntityManagerFactory emf) {
 		em = emf.createEntityManager();
@@ -61,5 +63,55 @@ public class DeviceManagerImpl implements DeviceManager {
 	public Sensor getSensor(String name) {
 		TypedQuery<Sensor> sensorQuery = em.createQuery("SELECT d FROM Sensor d WHERE d.name = :name", Sensor.class);
 		return sensorQuery.setParameter("name", name).getSingleResult();		
+	}
+
+	@Override
+	public List<Sensor> getSensors() {
+		TypedQuery<Sensor> query = em.createQuery("SELECT s FROM Sensor s", Sensor.class);
+		return query.getResultList();
+	}
+
+	@Override
+	public void insertSensor(Sensor sensor) {
+		EntityTransaction transaction = em.getTransaction();
+		transaction.begin();
+		em.persist(sensor);
+		transaction.commit();
+	}
+
+	@Override
+	public void deleteSensor(long id) {
+		Sensor sensor = em.find(Sensor.class, id);
+		EntityTransaction transaction = em.getTransaction();
+		if (sensor != null) {
+			transaction.begin();
+			em.remove(sensor);
+			transaction.commit();
+		}
+	}
+
+	@Override
+	public List<Actuator> getActuators() {
+		TypedQuery<Actuator> query = em.createQuery("SELECT a FROM Actuator a", Actuator.class);
+		return query.getResultList();
+	}
+
+	@Override
+	public void insertActuator(Actuator actuator) {
+		EntityTransaction transaction = em.getTransaction();
+		transaction.begin();
+		em.persist(actuator);
+		transaction.commit();
+	}
+
+	@Override
+	public void deleteActuator(long id) {
+		Actuator actuator = em.find(Actuator.class, id);
+		EntityTransaction transaction = em.getTransaction();
+		if (actuator != null) {
+			transaction.begin();
+			em.remove(actuator);
+			transaction.commit();
+		}
 	}
 }

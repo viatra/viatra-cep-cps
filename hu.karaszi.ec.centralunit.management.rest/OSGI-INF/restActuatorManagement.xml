@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest actuator management interface">
+   <property name="service.exported.interfaces" value="hu.karaszi.ec.centralunit.management.rest.RestActuatorManagement" />
+   <property name="service.exported.configs" value="org.apache.cxf.rs" />
+   <property name="service.exported.intents" value="HTTP" />
+   <property name="org.apache.cxf.rs.address" value="http://localhost:9090/management/actuator" />
+   <property name="org.apache.cxf.rs.provider" value="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+   <service>
+      <provide interface="hu.karaszi.ec.centralunit.management.rest.RestActuatorManagement"/>
+   </service>
+   <implementation class="hu.karaszi.ec.centralunit.management.rest.impl.RestActuatorManagementImpl"/>
+
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
+</scr:component>

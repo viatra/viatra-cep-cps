@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MeasurementDataManager {
 	public List<Measurement> getMeasurements(long sensorId);
-	public Measurement insertMeasurement(Measurement measurement);
+	public void insertMeasurement(Measurement measurement);
 }

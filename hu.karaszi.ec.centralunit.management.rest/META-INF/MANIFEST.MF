@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rest
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.management.rest
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*
+Import-Package: hu.karaszi.ec.centralunit.dal,
+ hu.karaszi.ec.centralunit.data,
+ javax.ws.rs;version="1.1.1",
+ javax.ws.rs.core;version="1.1.1",
+ org.codehaus.jackson.jaxrs;version="1.9.13"

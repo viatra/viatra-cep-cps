@@ -10,5 +10,11 @@
    </service>
    <implementation class="hu.karaszi.ec.centralunit.interfaces.devices.rest.impl.RestDeviceDataReceiverImpl"/>
 
-   <reference bind="setDeviceDataForwarder" cardinality="0..1" interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder" name="DeviceDataForwarder" policy="dynamic" unbind="unsetDeviceDataForwarder"/>
+   <reference 
+   		name="DeviceDataForwarder" 
+   		interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceDataForwarder" 
+   		unbind="unsetDeviceDataForwarder"/>
 </scr:component>

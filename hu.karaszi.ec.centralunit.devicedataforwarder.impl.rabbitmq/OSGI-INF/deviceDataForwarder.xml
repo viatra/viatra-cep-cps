@@ -5,5 +5,11 @@
       <provide interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder"/>
    </service>
    
-   <reference bind="setDeviceManager" cardinality="0..1" interface="hu.karaszi.ec.centralunit.dal.DeviceManager" name="DeviceManager" policy="dynamic" unbind="unsetDeviceManager"/>
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
 </scr:component>
