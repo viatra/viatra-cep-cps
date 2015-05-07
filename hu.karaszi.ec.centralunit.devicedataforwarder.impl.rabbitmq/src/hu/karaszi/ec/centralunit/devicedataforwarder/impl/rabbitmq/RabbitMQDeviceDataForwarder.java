@@ -110,7 +110,7 @@ public class RabbitMQDeviceDataForwarder implements DeviceDataForwarder {
 
 	@Override
 	public void forwardMeasurementData(String source, double measurement,
-			int scale, String unit, Date date) {
+			int scale, Date date) {
 		try {
 			Sensor sourceSensor = deviceManager.getSensor(source);
 			Measurement newMeasurement = new Measurement();

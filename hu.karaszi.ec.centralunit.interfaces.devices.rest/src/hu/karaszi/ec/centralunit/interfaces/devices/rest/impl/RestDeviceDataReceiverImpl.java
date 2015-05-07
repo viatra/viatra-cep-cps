@@ -2,9 +2,9 @@ package hu.karaszi.ec.centralunit.interfaces.devices.rest.impl;
 
 import hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder;
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver;
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataBean;
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.OperationalStatusBean;
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.ThresholdEventBean;
+import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
+import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.OperationalStatusDTO;
+import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.ThresholdEventDTO;
 
 public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	private DeviceDataForwarder forwarder;
@@ -18,7 +18,7 @@ public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	}
 	
 	@Override
-	public void receiveOperationalStatus(OperationalStatusBean data) {
+	public void receiveOperationalStatus(OperationalStatusDTO data) {
 		if (forwarder != null) {
 			forwarder.forwardDeviceStatus(data.source, data.status, data.date);
 		} else {
@@ -27,7 +27,7 @@ public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	}
 
 	@Override
-	public void receiveThresholdEvent(ThresholdEventBean data) {
+	public void receiveThresholdEvent(ThresholdEventDTO data) {
 		if (forwarder != null) {
 			forwarder.forwardThresholdEvent(data.source, data.newRange, data.measurement, data.scale, data.unit, data.date);
 		} else {
@@ -36,9 +36,9 @@ public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	}
 
 	@Override
-	public void receiveMeasurementData(MeasurementDataBean data) {
+	public void receiveMeasurementData(MeasurementDataDTO data) {
 		if (forwarder != null) {
-			forwarder.forwardMeasurementData(data.source, data.measurement, data.scale, data.unit, data.date);
+			forwarder.forwardMeasurementData(data.source, data.measurement, data.scale, data.date);
 		} else {
 			//TODO: log missing service
 		}

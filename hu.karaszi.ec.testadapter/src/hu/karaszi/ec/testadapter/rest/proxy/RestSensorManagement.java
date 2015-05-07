@@ -1,8 +1,8 @@
-package hu.karaszi.ec.centralunit.management.rest;
+package hu.karaszi.ec.testadapter.rest.proxy;
+
+import hu.karaszi.ec.testadapter.dto.management.SensorDTO;
 
 import java.util.List;
-
-import hu.karaszi.ec.centralunit.management.rest.dto.SensorDTO;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;

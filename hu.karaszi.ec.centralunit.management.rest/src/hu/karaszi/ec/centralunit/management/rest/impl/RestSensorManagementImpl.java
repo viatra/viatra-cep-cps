@@ -48,11 +48,10 @@ public class RestSensorManagementImpl implements RestSensorManagement {
 	}
 
 	@Override
-	public Response newSensor(SensorDTO sensor) {
+	public SensorDTO newSensor(SensorDTO sensor) {
 		Sensor newSensor = DTOToSensor(sensor);
-		deviceManager.insertSensor(newSensor);
-		//TODO
-		return null;
+		Sensor created = deviceManager.insertSensor(newSensor);		
+		return sensorToDTO(created);
 
 	}
 

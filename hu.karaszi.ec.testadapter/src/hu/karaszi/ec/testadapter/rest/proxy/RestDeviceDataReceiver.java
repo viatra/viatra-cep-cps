@@ -1,8 +1,8 @@
-package hu.karaszi.ec.centralunit.interfaces.devices.rest;
+package hu.karaszi.ec.testadapter.rest.proxy;
 
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.OperationalStatusDTO;
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.ThresholdEventDTO;
+import hu.karaszi.ec.testadapter.dto.data.MeasurementDataDTO;
+import hu.karaszi.ec.testadapter.dto.data.OperationalStatusDTO;
+import hu.karaszi.ec.testadapter.dto.data.ThresholdEventDTO;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

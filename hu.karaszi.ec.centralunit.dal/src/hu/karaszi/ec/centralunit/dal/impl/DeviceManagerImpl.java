@@ -72,11 +72,12 @@ public class DeviceManagerImpl implements DeviceManager {
 	}
 
 	@Override
-	public void insertSensor(Sensor sensor) {
+	public Sensor insertSensor(Sensor sensor) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.persist(sensor);
 		transaction.commit();
+		return sensor;
 	}
 
 	@Override

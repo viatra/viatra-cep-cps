@@ -12,7 +12,7 @@ public interface DeviceManager {
 	public Sensor getSensor(long id);
 	public Sensor getSensor(String name);
 	public List<Sensor> getSensors();
-	public void insertSensor(Sensor sensor);
+	public Sensor insertSensor(Sensor sensor);
 	public void updateSensor(Sensor sensor);
 	public void deleteSensor(long id);
 	
