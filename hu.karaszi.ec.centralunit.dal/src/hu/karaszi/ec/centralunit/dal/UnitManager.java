@@ -8,7 +8,7 @@ public interface UnitManager {
 	public List<Unit> getUnits();
 	public Unit getUnit(String name);
 	public Unit getUnit(long id);
-	public void insertUnit(Unit unit);
-	public void updateUnit(Unit unit);
+	public Unit insertUnit(Unit unit);
+	public Unit updateUnit(Unit unit);
 	public void deleteUnit(long id);
 }

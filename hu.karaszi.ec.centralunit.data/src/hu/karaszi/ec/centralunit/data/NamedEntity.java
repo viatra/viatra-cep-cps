@@ -1,12 +1,15 @@
 package hu.karaszi.ec.centralunit.data;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+@SuppressWarnings("serial")
 @MappedSuperclass
-public abstract class NamedEntity {
+public abstract class NamedEntity implements Serializable {
 	@Id
 	@GeneratedValue
 	protected long id;

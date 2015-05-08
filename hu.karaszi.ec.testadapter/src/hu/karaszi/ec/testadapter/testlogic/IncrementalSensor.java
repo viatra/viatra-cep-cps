@@ -1,9 +1,9 @@
 package hu.karaszi.ec.testadapter.testlogic;
 
-import java.util.Date;
+import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
+import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.SensorDTO;
 
-import hu.karaszi.ec.testadapter.dto.data.MeasurementDataDTO;
-import hu.karaszi.ec.testadapter.dto.management.SensorDTO;
+import java.util.Date;
 
 public class IncrementalSensor implements Sensor {
 	private double value;
@@ -13,13 +13,15 @@ public class IncrementalSensor implements Sensor {
 	private double upperCriticalThreshold;
 	private double upperFatalThreshold;
 	private String name;
-	private long id;	
+	private long id;
+	private long unitId;	
 	
-	public IncrementalSensor(String name, double value, double increment, double lowerFatalThreshold,
+	public IncrementalSensor(String name, long unitId, double value, double increment, double lowerFatalThreshold,
 			double lowerCriticalThreshold, double upperCriticalThreshold,
 			double upperFatalThreshold) {
 		super();
 		this.name = name;
+		this.unitId = unitId;
 		this.value = value;
 		this.increment = increment;
 		this.lowerFatalThreshold = lowerFatalThreshold;
@@ -31,6 +33,7 @@ public class IncrementalSensor implements Sensor {
 	@Override
 	public MeasurementDataDTO getNextMeasurement() {
 		MeasurementDataDTO measurement = new MeasurementDataDTO();
+		measurement.source = name;
 		measurement.date = new Date();
 		measurement.measurement = value;
 		measurement.scale = 1;
@@ -70,12 +73,17 @@ public class IncrementalSensor implements Sensor {
 		dto.lowerCriticalThreshold = lowerCriticalThreshold;
 		dto.upperCriticalThreshold = upperCriticalThreshold;
 		dto.upperFatalThreshold = upperFatalThreshold;
-		dto.unit = 1;
+		dto.unit = unitId;
 		return dto;
 	}
 
 	@Override
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	@Override
+	public long getId() {
+		return id;
 	}
 }

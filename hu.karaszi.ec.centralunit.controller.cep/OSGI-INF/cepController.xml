@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.karaszi.ec.centralunit.controller.instancemodel">
+   <implementation class="hu.karaszi.ec.centralunit.controller.cep.CepController"/>
+</scr:component>

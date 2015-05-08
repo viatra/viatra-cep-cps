@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RabbitMQ event forwarder
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.event.forwarder.impl.rabbitmq
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: com.rabbitmq.client;version="3.5.1",
+ hu.karaszi.ec.centralunit.dal,
+ hu.karaszi.ec.centralunit.data,
+ hu.karaszi.ec.centralunit.event.forwarder.api,
+ org.osgi.service.component;version="1.2.2"

@@ -28,11 +28,12 @@ public class MeasurementDataManagerImpl implements MeasurementDataManager {
 	}
 
 	@Override
-	public void insertMeasurement(Measurement measurement) {
+	public Measurement insertMeasurement(Measurement measurement) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.persist(measurement);
 		transaction.commit();
+		return measurement;
 	}
 
 }

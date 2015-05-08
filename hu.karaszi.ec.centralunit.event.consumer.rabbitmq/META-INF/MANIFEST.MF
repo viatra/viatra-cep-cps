@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RabbitMQ event consumer
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.event.consumer.rabbitmq
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: com.rabbitmq.client;version="3.5.1",
+ hu.karaszi.ec.centralunit.data,
+ hu.karaszi.ec.centralunit.event.processor.api,
+ org.osgi.service.component;version="1.2.2"

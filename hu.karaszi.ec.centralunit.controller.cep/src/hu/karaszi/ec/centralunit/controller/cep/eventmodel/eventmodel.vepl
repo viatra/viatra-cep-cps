@@ -1,0 +1,5 @@
+package hu.karaszi.ec.centralunit.controller.cep.eventmodel
+
+import-queries hu.karaszi.ec.centralunit.controller.model.incquery.*
+
+

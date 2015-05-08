@@ -9,4 +9,26 @@
    start
    stop
    </property>
+   <reference 
+   		name="RestSensorManagement" 
+   		interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setRestSensorManagement" 
+   		unbind="unsetRestSensorManagement"/>
+   <reference 
+   		name="RestUnitManagement" 
+   		interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestUnitManagement" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setRestUnitManagement" 
+   		unbind="unsetRestUnitManagement"/>
+   	<reference 
+   		name="RestDeviceDataReceiver" 
+   		interface="hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setRestDeviceDataReceiver" 
+   		unbind="unsetRestDeviceDataReceiver"/>
+
 </scr:component>

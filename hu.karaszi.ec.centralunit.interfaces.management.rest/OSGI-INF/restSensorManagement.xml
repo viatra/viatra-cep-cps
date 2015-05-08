@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest sensor management interface">
+   <property name="service.exported.interfaces" value="hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement" />
+   <property name="service.exported.configs" value="org.apache.cxf.rs" />
+   <property name="service.exported.intents" value="HTTP" />
+   <property name="org.apache.cxf.rs.address" value="http://localhost:9090/management/sensor" />
+   <property name="org.apache.cxf.rs.provider" value="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+   <service>
+      <provide interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement"/>
+   </service>
+   <implementation class="hu.karaszi.ec.centralunit.interfaces.management.rest.impl.RestSensorManagementImpl"/>
+
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
+   <reference 
+   		name="UnitManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.UnitManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setUnitManager" 
+   		unbind="unsetUnitManager"/>
+   <reference 
+   		name="ManagementEventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.ManagementEventForwarder" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setManagementEventForwarder" 
+   		unbind="unsetManagementEventForwarder"/>
+</scr:component>

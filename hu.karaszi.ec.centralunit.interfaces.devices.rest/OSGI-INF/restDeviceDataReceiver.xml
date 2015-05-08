@@ -11,10 +11,10 @@
    <implementation class="hu.karaszi.ec.centralunit.interfaces.devices.rest.impl.RestDeviceDataReceiverImpl"/>
 
    <reference 
-   		name="DeviceDataForwarder" 
-   		interface="hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder" 
+   		name="DeviceEventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.DeviceEventForwarder" 
    		cardinality="0..1" 
    		policy="dynamic" 
-   		bind="setDeviceDataForwarder" 
-   		unbind="unsetDeviceDataForwarder"/>
+   		bind="setDeviceEventForwarder" 
+   		unbind="unsetDeviceEventForwarder"/>
 </scr:component>

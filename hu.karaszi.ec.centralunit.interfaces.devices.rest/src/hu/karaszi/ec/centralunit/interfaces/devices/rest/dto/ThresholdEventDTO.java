@@ -11,6 +11,5 @@ public class ThresholdEventDTO {
 	@XmlElement public String newRange;
 	@XmlElement public double measurement;
 	@XmlElement public int scale;
-	@XmlElement public String unit;
 	@XmlElement public Date date;
 }

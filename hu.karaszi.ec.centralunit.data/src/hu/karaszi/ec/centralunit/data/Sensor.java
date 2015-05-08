@@ -2,12 +2,15 @@ package hu.karaszi.ec.centralunit.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @SuppressWarnings("serial")
 @Entity
@@ -17,14 +20,14 @@ public class Sensor extends Device implements Serializable {
 	private double upperCriticalThreshold;
 	private double upperFatalThreshold;
 	private SensorRange currentRange; 
-	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date lastThresholdEventDate;
 	private double minReadable;
 	private double maxReadable;
 
-	private double hysteresis;
 	@ManyToOne
 	private Unit unit;
-	@OneToMany
+	@OneToMany()
 	private List<Measurement> measurements = new ArrayList<Measurement>();
 	@ManyToMany
 	private List<Actuator> affectedBy = new ArrayList<Actuator>();
@@ -77,14 +80,6 @@ public class Sensor extends Device implements Serializable {
 		this.maxReadable = maxReadable;
 	}
 
-	public double getHysteresis() {
-		return hysteresis;
-	}
-
-	public void setHysteresis(double hysteresis) {
-		this.hysteresis = hysteresis;
-	}
-
 	public Unit getUnit() {
 		return unit;
 	}
@@ -115,5 +110,13 @@ public class Sensor extends Device implements Serializable {
 
 	public void setCurrentRange(SensorRange currentRange) {
 		this.currentRange = currentRange;
+	}
+
+	public Date getLastThresholdEventDate() {
+		return lastThresholdEventDate;
+	}
+
+	public void setLastThresholdEventDate(Date lastThresholdEventDate) {
+		this.lastThresholdEventDate = lastThresholdEventDate;
 	}
 }

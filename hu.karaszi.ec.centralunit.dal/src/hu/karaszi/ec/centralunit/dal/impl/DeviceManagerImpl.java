@@ -3,6 +3,7 @@ package hu.karaszi.ec.centralunit.dal.impl;
 import hu.karaszi.ec.centralunit.dal.DeviceManager;
 import hu.karaszi.ec.centralunit.data.Actuator;
 import hu.karaszi.ec.centralunit.data.Device;
+import hu.karaszi.ec.centralunit.data.Measurement;
 import hu.karaszi.ec.centralunit.data.Sensor;
 
 import java.util.List;
@@ -44,19 +45,21 @@ public class DeviceManagerImpl implements DeviceManager {
 	}
 
 	@Override
-	public void updateSensor(Sensor sensor) {
+	public Sensor updateSensor(Sensor sensor) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.merge(sensor);
 		transaction.commit();
+		return sensor;
 	}
 
 	@Override
-	public void updateActuator(Actuator actuator) {
+	public Actuator updateActuator(Actuator actuator) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.merge(actuator);
 		transaction.commit();
+		return actuator;
 	}
 
 	@Override
@@ -86,6 +89,8 @@ public class DeviceManagerImpl implements DeviceManager {
 		EntityTransaction transaction = em.getTransaction();
 		if (sensor != null) {
 			transaction.begin();
+			TypedQuery<Measurement> deleteMeasurements = em.createQuery("DELETE FROM Measurement m WHERE m.sensorId = :sensorId", Measurement.class);
+			deleteMeasurements.setParameter("sensorId", id).executeUpdate();
 			em.remove(sensor);
 			transaction.commit();
 		}
@@ -98,11 +103,12 @@ public class DeviceManagerImpl implements DeviceManager {
 	}
 
 	@Override
-	public void insertActuator(Actuator actuator) {
+	public Actuator insertActuator(Actuator actuator) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.persist(actuator);
 		transaction.commit();
+		return actuator;
 	}
 
 	@Override
@@ -114,5 +120,14 @@ public class DeviceManagerImpl implements DeviceManager {
 			em.remove(actuator);
 			transaction.commit();
 		}
+	}
+
+	@Override
+	public Device updateDevice(Device device) {
+		EntityTransaction transaction = em.getTransaction();
+		transaction.begin();
+		em.merge(device);
+		transaction.commit();
+		return device;
 	}
 }

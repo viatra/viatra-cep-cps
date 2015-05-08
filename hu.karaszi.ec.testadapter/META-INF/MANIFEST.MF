@@ -4,7 +4,11 @@ Bundle-Name: Testadapter
 Bundle-SymbolicName: hu.karaszi.ec.testadapter
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: javax.ws.rs;version="2.0.1",
+Import-Package: hu.karaszi.ec.centralunit.interfaces.devices.rest,
+ hu.karaszi.ec.centralunit.interfaces.devices.rest.dto,
+ hu.karaszi.ec.centralunit.interfaces.management.rest,
+ hu.karaszi.ec.centralunit.interfaces.management.rest.dto,
+ javax.ws.rs;version="2.0.1",
  javax.ws.rs.client;version="2.0.1",
  javax.ws.rs.core;version="2.0.1",
  org.osgi.framework;version="1.8.0",

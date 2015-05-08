@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="RabbitMQ consumer for events">
+   <implementation class="hu.karaszi.ec.centralunit.event.consumer.rabbitmq.RabbitMQEventConsumer"/>
+   <reference 
+   		name="EventProcessor" 
+   		interface="hu.karaszi.ec.centralunit.event.processor.api.EventProcessor" 
+   		cardinality="0..n" 
+   		policy="dynamic" 
+   		bind="setEventProcessor" 
+   		unbind="unsetEventProcessor"/>
+</scr:component>

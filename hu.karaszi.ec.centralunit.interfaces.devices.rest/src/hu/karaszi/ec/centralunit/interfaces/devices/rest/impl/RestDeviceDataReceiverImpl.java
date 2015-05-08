@@ -1,19 +1,19 @@
 package hu.karaszi.ec.centralunit.interfaces.devices.rest.impl;
 
-import hu.karaszi.ec.centralunit.devicedataforwarder.api.DeviceDataForwarder;
+import hu.karaszi.ec.centralunit.event.forwarder.api.DeviceEventForwarder;
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver;
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.OperationalStatusDTO;
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.ThresholdEventDTO;
 
 public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
-	private DeviceDataForwarder forwarder;
+	private DeviceEventForwarder forwarder;
 	
-	public void setDeviceDataForwarder(DeviceDataForwarder ddf) {
-		forwarder = ddf;
+	public void setDeviceEventForwarder(DeviceEventForwarder def) {
+		forwarder = def;
 	}
 	
-	public void unsetDeviceDataForwarder(DeviceDataForwarder ddf) {
+	public void unsetDeviceEventForwarder(DeviceEventForwarder def) {
 		forwarder = null;
 	}
 	
@@ -29,7 +29,7 @@ public class RestDeviceDataReceiverImpl implements RestDeviceDataReceiver {
 	@Override
 	public void receiveThresholdEvent(ThresholdEventDTO data) {
 		if (forwarder != null) {
-			forwarder.forwardThresholdEvent(data.source, data.newRange, data.measurement, data.scale, data.unit, data.date);
+			forwarder.forwardThresholdEvent(data.source, data.newRange, data.measurement, data.scale, data.date);
 		} else {
 			//TODO: log missing service
 		}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="RabbitMQ processor for received device data messages">
+   <implementation class="hu.karaszi.ec.centralunit.event.forwarder.impl.rabbitmq.RabbitMQDeviceEventForwarder"/>
+   <service>
+      <provide interface="hu.karaszi.ec.centralunit.event.forwarder.api.DeviceEventForwarder"/>
+   </service>
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
+   <reference 
+   		name="MeasurementDataManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.MeasurementDataManager" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setMeasurementDataManager" 
+   		unbind="unsetMeasurementDataManager"/>
+</scr:component>

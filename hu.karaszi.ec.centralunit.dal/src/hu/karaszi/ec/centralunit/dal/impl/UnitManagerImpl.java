@@ -38,19 +38,21 @@ public class UnitManagerImpl implements UnitManager {
 	}
 
 	@Override
-	public void insertUnit(Unit unit) {
+	public Unit insertUnit(Unit unit) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.persist(unit);
 		transaction.commit();
+		return unit;
 	}
 
 	@Override
-	public void updateUnit(Unit unit) {
+	public Unit updateUnit(Unit unit) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		em.merge(unit);
 		transaction.commit();
+		return unit;
 	}
 
 	@Override
