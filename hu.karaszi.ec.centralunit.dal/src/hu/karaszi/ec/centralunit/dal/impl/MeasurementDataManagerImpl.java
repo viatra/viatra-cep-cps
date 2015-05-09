@@ -36,4 +36,10 @@ public class MeasurementDataManagerImpl implements MeasurementDataManager {
 		return measurement;
 	}
 
+	@Override
+	public Measurement getLastMeasurement(long sensorId) {
+		TypedQuery<Measurement> measurementQuery = em.createQuery("SELECT m FROM Measurement m  WHERE m.sensor = :sensorId AND m.timestamp = MAX(m.timestamp)", Measurement.class);
+		return measurementQuery.setParameter("sensorId", sensorId).getSingleResult();
+	}
+
 }

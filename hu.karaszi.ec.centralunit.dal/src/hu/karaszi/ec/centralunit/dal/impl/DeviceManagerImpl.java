@@ -89,8 +89,8 @@ public class DeviceManagerImpl implements DeviceManager {
 		EntityTransaction transaction = em.getTransaction();
 		if (sensor != null) {
 			transaction.begin();
-			TypedQuery<Measurement> deleteMeasurements = em.createQuery("DELETE FROM Measurement m WHERE m.sensorId = :sensorId", Measurement.class);
-			deleteMeasurements.setParameter("sensorId", id).executeUpdate();
+			TypedQuery<Measurement> deleteMeasurements = em.createQuery("DELETE FROM Measurement m WHERE m.sensor = :sensor", Measurement.class);
+			deleteMeasurements.setParameter("sensor", sensor).executeUpdate();
 			em.remove(sensor);
 			transaction.commit();
 		}

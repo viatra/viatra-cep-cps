@@ -3,13 +3,21 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Instancemodel
 Bundle-SymbolicName: hu.karaszi.ec.centralunit.controller.cep
 Bundle-Version: 1.0.0.qualifier
+Export-Package: hu.karaszi.ec.centralunit.controller.cep.eventmodel,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.events.queryresult,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.jobs,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.mapping,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.queryresult,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.rules
 Require-Bundle: org.eclipse.viatra.cep.core;bundle-version="0.7.0",
  hu.karaszi.ec.centralunit.controller.model;bundle-version="0.1.0",
  hu.karaszi.ec.centralunit.controller.model.incquery;bundle-version="0.0.1",
- org.eclipse.emf.ecore.xmi;bundle-version="2.10.2"
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.2",
+ org.eclipse.core.databinding;bundle-version="1.4.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Service-Component: OSGI-INF/*.xml
 Import-Package: hu.karaszi.ec.centralunit.dal,
  hu.karaszi.ec.centralunit.data,
  hu.karaszi.ec.centralunit.event.processor.api,
  org.osgi.service.component;version="1.2.2"
+Service-Component: OSGI-INF/*.xml

@@ -5,6 +5,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" eType="#//DeviceHealth"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceState" eType="#//DeviceState"
         defaultValueLiteral="INACTIVE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastHealthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDeviceStateDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Device">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentRange" eType="#//SensorRange"
@@ -19,6 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="highCriticalThreshold"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="highFatalThreshold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastMeasurementDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//Device">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//ActuatorState"/>
@@ -26,6 +29,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="affects" upperBound="-1"
         eType="#//Sensor" eOpposite="#//Sensor/affectedBy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="effect" eType="#//ActuatorEffect"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastActuatorStateDate"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ActuatorState">
     <eLiterals name="ON"/>

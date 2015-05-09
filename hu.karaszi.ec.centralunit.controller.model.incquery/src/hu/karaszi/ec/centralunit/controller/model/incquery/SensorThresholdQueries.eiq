@@ -1,23 +1,29 @@
 package hu.karaszi.ec.centralunit.controller.model.incquery
 
 import "systemmodel.meta"
+import "http://www.eclipse.org/emf/2002/Ecore"
 
-pattern sensorInLowFatalRange (sensor : Sensor) {
+pattern sensorInLowFatalRange (sensor : Sensor, sensorId : ELong) {
 	Sensor.currentRange(sensor, ::LOW_FATAL);
+	Sensor.id(sensor, sensorId);
 }
 
-pattern sensorInLowCriticalRange (sensor : Sensor) {
+pattern sensorInLowCriticalRange (sensor : Sensor, sensorId : ELong) {
 	Sensor.currentRange(sensor, ::LOW_CRITICAL);
+	Sensor.id(sensor, sensorId);
 }
 
-pattern sensorInNormalRange (sensor : Sensor) {
+pattern sensorInNormalRange (sensor : Sensor, sensorId : ELong) {
 	Sensor.currentRange(sensor, ::NORMAL);
+	Sensor.id(sensor, sensorId);
 }
 
-pattern sensorInHighCriticalRange (sensor : Sensor) {
+pattern sensorInHighCriticalRange (sensor : Sensor, sensorId : ELong) {
 	Sensor.currentRange(sensor, ::HIGH_CRITICAL);
+	Sensor.id(sensor, sensorId);
 }
 
-pattern sensorInHighFatalRange (sensor : Sensor) {
+pattern sensorInHighFatalRange (sensor : Sensor, sensorId : ELong) {
 	Sensor.currentRange(sensor, ::HIGH_FATAL);
+	Sensor.id(sensor, sensorId);
 }

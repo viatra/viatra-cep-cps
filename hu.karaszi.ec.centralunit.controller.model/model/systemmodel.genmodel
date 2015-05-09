@@ -37,6 +37,8 @@
     <genClasses image="false" ecoreClass="systemmodel.ecore#//Device">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/health"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/deviceState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/lastHealthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/lastDeviceStateDate"/>
     </genClasses>
     <genClasses ecoreClass="systemmodel.ecore#//Sensor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/currentRange"/>
@@ -48,12 +50,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/lowCriticalThreshold"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/highCriticalThreshold"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/highFatalThreshold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/lastMeasurementDate"/>
     </genClasses>
     <genClasses ecoreClass="systemmodel.ecore#//Actuator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/state"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/performance"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference systemmodel.ecore#//Actuator/affects"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/effect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/lastActuatorStateDate"/>
     </genClasses>
     <genClasses image="false" ecoreClass="systemmodel.ecore#//NamedEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//NamedEntity/id"/>

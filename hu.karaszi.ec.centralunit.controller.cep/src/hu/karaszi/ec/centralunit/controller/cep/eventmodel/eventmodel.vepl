@@ -1,5 +1,112 @@
 package hu.karaszi.ec.centralunit.controller.cep.eventmodel
 
+import hu.karaszi.ec.centralunit.controller.cep.*
 import-queries hu.karaszi.ec.centralunit.controller.model.incquery.*
 
+QueryResultChangeEvent sensorEntersLowFatalRange(id: long){
+	query: sensorInLowFatalRange(_, id)
+	resultChangeType: NEW_MATCH_FOUND
+}
 
+QueryResultChangeEvent sensorEntersLowCriticalRange(id: long){
+	query: sensorInLowCriticalRange(_, id)
+	resultChangeType: NEW_MATCH_FOUND
+}
+
+QueryResultChangeEvent sensorEntersNormalRange(id: long){
+	query: sensorInNormalRange(_, id)
+	resultChangeType: NEW_MATCH_FOUND
+}
+
+QueryResultChangeEvent sensorEntersHighCriticalRange(id: long){
+	query: sensorInHighCriticalRange(_, id)
+	resultChangeType: NEW_MATCH_FOUND
+}
+
+QueryResultChangeEvent sensorEntersHighFatalRange(id: long){
+	query: sensorInHighFatalRange(_, id)
+	resultChangeType: NEW_MATCH_FOUND
+}
+
+ComplexEvent RapidLowCriticalElevation(sensorId: long){
+	definition: (sensorEntersLowFatalRange(id) -> sensorEntersLowCriticalRange(id))[100000]
+
+}
+ComplexEvent RapidNormalElevation(sensorId: long){
+	definition: (sensorEntersLowCriticalRange(id) -> sensorEntersNormalRange(id))[100000]
+}
+
+ComplexEvent RapidHighCriticalElevation(sensorId: long){
+	definition: (sensorEntersNormalRange(id) -> sensorEntersHighCriticalRange(id))[100000]
+}
+
+ComplexEvent RapidHighFatalElevation(sensorId: long){
+	definition: (sensorEntersHighCriticalRange(id) -> sensorEntersHighFatalRange(id))[100000]
+}
+
+Rule debugRapidEvelation{
+	events: RapidLowCriticalElevation, RapidNormalElevation,
+	 RapidNormalElevation, RapidHighCriticalElevation, RapidHighFatalElevation 
+//	action{
+//		System.out.println("Rapid elevation @ sensor %s")
+//	}
+	actionHandler: hu.karaszi.ec.centralunit.controller.cep.ThresholdEventHandler
+}
+
+////debug ////////////////////
+//ComplexEvent sensorInLowFatalRange(sensorId: long){
+//	definition: sensorEntersLowFatalRange(id)
+//}
+//
+//ComplexEvent sensorInLowCriticalRange(sensorId: long){
+//	definition: sensorEntersLowCriticalRange(id)
+//}
+//
+ComplexEvent debugInNormalRange(sensorId: long){
+	definition: sensorEntersNormalRange(id)
+}
+//
+//ComplexEvent sensorInHighCriticalRange(sensorId: long){
+//	definition: sensorInHighCriticalRange(id)
+//}
+//
+//ComplexEvent sensorInHighFatalRange(sensorId: long){
+//	definition: sensorEntersHighCriticalRange(id)
+//}
+//
+//Rule debugSensorInLowFatalRange{
+//	events: sensorInLowFatalRange
+//	action{
+//		System.out.println("sensorInLowFatalRange")
+//	}
+//}
+//
+//Rule debugSensorInLowCriticalRange{
+//	events: sensorEntersLowCriticalRange
+//	action{
+//		System.out.println("sensorEntersLowCriticalRange")
+//	}
+//}
+//
+Rule debugSensorInNormalRange{
+	events: debugInNormalRange
+	action{
+		System.out.println("sensorInNormalRange")
+	}
+}
+//
+//Rule debugSensorInHighCriticalRange{
+//	events: sensorInHighCriticalRange
+//	action{
+//		System.out.println("sensorInHighCriticalRange")
+//	}
+//}
+//
+//Rule debugSensorInHighFatalRange{
+//	events: sensorInHighFatalRange
+//	action{
+//		System.out.println("sensorInHighFatalRange")
+//	}
+//}
+//
+////end debug ///////////////
