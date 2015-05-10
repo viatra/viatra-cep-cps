@@ -11,13 +11,11 @@ import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.query
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.queryresult.SensorEntersLowCriticalRange_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.queryresult.SensorEntersLowFatalRange_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.queryresult.SensorEntersNormalRange_Pattern;
-import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.DebugInNormalRange_Pattern;
-import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.RapidHighCriticalElevation_Pattern;
+import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.RapidElevation_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.RapidHighFatalElevation_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.RapidLowCriticalElevation_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex.RapidNormalElevation_Pattern;
 import hu.karaszi.ec.centralunit.controller.cep.eventmodel.rules.DebugRapidEvelation;
-import hu.karaszi.ec.centralunit.controller.cep.eventmodel.rules.DebugSensorInNormalRange;
 import java.util.List;
 import org.eclipse.viatra.cep.core.api.rules.ICepRule;
 import org.eclipse.viatra.cep.core.metamodels.events.EventSource;
@@ -153,10 +151,10 @@ public class CepFactory {
   }
   
   /**
-   * Factory method for complex event pattern {@link RapidHighCriticalElevation_Pattern}.
+   * Factory method for complex event pattern {@link RapidElevation_Pattern}.
    */
-  public RapidHighCriticalElevation_Pattern createRapidHighCriticalElevation_Pattern() {
-    return new RapidHighCriticalElevation_Pattern();
+  public RapidElevation_Pattern createRapidElevation_Pattern() {
+    return new RapidElevation_Pattern();
   }
   
   /**
@@ -167,24 +165,10 @@ public class CepFactory {
   }
   
   /**
-   * Factory method for complex event pattern {@link DebugInNormalRange_Pattern}.
-   */
-  public DebugInNormalRange_Pattern createDebugInNormalRange_Pattern() {
-    return new DebugInNormalRange_Pattern();
-  }
-  
-  /**
    * Factory method for rule {@link DebugRapidEvelation}.
    */
   public DebugRapidEvelation createDebugRapidEvelation() {
     return new DebugRapidEvelation();
-  }
-  
-  /**
-   * Factory method for rule {@link DebugSensorInNormalRange}.
-   */
-  public DebugSensorInNormalRange createDebugSensorInNormalRange() {
-    return new DebugSensorInNormalRange();
   }
   
   /**
@@ -193,7 +177,6 @@ public class CepFactory {
   public List<ICepRule> allRules() {
     List<ICepRule> rules = Lists.newArrayList();
     rules.add(new DebugRapidEvelation());
-    rules.add(new DebugSensorInNormalRange());
     return rules;
   }
 }

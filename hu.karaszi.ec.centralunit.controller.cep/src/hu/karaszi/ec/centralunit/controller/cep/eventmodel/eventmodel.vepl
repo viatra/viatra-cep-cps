@@ -36,8 +36,8 @@ ComplexEvent RapidNormalElevation(sensorId: long){
 	definition: (sensorEntersLowCriticalRange(id) -> sensorEntersNormalRange(id))[100000]
 }
 
-ComplexEvent RapidHighCriticalElevation(sensorId: long){
-	definition: (sensorEntersNormalRange(id) -> sensorEntersHighCriticalRange(id))[100000]
+ComplexEvent RapidElevation(sensorId: long){
+	definition: (sensorEntersNormalRange(id) -> sensorEntersHighCriticalRange(id) -> sensorEntersHighFatalRange(id))[100000]
 }
 
 ComplexEvent RapidHighFatalElevation(sensorId: long){
@@ -45,8 +45,11 @@ ComplexEvent RapidHighFatalElevation(sensorId: long){
 }
 
 Rule debugRapidEvelation{
-	events: RapidLowCriticalElevation, RapidNormalElevation,
-	 RapidNormalElevation, RapidHighCriticalElevation, RapidHighFatalElevation 
+	events: //RapidLowCriticalElevation,
+		//RapidNormalElevation,
+		//RapidNormalElevation,
+		RapidElevation
+		//RapidHighFatalElevation 
 //	action{
 //		System.out.println("Rapid elevation @ sensor %s")
 //	}
@@ -62,9 +65,9 @@ Rule debugRapidEvelation{
 //	definition: sensorEntersLowCriticalRange(id)
 //}
 //
-ComplexEvent debugInNormalRange(sensorId: long){
-	definition: sensorEntersNormalRange(id)
-}
+//ComplexEvent debugInNormalRange(sensorId: long){
+//	definition: sensorEntersNormalRange(id)
+//}
 //
 //ComplexEvent sensorInHighCriticalRange(sensorId: long){
 //	definition: sensorInHighCriticalRange(id)
@@ -88,12 +91,12 @@ ComplexEvent debugInNormalRange(sensorId: long){
 //	}
 //}
 //
-Rule debugSensorInNormalRange{
-	events: debugInNormalRange
-	action{
-		System.out.println("sensorInNormalRange")
-	}
-}
+//Rule debugSensorInNormalRange{
+//	events: debugInNormalRange
+//	action{
+//		System.out.println("sensorInNormalRange")
+//	}
+//}
 //
 //Rule debugSensorInHighCriticalRange{
 //	events: sensorInHighCriticalRange

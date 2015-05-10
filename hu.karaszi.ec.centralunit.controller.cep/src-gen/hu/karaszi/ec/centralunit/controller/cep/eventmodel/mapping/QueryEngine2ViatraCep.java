@@ -48,11 +48,11 @@ public class QueryEngine2ViatraCep {
   
   public EventDrivenTransformationRuleGroup getRules() {
     EventDrivenTransformationRuleGroup ruleGroup = new EventDrivenTransformationRuleGroup(
-    	createsensorInHighCriticalRange_MappingRule(), 
-    	createsensorInLowFatalRange_MappingRule(), 
     	createsensorInLowCriticalRange_MappingRule(), 
+    	createsensorInHighFatalRange_MappingRule(), 
+    	createsensorInLowFatalRange_MappingRule(), 
     	createsensorInNormalRange_MappingRule(), 
-    	createsensorInHighFatalRange_MappingRule()
+    	createsensorInHighCriticalRange_MappingRule()
     );
     return ruleGroup;
   }
@@ -65,15 +65,15 @@ public class QueryEngine2ViatraCep {
     }
   }
   
-  public EventDrivenTransformationRule<SensorInHighCriticalRangeMatch, SensorInHighCriticalRangeMatcher> createsensorInHighCriticalRange_MappingRule() {
+  public EventDrivenTransformationRule<SensorInLowCriticalRangeMatch, SensorInLowCriticalRangeMatcher> createsensorInLowCriticalRange_MappingRule() {
     try{
-      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInHighCriticalRangeMatch, SensorInHighCriticalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
+      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInLowCriticalRangeMatch, SensorInLowCriticalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
       builder.addLifeCycle(Lifecycles.getDefault(false, true));
-      builder.precondition(SensorInHighCriticalRangeMatcher.querySpecification());
+      builder.precondition(SensorInLowCriticalRangeMatcher.querySpecification());
       
-      IMatchProcessor<SensorInHighCriticalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInHighCriticalRangeMatch>() {
-        public void process(final SensorInHighCriticalRangeMatch matchedPattern) {
-          SensorEntersHighCriticalRange_Event event = new SensorEntersHighCriticalRange_Event(null);event.setId((long)matchedPattern.get(1));
+      IMatchProcessor<SensorInLowCriticalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInLowCriticalRangeMatch>() {
+        public void process(final SensorInLowCriticalRangeMatch matchedPattern) {
+          SensorEntersLowCriticalRange_Event event = new SensorEntersLowCriticalRange_Event(null);event.setId((long)matchedPattern.get(1));
           
           event.setIncQueryPattern(matchedPattern);
           eventStream.push(event);
@@ -81,8 +81,39 @@ public class QueryEngine2ViatraCep {
       };
       builder.action(IncQueryActivationStateEnum.APPEARED, actionOnAppear_0);
       
-      IMatchProcessor<SensorInHighCriticalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInHighCriticalRangeMatch>() {
-        public void process(final SensorInHighCriticalRangeMatch matchedPattern) {
+      IMatchProcessor<SensorInLowCriticalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInLowCriticalRangeMatch>() {
+        public void process(final SensorInLowCriticalRangeMatch matchedPattern) {
+        }
+      };
+      builder.action(IncQueryActivationStateEnum.DISAPPEARED, actionOnDisappear_0);
+      
+      return builder.build();
+    } catch (IncQueryException e) {
+      e.printStackTrace();
+    } catch (InconsistentEventSemanticsException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  
+  public EventDrivenTransformationRule<SensorInHighFatalRangeMatch, SensorInHighFatalRangeMatcher> createsensorInHighFatalRange_MappingRule() {
+    try{
+      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInHighFatalRangeMatch, SensorInHighFatalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
+      builder.addLifeCycle(Lifecycles.getDefault(false, true));
+      builder.precondition(SensorInHighFatalRangeMatcher.querySpecification());
+      
+      IMatchProcessor<SensorInHighFatalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInHighFatalRangeMatch>() {
+        public void process(final SensorInHighFatalRangeMatch matchedPattern) {
+          SensorEntersHighFatalRange_Event event = new SensorEntersHighFatalRange_Event(null);event.setId((long)matchedPattern.get(1));
+          
+          event.setIncQueryPattern(matchedPattern);
+          eventStream.push(event);
+        }
+      };
+      builder.action(IncQueryActivationStateEnum.APPEARED, actionOnAppear_0);
+      
+      IMatchProcessor<SensorInHighFatalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInHighFatalRangeMatch>() {
+        public void process(final SensorInHighFatalRangeMatch matchedPattern) {
         }
       };
       builder.action(IncQueryActivationStateEnum.DISAPPEARED, actionOnDisappear_0);
@@ -127,37 +158,6 @@ public class QueryEngine2ViatraCep {
     return null;
   }
   
-  public EventDrivenTransformationRule<SensorInLowCriticalRangeMatch, SensorInLowCriticalRangeMatcher> createsensorInLowCriticalRange_MappingRule() {
-    try{
-      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInLowCriticalRangeMatch, SensorInLowCriticalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
-      builder.addLifeCycle(Lifecycles.getDefault(false, true));
-      builder.precondition(SensorInLowCriticalRangeMatcher.querySpecification());
-      
-      IMatchProcessor<SensorInLowCriticalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInLowCriticalRangeMatch>() {
-        public void process(final SensorInLowCriticalRangeMatch matchedPattern) {
-          SensorEntersLowCriticalRange_Event event = new SensorEntersLowCriticalRange_Event(null);event.setId((long)matchedPattern.get(1));
-          
-          event.setIncQueryPattern(matchedPattern);
-          eventStream.push(event);
-        }
-      };
-      builder.action(IncQueryActivationStateEnum.APPEARED, actionOnAppear_0);
-      
-      IMatchProcessor<SensorInLowCriticalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInLowCriticalRangeMatch>() {
-        public void process(final SensorInLowCriticalRangeMatch matchedPattern) {
-        }
-      };
-      builder.action(IncQueryActivationStateEnum.DISAPPEARED, actionOnDisappear_0);
-      
-      return builder.build();
-    } catch (IncQueryException e) {
-      e.printStackTrace();
-    } catch (InconsistentEventSemanticsException e) {
-      e.printStackTrace();
-    }
-    return null;
-  }
-  
   public EventDrivenTransformationRule<SensorInNormalRangeMatch, SensorInNormalRangeMatcher> createsensorInNormalRange_MappingRule() {
     try{
       EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInNormalRangeMatch, SensorInNormalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
@@ -189,15 +189,15 @@ public class QueryEngine2ViatraCep {
     return null;
   }
   
-  public EventDrivenTransformationRule<SensorInHighFatalRangeMatch, SensorInHighFatalRangeMatcher> createsensorInHighFatalRange_MappingRule() {
+  public EventDrivenTransformationRule<SensorInHighCriticalRangeMatch, SensorInHighCriticalRangeMatcher> createsensorInHighCriticalRange_MappingRule() {
     try{
-      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInHighFatalRangeMatch, SensorInHighFatalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
+      EventDrivenTransformationRuleFactory.EventDrivenTransformationBuilder<SensorInHighCriticalRangeMatch, SensorInHighCriticalRangeMatcher> builder = new EventDrivenTransformationRuleFactory().createRule();
       builder.addLifeCycle(Lifecycles.getDefault(false, true));
-      builder.precondition(SensorInHighFatalRangeMatcher.querySpecification());
+      builder.precondition(SensorInHighCriticalRangeMatcher.querySpecification());
       
-      IMatchProcessor<SensorInHighFatalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInHighFatalRangeMatch>() {
-        public void process(final SensorInHighFatalRangeMatch matchedPattern) {
-          SensorEntersHighFatalRange_Event event = new SensorEntersHighFatalRange_Event(null);event.setId((long)matchedPattern.get(1));
+      IMatchProcessor<SensorInHighCriticalRangeMatch> actionOnAppear_0 = new IMatchProcessor<SensorInHighCriticalRangeMatch>() {
+        public void process(final SensorInHighCriticalRangeMatch matchedPattern) {
+          SensorEntersHighCriticalRange_Event event = new SensorEntersHighCriticalRange_Event(null);event.setId((long)matchedPattern.get(1));
           
           event.setIncQueryPattern(matchedPattern);
           eventStream.push(event);
@@ -205,8 +205,8 @@ public class QueryEngine2ViatraCep {
       };
       builder.action(IncQueryActivationStateEnum.APPEARED, actionOnAppear_0);
       
-      IMatchProcessor<SensorInHighFatalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInHighFatalRangeMatch>() {
-        public void process(final SensorInHighFatalRangeMatch matchedPattern) {
+      IMatchProcessor<SensorInHighCriticalRangeMatch> actionOnDisappear_0 = new IMatchProcessor<SensorInHighCriticalRangeMatch>() {
+        public void process(final SensorInHighCriticalRangeMatch matchedPattern) {
         }
       };
       builder.action(IncQueryActivationStateEnum.DISAPPEARED, actionOnDisappear_0);

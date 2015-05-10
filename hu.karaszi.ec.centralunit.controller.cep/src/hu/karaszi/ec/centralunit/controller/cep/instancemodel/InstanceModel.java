@@ -127,20 +127,27 @@ public class InstanceModel implements EventProcessor{
 	@Override
 	public void processMeasurementData(Measurement measurement) {
 		systemmodel.Sensor eSensor = sensors.get(measurement.getSensor().getId());
-		eSensor.setLastMeasurement(measurement.getValue() * measurement.getScale());
-		eSensor.setLastMeasurementDate(measurement.getTimestamp());
 		
+		double newValue = measurement.getValue() * measurement.getScale();
+		SensorRange newRange = SensorRange.HIGH_FATAL;
 		if (eSensor.getLastMeasurement() < eSensor.getLowFatalThreshold()) {
-			eSensor.setCurrentRange(SensorRange.LOW_FATAL);
+			newRange = SensorRange.LOW_FATAL;
 		} else if (eSensor.getLastMeasurement() < eSensor.getLowCriticalThreshold()) {
-			eSensor.setCurrentRange(SensorRange.LOW_CRITICAL);
+			newRange = SensorRange.LOW_CRITICAL;
 		} else if (eSensor.getLastMeasurement() < eSensor.getHighCriticalThreshold()) {
-			eSensor.setCurrentRange(SensorRange.NORMAL);
+			newRange = SensorRange.NORMAL;
 		} else if (eSensor.getLastMeasurement() < eSensor.getHighFatalThreshold()) {
-			eSensor.setCurrentRange(SensorRange.HIGH_CRITICAL);
-		} else {
-			eSensor.setCurrentRange(SensorRange.HIGH_FATAL);
+			newRange = SensorRange.HIGH_CRITICAL;
 		}
+		
+		System.out.println("New measurement arrived --- Senor: " + eSensor.getId() +
+				", Value: " + newValue +
+				" (" + newRange.name() + ")  @ " +
+				measurement.getTimestamp().toString());
+		
+		eSensor.setLastMeasurement(newValue);
+		eSensor.setLastMeasurementDate(measurement.getTimestamp());
+		eSensor.setCurrentRange(newRange);
 	}
 
 	@Override

@@ -8,7 +8,8 @@ public class ThresholdEventHandler implements IActionHandler {
 
 	@Override
 	public void handle(Activation<? extends IObservableComplexEventPattern> activation) {
-			System.out.println(activation.toString());
+		//System.out.println(activation.toString());
+		System.out.println("Rapid high critical range elevation detected.");
 	}
 
 }

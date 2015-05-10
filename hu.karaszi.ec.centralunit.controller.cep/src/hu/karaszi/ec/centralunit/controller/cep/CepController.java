@@ -59,55 +59,46 @@ public class CepController extends DefaultApplication implements EventProcessor 
 
 	@Override
 	public void processDeviceStatus(Device device) {
-		System.out.println("device status received");
 		systemModel.processDeviceStatus(device);
 	}
 
 	@Override
 	public void processThresholdEvent(Sensor sensor) {
-		System.out.println("threshold event received");
 		systemModel.processThresholdEvent(sensor);
 	}
 
 	@Override
 	public void processMeasurementData(Measurement measurement) {
-		System.out.println("measurement data received");
 		systemModel.processMeasurementData(measurement);
 	}
 
 	@Override
 	public void processSensorDeleteEvent(long id) {
-		System.out.println("sensor delete received");
 		systemModel.processSensorDeleteEvent(id);
 	}
 
 	@Override
 	public void processSensorUpdateEvent(Sensor sensor) {
-		System.out.println("seonsor update received");
 		systemModel.processSensorUpdateEvent(sensor);
 	}
 
 	@Override
 	public void processSensorInsertEvent(Sensor sensor) {
-		System.out.println("sensor insert received");
 		systemModel.processSensorInsertEvent(sensor);
 	}
 
 	@Override
 	public void processActuatorDeleteEvent(long id) {
-		System.out.println("actuator delete received");
 		systemModel.processActuatorDeleteEvent(id);
 	}
 
 	@Override
 	public void processActuatorUpdateEvent(Actuator actuator) {
-		System.out.println("actuator update received");
 		systemModel.processActuatorUpdateEvent(actuator);
 	}
 
 	@Override
 	public void processActuatorInsertEvent(Actuator actuator) {
-		System.out.println("actuator insert received");
 		systemModel.processActuatorInsertEvent(actuator);
 	}
 
