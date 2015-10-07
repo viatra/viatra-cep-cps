@@ -1,5 +1,10 @@
 package hu.karaszi.ec.centralunit.interfaces.management.rest.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.core.Response;
+
 import hu.karaszi.ec.centralunit.dal.DeviceManager;
 import hu.karaszi.ec.centralunit.data.Actuator;
 import hu.karaszi.ec.centralunit.data.ActuatorEffect;
@@ -8,11 +13,6 @@ import hu.karaszi.ec.centralunit.data.Sensor;
 import hu.karaszi.ec.centralunit.event.forwarder.api.ManagementEventForwarder;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.RestActuatorManagement;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.ActuatorDTO;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.ws.rs.core.Response;
 
 public class RestActuatorManagementImpl implements RestActuatorManagement {
 	private DeviceManager deviceManager;

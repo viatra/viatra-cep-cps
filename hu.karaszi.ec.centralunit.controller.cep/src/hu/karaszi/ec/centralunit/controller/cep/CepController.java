@@ -38,7 +38,7 @@ public class CepController extends DefaultApplication implements EventProcessor 
 	}
 	
 	public CepController() {
-		super(EventContext.CHRONICLE);
+		super(EventContext.CHRONICLE, CepFactory.getInstance().allRules());
 	}
 
 	protected void activate(ComponentContext context) {
@@ -50,11 +50,6 @@ public class CepController extends DefaultApplication implements EventProcessor 
 	protected void deactivate(ComponentContext context) {
 		mapping.dispose();
 		getEngine().getLogger().debug("Ending");
-	}
-	
-	@Override
-	protected void configureRules() {
-		getEngine().addRules(CepFactory.getInstance().allRules());
 	}
 
 	@Override

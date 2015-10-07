@@ -8,8 +8,7 @@ Service-Component: OSGI-INF/*
 Import-Package: hu.karaszi.ec.centralunit.dal,
  hu.karaszi.ec.centralunit.data,
  hu.karaszi.ec.centralunit.event.forwarder.api,
- javax.ws.rs;version="1.1.1",
- javax.ws.rs.core;version="1.1.1",
- org.codehaus.jackson.jaxrs;version="1.9.13"
+ javax.ws.rs;version="[2.0.0,3.0.0)",
+ javax.ws.rs.core;version="[2.0.0,3.0.0)"
 Export-Package: hu.karaszi.ec.centralunit.interfaces.management.rest,
  hu.karaszi.ec.centralunit.interfaces.management.rest.dto

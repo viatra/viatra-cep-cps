@@ -3,10 +3,10 @@ package hu.karaszi.ec.testadapter.rest;
 import java.util.UUID;
 
 import hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.RestUnitManagement;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.SensorDTO;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.UnitDTO;
+import hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement;
+import hu.karaszi.ec.centralunit.interfaces.management.rest.RestUnitManagement;
 import hu.karaszi.ec.testadapter.testlogic.IncrementalSensor;
 import hu.karaszi.ec.testadapter.testlogic.Sensor;
 
