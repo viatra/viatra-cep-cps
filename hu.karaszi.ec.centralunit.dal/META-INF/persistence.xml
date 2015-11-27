@@ -4,13 +4,13 @@
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
 	<persistence-unit name="environmentcontroller" transaction-type="RESOURCE_LOCAL">
-		<class>hu.karaszi.ec.centralunit.data.NamedEntity</class>
-		<class>hu.karaszi.ec.centralunit.data.Device</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.NamedEntity</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.Device</class>
 		
-		<class>hu.karaszi.ec.centralunit.data.Sensor</class>
-		<class>hu.karaszi.ec.centralunit.data.Actuator</class>
-		<class>hu.karaszi.ec.centralunit.data.Unit</class>
-		<class>hu.karaszi.ec.centralunit.data.Measurement</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.Sensor</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.Actuator</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.Unit</class>
+		<class>hu.karaszi.ec.centralunit.data.persistence.Measurement</class>
 
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>

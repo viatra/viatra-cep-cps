@@ -1,8 +1,8 @@
 package hu.karaszi.ec.centralunit.dal;
 
-import hu.karaszi.ec.centralunit.data.Measurement;
-
 import java.util.List;
+
+import hu.karaszi.ec.centralunit.data.persistence.Measurement;
 
 public interface MeasurementDataManager {
 	public List<Measurement> getMeasurements(long sensorId);

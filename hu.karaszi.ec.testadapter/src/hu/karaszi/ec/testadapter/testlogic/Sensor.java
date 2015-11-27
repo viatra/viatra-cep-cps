@@ -1,13 +1,14 @@
 package hu.karaszi.ec.testadapter.testlogic;
 
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.SensorDTO;
+import hu.karaszi.ec.centralunit.data.dto.devices.DeviceHealthDTO;
+import hu.karaszi.ec.centralunit.data.dto.devices.MeasurementDataDTO;
+import hu.karaszi.ec.centralunit.data.dto.management.SensorDTO;
 
 public interface Sensor {
 	public MeasurementDataDTO getNextMeasurement();
 	public String getCurrentThreshold();
-	public String getOperationalStatus();
+	public DeviceHealthDTO getDeviceHealth();
 	public SensorDTO getDTO();
-	public void setId(long id);
-	public long getId();
+	public String getId();
+	public String getAddress();
 }

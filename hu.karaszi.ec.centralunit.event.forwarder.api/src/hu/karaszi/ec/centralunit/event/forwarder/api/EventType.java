@@ -1,0 +1,20 @@
+package hu.karaszi.ec.centralunit.event.forwarder.api;
+
+public enum EventType {
+	SENSOR_INSERT,
+	SENSOR_UPDATE,
+	SENSOR_DELETE,
+	ACTUATOR_INSERT,
+	ACTUATOR_UPDATE,
+	ACTUATOR_DELETE,
+	UNIT_INSERT,
+	UNIT_UPDATE,
+	UNIT_DELETE,
+	
+	TICK,
+	
+	MEASUREMENT,
+	THRESHOLD,
+	HEALTH,
+	ACTUATOR_STATE
+}

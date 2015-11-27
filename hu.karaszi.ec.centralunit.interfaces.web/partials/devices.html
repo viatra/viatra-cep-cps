@@ -1,0 +1,16 @@
+<div>
+	<ul class="device-list">
+		<li ng-repeat="sensor in sensors" class="device-item">
+			<p>{{sensor.id}}</p>
+			<p>{{sensor.name}}</p>
+			<p>{{sensor.description}}</p>
+		</li>
+	</ul>
+	<ul class="device-list">
+		<li ng-repeat="actuator in actuators" class="device-item">
+			<p>{{actuator.id}}</p>
+			<p>{{actuator.name}}</p>
+			<p>{{actuator.description}}</p>
+		</li>
+	</ul>
+</div>

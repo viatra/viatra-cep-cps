@@ -4,7 +4,7 @@ Bundle-Name: DataAccessLayer
 Bundle-SymbolicName: hu.karaszi.ec.centralunit.dal
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: hu.karaszi.ec.centralunit.data,
+Import-Package: hu.karaszi.ec.centralunit.data.persistence,
  javax.persistence;version="2.1.0"
 Export-Package: hu.karaszi.ec.centralunit.dal
 Service-Component: OSGI-INF/*.xml

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="systemmodel" nsURI="systemmodel.meta" nsPrefix="hu.karaszi.ec.centralunit.controller.model">
-  <eClassifiers xsi:type="ecore:EClass" name="Device" abstract="true" eSuperTypes="#//NamedEntity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" eType="#//DeviceHealth"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Device" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceHealth" eType="#//DeviceHealth"
+        defaultValueLiteral="UNKNOWN"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceState" eType="#//DeviceState"
         defaultValueLiteral="INACTIVE"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastHealthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDeviceStateDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDeviceHealthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDeviceStateDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="healthCheckInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Device">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentRange" eType="#//SensorRange"
@@ -21,7 +28,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="highCriticalThreshold"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="highFatalThreshold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastMeasurementDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastMeasurementDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readInterval" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//Device">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//ActuatorState"/>
@@ -50,18 +60,15 @@
     <eLiterals name="ERROR"/>
     <eLiterals name="UNKNOWN"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NamedEntity" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DeviceState">
     <eLiterals name="ACTIVE"/>
     <eLiterals name="INACTIVE"/>
-    <eLiterals name="REMOVED"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ActuatorEffect">
     <eLiterals name="POSITIVE"/>
     <eLiterals name="NEGATIVE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
 </ecore:EPackage>

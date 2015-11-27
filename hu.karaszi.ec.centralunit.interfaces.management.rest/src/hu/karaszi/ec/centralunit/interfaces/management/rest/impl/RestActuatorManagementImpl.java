@@ -6,17 +6,16 @@ import java.util.List;
 import javax.ws.rs.core.Response;
 
 import hu.karaszi.ec.centralunit.dal.DeviceManager;
-import hu.karaszi.ec.centralunit.data.Actuator;
-import hu.karaszi.ec.centralunit.data.ActuatorEffect;
-import hu.karaszi.ec.centralunit.data.ActuatorState;
-import hu.karaszi.ec.centralunit.data.Sensor;
-import hu.karaszi.ec.centralunit.event.forwarder.api.ManagementEventForwarder;
+import hu.karaszi.ec.centralunit.data.dto.management.ActuatorDTO;
+import hu.karaszi.ec.centralunit.data.persistence.Actuator;
+import hu.karaszi.ec.centralunit.event.forwarder.api.EventForwarder;
+import hu.karaszi.ec.centralunit.event.forwarder.api.EventSource;
+import hu.karaszi.ec.centralunit.event.forwarder.api.EventType;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.RestActuatorManagement;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.ActuatorDTO;
 
 public class RestActuatorManagementImpl implements RestActuatorManagement {
 	private DeviceManager deviceManager;
-	private ManagementEventForwarder managementEventForwarder;
+	private EventForwarder eventForwarder;
 
 	public void setDeviceManager(DeviceManager dm) {
 		deviceManager = dm;
@@ -26,83 +25,44 @@ public class RestActuatorManagementImpl implements RestActuatorManagement {
 		deviceManager = null;
 	}
 
-	public void setManagementEventForwarder(ManagementEventForwarder mef) {
-		managementEventForwarder = mef;
+	public void setEventForwarder(EventForwarder mef) {
+		eventForwarder = mef;
 	}
 
-	public void unsetManagementEventForwarder(ManagementEventForwarder mef) {
-		managementEventForwarder = null;
+	public void unsetEventForwarder(EventForwarder mef) {
+		eventForwarder = null;
 	}
 	
 	@Override
 	public List<ActuatorDTO> getActuators() {
 		List<ActuatorDTO> actuatorDTOList = new ArrayList<ActuatorDTO>();
 		for (Actuator actuator : deviceManager.getActuators()) {
-			actuatorDTOList.add(actuatorToDTO(actuator));
+			actuatorDTOList.add(actuator.toDTO());
 		} 
 		return actuatorDTOList;
 	}
 
 	@Override
-	public ActuatorDTO getActuator(long actuatorId) {
+	public ActuatorDTO getActuator(String actuatorId) {
 		Actuator actuator = deviceManager.getActuator(actuatorId);
-		return actuatorToDTO(actuator);
+		return actuator.toDTO();
 	}
 
 	@Override
-	public ActuatorDTO newActuator(ActuatorDTO actuator) {
-		Actuator newActuator = DTOToActuator(actuator);
-		Actuator created = deviceManager.insertActuator(newActuator);
-		managementEventForwarder.forwardActuatorInsertEvent(created);
-		return actuatorToDTO(created);
-	}
-
-	@Override
-	public ActuatorDTO updateActuator(long actuatorId, ActuatorDTO actuator) {
-		Actuator newActuator = DTOToActuator(actuator);
-		Actuator updated = deviceManager.updateActuator(newActuator);
-		managementEventForwarder.forwardActuatorUpdateEvent(updated);
-		return actuatorToDTO(updated);
-	}
-
-	@Override
-	public Response deleteActuator(long actuatorId) {
-		deviceManager.deleteActuator(actuatorId);
-		managementEventForwarder.forwardActuatorDeleteEvent(actuatorId);
-		//return Response.ok().build();
+	public Response newActuator(ActuatorDTO actuator) {
+		eventForwarder.sendEvent(actuator, EventSource.MANAGEMENT, EventType.ACTUATOR_INSERT);
 		return null;
 	}
 
-	private ActuatorDTO actuatorToDTO(Actuator actuator){
-		ActuatorDTO dto = new ActuatorDTO();
-		dto.id = actuator.getId();
-		dto.name = actuator.getName();
-		dto.address = actuator.getAddress();
-		dto.protocol = actuator.getProtocol();
-		dto.description = actuator.getDescription();
-		dto.effect = actuator.getEffect().name();
-		dto.state = actuator.getState().name();
-		dto.performance = actuator.getPerformance();
-		for (Sensor sensor : actuator.getAffects()) {
-			dto.affects.add(sensor.getId());
-		}
-		return dto;
+	@Override
+	public Response updateActuator(String actuatorId, ActuatorDTO actuator) {
+		eventForwarder.sendEvent(actuator, EventSource.MANAGEMENT, EventType.ACTUATOR_UPDATE);
+		return null;
 	}
-	
-	private Actuator DTOToActuator(ActuatorDTO dto){
-		Actuator actuator = new Actuator();
-		actuator.setId(dto.id);
-		actuator.setName(dto.name);
-		actuator.setAddress(dto.address);
-		actuator.setDescription(dto.description);
-		actuator.setProtocol(dto.protocol);
-		actuator.setEffect(ActuatorEffect.valueOf(dto.effect));
-		actuator.setState(ActuatorState.valueOf(dto.state));
-		actuator.setPerformance(dto.performance);
-		for (long sensorId : dto.affects) {
-			Sensor sensor = deviceManager.getSensor(sensorId);
-			actuator.getAffects().add(sensor);
-		}
-		return actuator;
+
+	@Override
+	public Response deleteActuator(String actuatorId) {
+		eventForwarder.sendEvent(actuatorId, EventSource.MANAGEMENT, EventType.ACTUATOR_DELETE);
+		return null;
 	}
 }

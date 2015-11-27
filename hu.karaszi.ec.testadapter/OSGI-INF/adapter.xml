@@ -12,21 +12,28 @@
    <reference 
    		name="RestSensorManagement" 
    		interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement" 
-   		cardinality="0..1" 
+   		cardinality="1..1" 
    		policy="dynamic" 
    		bind="setRestSensorManagement" 
    		unbind="unsetRestSensorManagement"/>
+    <reference 
+   		name="RestActuatorManagement" 
+   		interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestActuatorManagement" 
+   		cardinality="1..1" 
+   		policy="dynamic" 
+   		bind="setRestActuatorManagement" 
+   		unbind="unsetRestActuatorManagement"/>
    <reference 
    		name="RestUnitManagement" 
    		interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestUnitManagement" 
-   		cardinality="0..1" 
+   		cardinality="1..1" 
    		policy="dynamic" 
    		bind="setRestUnitManagement" 
    		unbind="unsetRestUnitManagement"/>
    	<reference 
    		name="RestDeviceDataReceiver" 
    		interface="hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver" 
-   		cardinality="0..1" 
+   		cardinality="1..1" 
    		policy="dynamic" 
    		bind="setRestDeviceDataReceiver" 
    		unbind="unsetRestDeviceDataReceiver"/>

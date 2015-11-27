@@ -1,7 +1,5 @@
 package hu.karaszi.ec.centralunit.interfaces.management.rest;
 
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.UnitDTO;
-
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -15,6 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import hu.karaszi.ec.centralunit.data.dto.management.UnitDTO;
+
 @Path("/unit")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -24,18 +24,18 @@ public interface RestUnitManagement {
 	
 	@GET
 	@Path("/{id}")
-	public UnitDTO getUnit(@PathParam("id") String unitId);
+	public UnitDTO getUnit(@PathParam("id") String unitName);
 	
 	@POST
-	public UnitDTO newUnit(final UnitDTO unit);
+	public Response newUnit(final UnitDTO unit);
 	
 	@PUT
 	@Path("/{id}")
 	public Response updateUnit(
-			@PathParam("id") String unitId,
+			@PathParam("id") String unitName,
 			final UnitDTO unit);
 	
 	@DELETE
 	@Path("/{id}")
-	public Response deleteUnit(@PathParam("id") String unitId);
+	public Response deleteUnit(@PathParam("id") String unitName);
 }

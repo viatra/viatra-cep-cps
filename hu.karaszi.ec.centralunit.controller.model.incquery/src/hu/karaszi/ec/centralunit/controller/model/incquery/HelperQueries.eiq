@@ -1,0 +1,9 @@
+package hu.karaszi.ec.centralunit.controller.model.incquery
+
+import "systemmodel.meta"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+pattern deviceActive (device : Device, deviceId : EString) {
+	Device.deviceId(device, deviceId);
+	Device.deviceState(device, ::ACTIVE);
+}

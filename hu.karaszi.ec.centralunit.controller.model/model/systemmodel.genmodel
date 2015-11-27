@@ -28,17 +28,18 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//DeviceState">
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceState/ACTIVE"/>
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceState/INACTIVE"/>
-      <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//DeviceState/REMOVED"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="systemmodel.ecore#//ActuatorEffect">
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorEffect/POSITIVE"/>
       <genEnumLiterals ecoreEnumLiteral="systemmodel.ecore#//ActuatorEffect/NEGATIVE"/>
     </genEnums>
     <genClasses image="false" ecoreClass="systemmodel.ecore#//Device">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/health"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/deviceHealth"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/deviceState"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/lastHealthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/lastDeviceHealthDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/lastDeviceStateDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/deviceId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Device/healthCheckInterval"/>
     </genClasses>
     <genClasses ecoreClass="systemmodel.ecore#//Sensor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/currentRange"/>
@@ -51,6 +52,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/highCriticalThreshold"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/highFatalThreshold"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/lastMeasurementDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Sensor/readInterval"/>
     </genClasses>
     <genClasses ecoreClass="systemmodel.ecore#//Actuator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/state"/>
@@ -59,9 +61,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/effect"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Actuator/lastActuatorStateDate"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="systemmodel.ecore#//NamedEntity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//NamedEntity/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//NamedEntity/name"/>
+    <genClasses ecoreClass="systemmodel.ecore#//Time">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute systemmodel.ecore#//Time/currentTime"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

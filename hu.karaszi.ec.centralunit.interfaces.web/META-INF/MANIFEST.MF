@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.karaszi.ec.centralunit.interfaces.web
+Bundle-SymbolicName: hu.karaszi.ec.centralunit.interfaces.web;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Jetty-extraClassPath: .
+Web-ContextPath: /ec
+Import-Package: hu.karaszi.ec.centralunit.dal,
+ hu.karaszi.ec.centralunit.data.dto.management,
+ hu.karaszi.ec.centralunit.data.persistence,
+ hu.karaszi.ec.centralunit.event.forwarder.api,
+ javax.ws.rs;version="[2.0.0,3.0.0)",
+ javax.ws.rs.core;version="[2.0.0,3.0.0)",
+ org.glassfish.jersey.server;version="2.22.0",
+ org.glassfish.jersey.servlet;version="2.22.0"

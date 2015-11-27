@@ -1,7 +1,8 @@
 package hu.karaszi.ec.testadapter.testlogic;
 
-import hu.karaszi.ec.centralunit.interfaces.devices.rest.dto.MeasurementDataDTO;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.SensorDTO;
+import hu.karaszi.ec.centralunit.data.dto.devices.DeviceHealthDTO;
+import hu.karaszi.ec.centralunit.data.dto.devices.MeasurementDataDTO;
+import hu.karaszi.ec.centralunit.data.dto.management.SensorDTO;
 
 import java.util.Date;
 
@@ -13,27 +14,35 @@ public class IncrementalSensor implements Sensor {
 	private double upperCriticalThreshold;
 	private double upperFatalThreshold;
 	private String name;
-	private long id;
-	private long unitId;	
+	private String deviceId;
+	private String unitName;	
+	private long readInterval;
+	private long healthCheckInterval;
+	private String state = "ACTIVE";
+	private String description = "incremental rest test sensor";
+	private String protocol = "incadapter";
 	
-	public IncrementalSensor(String name, long unitId, double value, double increment, double lowerFatalThreshold,
+	public IncrementalSensor(String deviceId, String name, String unitName, double value, double increment, double lowerFatalThreshold,
 			double lowerCriticalThreshold, double upperCriticalThreshold,
-			double upperFatalThreshold) {
+			double upperFatalThreshold, long readInterval, long healthCheckInterval) {
 		super();
+		this.deviceId = deviceId;
 		this.name = name;
-		this.unitId = unitId;
+		this.unitName = unitName;
 		this.value = value;
 		this.increment = increment;
 		this.lowerFatalThreshold = lowerFatalThreshold;
 		this.lowerCriticalThreshold = lowerCriticalThreshold;
 		this.upperCriticalThreshold = upperCriticalThreshold;
 		this.upperFatalThreshold = upperFatalThreshold;
+		this.readInterval = readInterval;
+		this.healthCheckInterval = healthCheckInterval;
 	}
 
 	@Override
 	public MeasurementDataDTO getNextMeasurement() {
 		MeasurementDataDTO measurement = new MeasurementDataDTO();
-		measurement.source = name;
+		measurement.deviceId = deviceId;
 		measurement.date = new Date();
 		measurement.measurement = value;
 		measurement.scale = 1;
@@ -57,33 +66,40 @@ public class IncrementalSensor implements Sensor {
 	}
 
 	@Override
-	public String getOperationalStatus() {
-		return "OK";
+	public DeviceHealthDTO getDeviceHealth() {
+		DeviceHealthDTO dto = new DeviceHealthDTO();
+		dto.date = new Date();
+		dto.deviceId = deviceId;
+		dto.health = "OK";
+		return dto;
 	}
 
 	@Override
 	public SensorDTO getDTO() {
 		SensorDTO dto = new SensorDTO();
-		dto.id = id;
+		dto.deviceId = deviceId;
 		dto.name = name;
-		dto.description = "incremental rest test sensor";
-		dto.protocol = "not uset yet";
-		dto.address = "not uset yet";
+		dto.description = description;
+		dto.protocol = protocol;
+		dto.address = deviceId;
 		dto.lowerFatalThreshold = lowerFatalThreshold;
 		dto.lowerCriticalThreshold = lowerCriticalThreshold;
 		dto.upperCriticalThreshold = upperCriticalThreshold;
 		dto.upperFatalThreshold = upperFatalThreshold;
-		dto.unit = unitId;
+		dto.unit = unitName;
+		dto.readInterval = readInterval;
+		dto.healthCheckInterval = healthCheckInterval;
+		dto.state = state;
 		return dto;
 	}
 
 	@Override
-	public void setId(long id) {
-		this.id = id;
+	public String getAddress() {
+		return deviceId;
 	}
-
+	
 	@Override
-	public long getId() {
-		return id;
+	public String getId() {
+		return deviceId;
 	}
 }

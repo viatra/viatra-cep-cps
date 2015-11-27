@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="hu.karaszi.ec.centralunit.controller.model.incquery.SchedulerQueries" point="org.eclipse.incquery.runtime.queryspecification">
+    <group group="org.eclipse.incquery.runtime.extensibility.SingletonExtensionFactory:hu.karaszi.ec.centralunit.controller.model.incquery.SchedulerQueries" id="hu.karaszi.ec.centralunit.controller.model.incquery.SchedulerQueries"/>
+  </extension>
   <extension id="hu.karaszi.ec.centralunit.controller.model.incquery.SensorThresholdQueries" point="org.eclipse.incquery.runtime.queryspecification">
     <group group="org.eclipse.incquery.runtime.extensibility.SingletonExtensionFactory:hu.karaszi.ec.centralunit.controller.model.incquery.SensorThresholdQueries" id="hu.karaszi.ec.centralunit.controller.model.incquery.SensorThresholdQueries"/>
+  </extension>
+  <extension id="hu.karaszi.ec.centralunit.controller.model.incquery.HelperQueries" point="org.eclipse.incquery.runtime.queryspecification">
+    <group group="org.eclipse.incquery.runtime.extensibility.SingletonExtensionFactory:hu.karaszi.ec.centralunit.controller.model.incquery.HelperQueries" id="hu.karaszi.ec.centralunit.controller.model.incquery.HelperQueries"/>
   </extension>
 </plugin>

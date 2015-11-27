@@ -1,7 +1,5 @@
 package hu.karaszi.ec.centralunit.interfaces.management.rest;
 
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.MeasurementDTO;
-
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -10,6 +8,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+
+import hu.karaszi.ec.centralunit.data.dto.management.MeasurementDTO;
 
 @Path("/measurement")
 @Consumes(MediaType.APPLICATION_JSON)

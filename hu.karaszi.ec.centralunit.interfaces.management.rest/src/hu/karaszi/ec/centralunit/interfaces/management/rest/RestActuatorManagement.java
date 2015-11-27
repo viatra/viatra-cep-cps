@@ -2,8 +2,6 @@ package hu.karaszi.ec.centralunit.interfaces.management.rest;
 
 import java.util.List;
 
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.ActuatorDTO;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -15,6 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import hu.karaszi.ec.centralunit.data.dto.management.ActuatorDTO;
+
 @Path("/actuator")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -24,18 +24,18 @@ public interface RestActuatorManagement {
 	
 	@GET
 	@Path("/{id}")
-	public ActuatorDTO getActuator(@PathParam("id") long actuatorId);
+	public ActuatorDTO getActuator(@PathParam("id") String actuatorId);
 	
 	@POST
-	public ActuatorDTO newActuator(final ActuatorDTO actuator);
+	public Response newActuator(final ActuatorDTO actuator);
 	
 	@PUT
 	@Path("/{id}")
-	public ActuatorDTO updateActuator(
-			@PathParam("id") long actuatorId,
+	public Response updateActuator(
+			@PathParam("id") String actuatorId,
 			final ActuatorDTO actuator);
 	
 	@DELETE
 	@Path("/{id}")
-	public Response deleteActuator(@PathParam("id") long actuatorId);
+	public Response deleteActuator(@PathParam("id") String actuatorId);
 }

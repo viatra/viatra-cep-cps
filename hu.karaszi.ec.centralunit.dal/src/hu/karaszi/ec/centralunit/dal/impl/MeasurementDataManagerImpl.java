@@ -1,7 +1,7 @@
 package hu.karaszi.ec.centralunit.dal.impl;
 
 import hu.karaszi.ec.centralunit.dal.MeasurementDataManager;
-import hu.karaszi.ec.centralunit.data.Measurement;
+import hu.karaszi.ec.centralunit.data.persistence.Measurement;
 
 import java.util.List;
 
@@ -31,6 +31,7 @@ public class MeasurementDataManagerImpl implements MeasurementDataManager {
 	public Measurement insertMeasurement(Measurement measurement) {
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
+		em.flush();
 		em.persist(measurement);
 		transaction.commit();
 		return measurement;

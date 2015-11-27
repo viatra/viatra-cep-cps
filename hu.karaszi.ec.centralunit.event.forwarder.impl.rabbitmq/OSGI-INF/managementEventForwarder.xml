@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="RabbitMQ processor for received management messages">
-   <implementation class="hu.karaszi.ec.centralunit.event.forwarder.impl.rabbitmq.RabbitMQManagementEventForwarder"/>
-   <service>
-      <provide interface="hu.karaszi.ec.centralunit.event.forwarder.api.ManagementEventForwarder"/>
-   </service>
-</scr:component>

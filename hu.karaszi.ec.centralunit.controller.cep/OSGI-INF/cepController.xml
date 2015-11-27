@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.karaszi.ec.centralunit.controller.cep.CepController">
    <implementation class="hu.karaszi.ec.centralunit.controller.cep.CepController"/>
-   <service>
-      <provide interface="hu.karaszi.ec.centralunit.event.processor.api.EventProcessor"/>
-   </service>
    <reference 
    		name="DeviceManager" 
    		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
-   		cardinality="0..1" 
+   		cardinality="1..1" 
    		policy="dynamic" 
    		bind="setDeviceManager" 
    		unbind="unsetDeviceManager"/>
@@ -18,4 +15,18 @@
    		policy="dynamic" 
    		bind="setMeasurementDataManager" 
    		unbind="unsetMeasurementDataManager"/>
+   <reference 
+   		name="EventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.EventForwarder" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setEventForwarder" 
+   		unbind="unsetEventForwarder"/>
+   <reference 
+   		name="DeviceCommandSender" 
+   		interface="hu.karaszi.ec.centralunit.interfaces.devices.internal.DeviceCommandSender" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setDeviceCommandSender" 
+   		unbind="unsetDeviceCommandSender"/>
 </scr:component>

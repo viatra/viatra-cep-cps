@@ -4,9 +4,11 @@ Bundle-Name: Instancemodel
 Bundle-SymbolicName: hu.karaszi.ec.centralunit.controller.cep
 Bundle-Version: 1.0.0.qualifier
 Export-Package: hu.karaszi.ec.centralunit.controller.cep.eventmodel,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.events,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.events.queryresult,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.jobs,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.mapping,
+ hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.atomic.queryresult,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.patterns.complex,
  hu.karaszi.ec.centralunit.controller.cep.eventmodel.rules
@@ -17,7 +19,12 @@ Require-Bundle: org.eclipse.viatra.cep.core;bundle-version="0.7.0",
  org.eclipse.core.databinding;bundle-version="1.4.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: hu.karaszi.ec.centralunit.dal,
- hu.karaszi.ec.centralunit.data,
+ hu.karaszi.ec.centralunit.data.dto.devices,
+ hu.karaszi.ec.centralunit.data.dto.management,
+ hu.karaszi.ec.centralunit.event.consumer.api,
+ hu.karaszi.ec.centralunit.event.consumer.rabbitmq,
+ hu.karaszi.ec.centralunit.event.forwarder.api,
  hu.karaszi.ec.centralunit.event.processor.api,
+ hu.karaszi.ec.centralunit.interfaces.devices.internal,
  org.osgi.service.component;version="1.2.2"
 Service-Component: OSGI-INF/*.xml

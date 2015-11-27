@@ -1,7 +1,7 @@
 package hu.karaszi.ec.centralunit.dal.impl;
 
 import hu.karaszi.ec.centralunit.dal.UnitManager;
-import hu.karaszi.ec.centralunit.data.Unit;
+import hu.karaszi.ec.centralunit.data.persistence.Unit;
 
 import java.util.List;
 
@@ -64,5 +64,11 @@ public class UnitManagerImpl implements UnitManager {
 			em.remove(unit);
 			transaction.commit();
 		}
+	}
+
+	@Override
+	public void deleteUnitByName(String unitName) {
+		Unit unit = getUnit(unitName);
+		deleteUnit(unit.getId());
 	}
 }

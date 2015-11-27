@@ -2,14 +2,22 @@
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest receiver remote service">
    <service>
       <provide interface="hu.karaszi.ec.centralunit.interfaces.devices.rest.RestDeviceDataReceiver"/>
+      <provide interface="hu.karaszi.ec.centralunit.interfaces.devices.internal.DeviceCommandSender"/>
    </service>
-   <implementation class="hu.karaszi.ec.centralunit.interfaces.devices.rest.impl.RestDeviceDataReceiverImpl"/>
+   <implementation class="hu.karaszi.ec.centralunit.interfaces.devices.rest.impl.RestDeviceAdapterConnector"/>
 
    <reference 
-   		name="DeviceEventForwarder" 
-   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.DeviceEventForwarder" 
-   		cardinality="0..1" 
+   		name="EventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.EventForwarder" 
+   		cardinality="1..1" 
    		policy="dynamic" 
-   		bind="setDeviceEventForwarder" 
-   		unbind="unsetDeviceEventForwarder"/>
+   		bind="setEventForwarder" 
+   		unbind="unsetEventForwarder"/>
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="1..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
 </scr:component>

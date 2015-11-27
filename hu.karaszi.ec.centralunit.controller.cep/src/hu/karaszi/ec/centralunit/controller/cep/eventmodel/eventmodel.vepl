@@ -1,102 +1,292 @@
 package hu.karaszi.ec.centralunit.controller.cep.eventmodel
 
 import hu.karaszi.ec.centralunit.controller.cep.*
+import hu.karaszi.ec.centralunit.controller.cep.workaround.*
 import-queries hu.karaszi.ec.centralunit.controller.model.incquery.*
 
-queryEvent sensorEntersLowFatalRange(id: long) as sensorInLowFatalRange(_, id) found
+////
+//atomic sensor range enter and leave events
+////
+queryEvent sensorEntersLowFatalRange(id: String) as sensorInLowFatalRange(_, id) found
+queryEvent sensorEntersLowCriticalRange(id: String) as sensorInLowCriticalRange(_, id) found
+queryEvent sensorEntersNormalRange(id: String) as sensorInNormalRange(_, id) found
+queryEvent sensorEntersHighCriticalRange(id: String) as sensorInHighCriticalRange(_, id) found
+queryEvent sensorEntersHighFatalRange(id: String)	as sensorInHighFatalRange(_, id) found
 
+queryEvent sensorLeavesLowFatalRange(id: String) as sensorInLowFatalRange(_, id) lost
+queryEvent sensorLeavesLowCriticalRange(id: String) as sensorInLowCriticalRange(_, id) lost
+queryEvent sensorLeavesNormalRange(id: String) as sensorInNormalRange(_, id) lost
+queryEvent sensorLeavesHighCriticalRange(id: String) as sensorInHighCriticalRange(_, id) lost
+queryEvent sensorLeavesHighFatalRange(id: String)	as sensorInHighFatalRange(_, id) lost
 
-queryEvent sensorEntersLowCriticalRange(id: long) as sensorInLowCriticalRange(_, id) found
+//workaround until holds-for time window feature
+atomicEvent tick(dummy: String) {}
 
-queryEvent sensorEntersNormalRange(id: long) as sensorInNormalRange(_, id) found
-
-queryEvent sensorEntersHighCriticalRange(id: long) as sensorInHighCriticalRange(_, id) found
-
-queryEvent sensorEntersHighFatalRange(id: long)	as sensorInHighFatalRange(_, id) found
-
-complexEvent RapidLowCriticalElevation(sensorId: long){
-	as (sensorEntersLowFatalRange(id) -> sensorEntersLowCriticalRange(id))[100000]
-
-}
-complexEvent RapidNormalElevation(sensorId: long){
-	as (sensorEntersLowCriticalRange(id) -> sensorEntersNormalRange(id))[100000]
-}
-
-complexEvent RapidElevation(sensorId: long){
-	as (sensorEntersNormalRange(id) -> sensorEntersHighCriticalRange(id) -> sensorEntersHighFatalRange(id))[100000]
-}
-
-complexEvent RapidHighFatalElevation(sensorId: long){
-	as (sensorEntersHighCriticalRange(id) -> sensorEntersHighFatalRange(id))[100000]
+////
+//rapid elevation events
+////
+complexEvent RapidIncrease(sensorId: String){
+	as (sensorEntersLowCriticalRange(sensorId) -> sensorEntersHighCriticalRange(sensorId))[100000]
 }
 
-rule debugRapidEvelation on 
-		//RapidLowCriticalElevation,
-		//RapidNormalElevation,
-		//RapidNormalElevation,
-		RapidElevation
-		//RapidHighFatalElevation 
-//	action{
-//		System.out.println("Rapid elevation @ sensor %s")
-//	}
-	{
-		new ThresholdEventHandler().handle(ruleInstance)
+complexEvent RapidFatalIncrease(sensorId: String){
+	as (sensorEntersNormalRange(sensorId) -> sensorEntersHighFatalRange(sensorId))[100000]
 }
 
-////debug ////////////////////
-//complexEvent sensorInLowFatalRange(sensorId: long){
-//	as sensorEntersLowFatalRange(id)
+complexEvent RapidDecrease(sensorId: String){
+	as (sensorEntersHighCriticalRange(sensorId) -> sensorEntersLowCriticalRange(sensorId))[100000]
+}
+
+complexEvent RapidFatalDecrease(sensorId: String){
+	as (sensorEntersNormalRange(sensorId) -> sensorEntersLowFatalRange(sensorId))[100000]
+}
+
+rule handleRapidIncrease on RapidIncrease {
+		ThresholdEventHandler.handleRapidIncrease(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+rule handleRapidFatalIncrease on RapidFatalIncrease {
+		ThresholdEventHandler.handleRapidFatalIncrease(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+rule handleRapidDecrease on RapidDecrease {
+		ThresholdEventHandler.handleRapidDecrease(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+rule handleRapidFatalDecrease on RapidFatalDecrease {
+		ThresholdEventHandler.handleRapidFatalDecrease(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+////
+//stable range events
+////
+
+//complexEvent StableLowFatalMeasurement(sensorId: String){
+//	as sensorEntersLowFatalRange(id) -> (NOT sensorLeavesLowFatalRange(id)){*} -> PossibleStableLowFatalMeasurement
+//	context immediate
 //}
 //
-//complexEvent sensorInLowCriticalRange(sensorId: long){
-//	as sensorEntersLowCriticalRange(id)
+//complexEvent StableLowCriticalMeasurement(sensorId: String){
+//	as sensorEntersLowCriticalRange(id) -> (NOT sensorLeavesLowCriticalRange(id)){*} -> PossibleStableLowCriticalMeasurement
+//	context immediate
 //}
 //
-//complexEvent debugInNormalRange(sensorId: long){
-//	as sensorEntersNormalRange(id)
+//complexEvent StableNormalMeasurement(sensorId: String){
+//	as (sensorEntersNormalRange(id) -> StableNormalForATick{10})[10000]
 //}
 //
-//complexEvent sensorInHighCriticalRange(sensorId: long){
-//	as sensorInHighCriticalRange(id)
+//complexEvent StableHighCriticalMeasurement(sensorId: String){
+//	as sensorEntersHighCriticalRange(id) -> (NOT sensorLeavesHighCriticalRange(id)){*} -> PossibleStableHighCriticalMeasurement
+//	context immediate
 //}
 //
-//complexEvent sensorInHighFatalRange(sensorId: long){
-//	as sensorEntersHighCriticalRange(id)
+//complexEvent StableHighFatalMeasurement(sensorId: String){
+//	as (sensorEntersHighFatalRange(id) -> StableHighFatalForATick{10})[10000]
 //}
-//
-//rule debugSensorInLowFatalRange{
-//	events: sensorInLowFatalRange
-//	action{
-//		System.out.println("sensorInLowFatalRange")
-//	}
+
+
+rule handleStableLowFatalMeasurement on StableLowFatalMeasurement {
+	ThresholdEventHandler.handleStableLowFatal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+//	System.out.println("StableLowFatalMeasurement " + new java.util.Date());
+}
+rule handleStableLowCriticalMeasurement on StableLowCriticalMeasurement {
+	ThresholdEventHandler.handleStableLowCritical(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+//	System.out.println("StableLowCriticalMeasurement " + new java.util.Date());
+}
+rule handleStableNormalMeasurement on StableNormalMeasurement {
+	ThresholdEventHandler.handleStableNormal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+//	System.out.println("StableNormalMeasurement " + new java.util.Date());
+}
+rule handleStableHighCriticalMeasurement on StableHighCriticalMeasurement {
+	ThresholdEventHandler.handleStableHighCritical(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+//	System.out.println("StableHighCriticalMeasurement " + new java.util.Date());
+}
+rule handleStableHighFatalMeasurement on StableHighFatalMeasurement {
+	ThresholdEventHandler.handleStableHighFatal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+//	System.out.println("StableHighFatalMeasurement " + new java.util.Date());
+}
+
+//workaround
+atomicEvent AtomicStableLowFatalMeasurement(id: String){}
+atomicEvent AtomicStableLowCriticalMeasurement(id: String){}
+atomicEvent AtomicStableNormalMeasurement(id: String){}
+atomicEvent AtomicStableHighCriticalMeasurement(id: String){}
+atomicEvent AtomicStableHighFatalMeasurement(id: String){}
+
+complexEvent StableLowFatalMeasurement(sensorId: String){
+	as AtomicStableLowFatalMeasurement(id)
+}
+complexEvent StableLowCriticalMeasurement(sensorId: String){
+	as AtomicStableLowCriticalMeasurement(id)
+}
+complexEvent StableNormalMeasurement(sensorId: String){
+	as AtomicStableNormalMeasurement(id)
+}
+complexEvent StableHighCriticalMeasurement(sensorId: String){
+	as AtomicStableHighCriticalMeasurement(id)
+}
+complexEvent StableHighFatalMeasurement(sensorId: String){
+	as AtomicStableHighFatalMeasurement(id)
+}
+
+complexEvent PossibleStableLowFatalMeasurement(sensorId: String){
+	as sensorEntersLowFatalRange(sensorId) -> tick{10}
+}
+complexEvent PossibleStableLowCriticalMeasurement(sensorId: String){
+	as sensorEntersLowCriticalRange(sensorId) -> tick{10}
+}
+complexEvent PossibleStableNormalMeasurement(sensorId: String){
+	as sensorEntersNormalRange(sensorId) -> tick{10}
+}
+complexEvent PossibleStableHighCriticalMeasurement(sensorId: String){
+	as sensorEntersHighCriticalRange(sensorId) -> tick{10}
+}
+complexEvent PossibleStableHighFatalMeasurement(sensorId: String){
+	as sensorEntersHighFatalRange(sensorId) -> tick{10}
+}
+
+rule handlePossibleStableLowFatalMeasurement on PossibleStableLowFatalMeasurement {
+		PossibleThresholdEventHandler.handleStableLowFatal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handlePossibleStableLowCriticalMeasurement on PossibleStableLowCriticalMeasurement {
+		PossibleThresholdEventHandler.handleStableLowCritical(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handlePossibleStableNormalMeasurement on PossibleStableNormalMeasurement {
+		PossibleThresholdEventHandler.handleStableNormal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handlePossibleStableHighCriticalMeasurement on PossibleStableHighCriticalMeasurement {
+		PossibleThresholdEventHandler.handleStableHighCritical(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handlePossibleStableHighFatalMeasurement on PossibleStableHighFatalMeasurement {
+		PossibleThresholdEventHandler.handleStableHighFatal(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+complexEvent sensorEntersLowFatalRangeWrapper(sensorId: String){
+	as sensorEntersLowFatalRange(sensorId) 
+}
+complexEvent sensorEntersLowCriticalRangeWrapper(sensorId: String){
+	as sensorEntersLowCriticalRange(sensorId) 
+}
+complexEvent sensorEntersNormalRangeWrapper(sensorId: String){
+	as sensorEntersNormalRange(sensorId) 
+}
+complexEvent sensorEntersHighCriticalRangeWrapper(sensorId: String){
+	as sensorEntersHighCriticalRange(sensorId) 
+}
+complexEvent sensorEntersHighFatalRangeWrapper(sensorId: String){
+	as sensorEntersHighFatalRange(sensorId) 
+}
+
+rule handleSensorEntersThreshold on 
+	sensorEntersLowFatalRangeWrapper,
+	sensorEntersLowCriticalRangeWrapper,
+	sensorEntersNormalRangeWrapper,
+	sensorEntersHighCriticalRangeWrapper,
+	sensorEntersHighFatalRangeWrapper {
+		PossibleThresholdEventHandler.handleSensorEntersThreshold(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+////
+//sensor read scheduling
+////
+queryEvent sensorReadNeeded (id : String) as sensorReadNeeded(_, id, _) found
+
+complexEvent sensorReadNeededWrapper(sensorId: String){
+	as sensorReadNeeded(id)
+}
+
+rule ReadSensor on sensorReadNeededWrapper, RetrySensorRead {
+	ScheduleEventHandler.handleSensorRead(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+////
+//device health read scheduling
+////
+queryEvent deviceHealthReadNeeded (id : String) as deviceHealthReadNeeded(_, id, _) found
+
+complexEvent deviceHealthReadNeededWrapper(sensorId: String){
+	as deviceHealthReadNeeded(id)
+}
+
+rule ReadDeviceHealth on deviceHealthReadNeededWrapper, RetryDeviceHealthRead {
+	ScheduleEventHandler.handleDeviceHealthRead(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+////
+//scheduling and actuator control error handling
+////
+atomicEvent SensorReadSent(id: String) {}
+atomicEvent DeviceHealthReadSent(id: String) {}
+atomicEvent commandSent(sensorId: String, actuatorId: String) {}
+
+atomicEvent MeasurementArrived(id: String) {}
+atomicEvent DeviceHealthArrived(id: String) {}
+atomicEvent ActuatorStateArrived(actuatorId: String) {}
+
+//complexEvent retryDeviceHealthRead(id: String) {
+//	as deviceHealthReadSent(id) -> (NOT deviceHealthArrived(id) AND tick{5})
 //}
-//
-//rule debugSensorInLowCriticalRange{
-//	events: sensorEntersLowCriticalRange
-//	action{
-//		System.out.println("sensorEntersLowCriticalRange")
-//	}
-//}
-//
-//rule debugSensorInNormalRange{
-//	events: debugInNormalRange
-//	action{
-//		System.out.println("sensorInNormalRange")
-//	}
-//}
-//
-//rule debugSensorInHighCriticalRange{
-//	events: sensorInHighCriticalRange
-//	action{
-//		System.out.println("sensorInHighCriticalRange")
-//	}
-//}
-//
-//rule debugSensorInHighFatalRange{
-//	events: sensorInHighFatalRange
-//	action{
-//		System.out.println("sensorInHighFatalRange")
-//	}
-//}
-//
-////end debug ///////////////
+
+complexEvent DeviceHealthReadFailed(id: String) {
+	as RetryDeviceHealthRead{3}[15000]
+}
+
+complexEvent SensorReadFailed(id: String) {
+	as RetrySensorRead{3}[15000]
+}
+
+rule handleReadFailed on DeviceHealthReadFailed, SensorReadFailed {
+	ControlEventHandler.handleReadFailed(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+//workaround
+complexEvent DeviceHealthReadSentWrapper(id: String){
+	as DeviceHealthReadSent(id)
+}
+complexEvent SensorReadSentWrapper(id: String){
+	as SensorReadSent(id)
+}
+rule handleDeviceHealthReadSent on DeviceHealthReadSentWrapper {
+	ControlWorkaroundEventHandler.handleDeviceHealthReadSent(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handleSensorReadSent on DeviceHealthReadSentWrapper {
+	ControlWorkaroundEventHandler.handleSensorReadSent(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+atomicEvent AtomicRetryDeviceHealthReadNeeded(id: String){}
+atomicEvent AtomicRetrySensorReadNeeded(id: String){}
+
+complexEvent RetryDeviceHealthRead(id: String) {
+	as AtomicRetryDeviceHealthReadNeeded(id)
+}
+complexEvent RetrySensorRead(id: String) {
+	as AtomicRetrySensorReadNeeded(id)
+}
+
+complexEvent DeviceHealthReadArrivedWrapper(id: String){
+	as DeviceHealthArrived(id)
+}
+complexEvent SensorReadArrivedWrapper(id: String){
+	as MeasurementArrived(id)
+}
+
+rule handleDeviceHealthReadArrived on DeviceHealthReadArrivedWrapper {
+	ControlWorkaroundEventHandler.handleDeviceHealthArrived(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handleSensorReadArrived on SensorReadArrivedWrapper {
+	ControlWorkaroundEventHandler.handleSensorReadArrived(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+
+complexEvent PossibleDeviceHealthReadTimeout(id: String){
+	as DeviceHealthReadSent(id) -> tick{5}
+}
+complexEvent PossibleSensorReadTimeout(id: String){
+	as SensorReadSent(id) -> tick{5}
+}
+
+rule handlePossibleDeviceHealthReadTimeout on PossibleDeviceHealthReadTimeout {
+	ControlWorkaroundEventHandler.handlePossibleDeviceHealthReadTimeout(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}
+rule handlePossibleSensorReadTimeout on PossibleSensorReadTimeout {
+	ControlWorkaroundEventHandler.handlePossibleSensorReadTimeout(ruleInstance.atom.parameterTable.parameterBindings.get(0).value as String);
+}

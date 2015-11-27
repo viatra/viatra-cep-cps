@@ -1,7 +1,5 @@
 package hu.karaszi.ec.testadapter.rest.proxy;
 
-import hu.karaszi.ec.testadapter.dto.management.UnitDTO;
-
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -14,6 +12,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import hu.karaszi.ec.centralunit.data.dto.management.UnitDTO;
 
 @Path("/")
 @Consumes(MediaType.APPLICATION_JSON)

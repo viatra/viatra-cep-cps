@@ -1,9 +1,9 @@
 package hu.karaszi.ec.centralunit.interfaces.management.rest.impl;
 
 import hu.karaszi.ec.centralunit.dal.MeasurementDataManager;
-import hu.karaszi.ec.centralunit.data.Measurement;
+import hu.karaszi.ec.centralunit.data.dto.management.MeasurementDTO;
+import hu.karaszi.ec.centralunit.data.persistence.Measurement;
 import hu.karaszi.ec.centralunit.interfaces.management.rest.RestMeasurementManagement;
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.MeasurementDTO;
 
 import java.util.ArrayList;
 import java.util.List;

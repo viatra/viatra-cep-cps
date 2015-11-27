@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest sensor management interface">
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.karaszi.ec.centralunit.interfaces.management.rest.impl.RestSensorManagementImpl">
    <service>
       <provide interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestSensorManagement"/>
    </service>
@@ -8,22 +8,15 @@
    <reference 
    		name="DeviceManager" 
    		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
-   		cardinality="0..1" 
+   		cardinality="1..1" 
    		policy="dynamic" 
    		bind="setDeviceManager" 
    		unbind="unsetDeviceManager"/>
    <reference 
-   		name="UnitManager" 
-   		interface="hu.karaszi.ec.centralunit.dal.UnitManager" 
-   		cardinality="0..1" 
+   		name="EventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.EventForwarder" 
+   		cardinality="1..1" 
    		policy="dynamic" 
-   		bind="setUnitManager" 
-   		unbind="unsetUnitManager"/>
-   <reference 
-   		name="ManagementEventForwarder" 
-   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.ManagementEventForwarder" 
-   		cardinality="0..1" 
-   		policy="dynamic" 
-   		bind="setManagementEventForwarder" 
-   		unbind="unsetManagementEventForwarder"/>
+   		bind="setEventForwarder" 
+   		unbind="unsetEventForwarder"/>
 </scr:component>

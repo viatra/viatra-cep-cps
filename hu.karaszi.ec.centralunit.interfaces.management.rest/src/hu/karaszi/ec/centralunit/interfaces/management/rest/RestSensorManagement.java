@@ -2,8 +2,6 @@ package hu.karaszi.ec.centralunit.interfaces.management.rest;
 
 import java.util.List;
 
-import hu.karaszi.ec.centralunit.interfaces.management.rest.dto.SensorDTO;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -15,6 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import hu.karaszi.ec.centralunit.data.dto.management.SensorDTO;
+
 @Path("/sensor")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -24,18 +24,18 @@ public interface RestSensorManagement {
 	
 	@GET
 	@Path("/{id}")
-	public SensorDTO getSensor(@PathParam("id") long sensorId);
+	public SensorDTO getSensor(@PathParam("id") String sensorId);
 	
 	@POST
-	public SensorDTO newSensor(final SensorDTO sensor);
+	public Response newSensor(final SensorDTO sensor);
 	
 	@PUT
 	@Path("/{id}")
-	public SensorDTO updateSensor(
-			@PathParam("id") long sensorId,
+	public Response updateSensor(
+			@PathParam("id") String sensorId,
 			final SensorDTO sensor);
 	
 	@DELETE
 	@Path("/{id}")
-	public Response deleteSensor(@PathParam("id") long sensorId);
+	public Response deleteSensor(@PathParam("id") String sensorId);
 }

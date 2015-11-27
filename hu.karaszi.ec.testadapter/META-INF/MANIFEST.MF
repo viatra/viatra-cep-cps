@@ -4,13 +4,14 @@ Bundle-Name: Testadapter
 Bundle-SymbolicName: hu.karaszi.ec.testadapter
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: hu.karaszi.ec.centralunit.interfaces.devices.rest,
- hu.karaszi.ec.centralunit.interfaces.devices.rest.dto,
- hu.karaszi.ec.centralunit.interfaces.management.rest.dto,
+Import-Package: hu.karaszi.ec.centralunit.data.dto.devices,
+ hu.karaszi.ec.centralunit.data.dto.management,
+ hu.karaszi.ec.centralunit.interfaces.devices.rest,
  hu.karaszi.ec.centralunit.interfaces.management.rest,
  javax.ws.rs;version="[2.0.0,3.0.0)",
  javax.ws.rs.client;version="[2.0.0,3.0.0)",
  javax.ws.rs.core;version="[2.0.0,3.0.0)",
+ org.glassfish.jersey.media.sse;version="2.22.0",
  org.osgi.framework;version="1.8.0",
  org.osgi.service.component;version="1.2.2"
 Service-Component: OSGI-INF/*.xml

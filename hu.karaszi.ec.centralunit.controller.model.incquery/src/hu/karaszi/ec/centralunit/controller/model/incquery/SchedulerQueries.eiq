@@ -1,0 +1,20 @@
+package hu.karaszi.ec.centralunit.controller.model.incquery
+
+import "systemmodel.meta"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+pattern sensorReadNeeded(sensor : Sensor, sensorId : EString, time : Time) {
+	find deviceActive(device, sensorId);
+	Sensor.lastMeasurementDate(sensor, LastRead);
+	Sensor.readInterval(sensor, Interval);
+	Time.currentTime(time, CurrentTime);
+	check(LastRead + Interval < CurrentTime);
+}
+
+pattern deviceHealthReadNeeded(device : Device, deviceId : EString, time : Time) {
+	find deviceActive(device, deviceId);
+	Device.lastDeviceHealthDate(device, LastRead);
+	Device.healthCheckInterval(device, Interval);
+	Time.currentTime(time, CurrentTime);
+	check(LastRead + Interval < CurrentTime);
+}

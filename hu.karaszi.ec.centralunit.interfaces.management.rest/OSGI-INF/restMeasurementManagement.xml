@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Rest measurement data management interface">
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.karaszi.ec.centralunit.interfaces.management.rest.impl.RestMeasurementManagementImpl">
    <service>
       <provide interface="hu.karaszi.ec.centralunit.interfaces.management.rest.RestMeasurementManagement"/>
    </service>
@@ -8,7 +8,7 @@
    <reference 
    		name="MeasurementDataManager"
    		interface="hu.karaszi.ec.centralunit.dal.MeasurementDataManager"
-   		cardinality="0..1"
+   		cardinality="1..1"
    		policy="dynamic"
    		bind="setMeasurementDataManager"
    		unbind="unsetMeasurementDataManager"/>
