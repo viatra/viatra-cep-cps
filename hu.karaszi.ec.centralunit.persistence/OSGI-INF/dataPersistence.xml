@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="hu.karaszi.ec.centralunit.persistence.DataPersister">
+   <implementation class="hu.karaszi.ec.centralunit.persistence.DataPersister"/>
+   <reference 
+   		name="DeviceManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.DeviceManager" 
+   		cardinality="1..1" 
+   		policy="dynamic" 
+   		bind="setDeviceManager" 
+   		unbind="unsetDeviceManager"/>
+   <reference 
+   		name="MeasurementDataManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.MeasurementDataManager" 
+   		cardinality="1..1" 
+   		policy="dynamic" 
+   		bind="setMeasurementDataManager" 
+   		unbind="unsetMeasurementDataManager"/>
+   <reference 
+   		name="UnitManager" 
+   		interface="hu.karaszi.ec.centralunit.dal.UnitManager" 
+   		cardinality="1..1" 
+   		policy="dynamic" 
+   		bind="setUnitManager" 
+   		unbind="unsetUnitManager"/>
+   <reference 
+   		name="EventForwarder" 
+   		interface="hu.karaszi.ec.centralunit.event.forwarder.api.EventForwarder" 
+   		cardinality="0..1" 
+   		policy="dynamic" 
+   		bind="setEventForwarder" 
+   		unbind="unsetEventForwarder"/>
+</scr:component>
