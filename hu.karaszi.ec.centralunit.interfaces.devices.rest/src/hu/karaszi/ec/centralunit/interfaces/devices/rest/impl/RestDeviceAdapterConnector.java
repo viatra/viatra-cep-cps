@@ -76,6 +76,7 @@ public class RestDeviceAdapterConnector implements RestDeviceDataReceiver, Devic
 
 	@Override
 	public void receiveMeasurementData(MeasurementDataDTO data) {
+		System.out.println("Measurement arrived from: " + data.deviceId);
 		if (forwarder != null) {
 			forwarder.sendEvent(data, EventSource.DEVICE, EventType.MEASUREMENT);
 		} else {
@@ -145,6 +146,7 @@ public class RestDeviceAdapterConnector implements RestDeviceDataReceiver, Devic
 				eventBuilder.data(CommandDTO.class, command);
 				final OutboundEvent event = eventBuilder.build();
 				eventOutput.write(event);
+				System.out.println("Command sent: " + commandString);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

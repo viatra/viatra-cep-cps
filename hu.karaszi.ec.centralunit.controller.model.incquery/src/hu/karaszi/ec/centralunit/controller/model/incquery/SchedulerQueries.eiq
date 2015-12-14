@@ -4,7 +4,7 @@ import "systemmodel.meta"
 import "http://www.eclipse.org/emf/2002/Ecore"
 
 pattern sensorReadNeeded(sensor : Sensor, sensorId : EString, time : Time) {
-	find deviceActive(device, sensorId);
+	find deviceActive(sensor, sensorId);
 	Sensor.lastMeasurementDate(sensor, LastRead);
 	Sensor.readInterval(sensor, Interval);
 	Time.currentTime(time, CurrentTime);

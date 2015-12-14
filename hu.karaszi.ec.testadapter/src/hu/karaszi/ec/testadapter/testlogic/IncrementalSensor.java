@@ -46,7 +46,7 @@ public class IncrementalSensor implements Sensor {
 		measurement.date = new Date();
 		measurement.measurement = value;
 		measurement.scale = 1;
-		value += increment;
+		value -= increment;
 		return measurement;
 	}
 

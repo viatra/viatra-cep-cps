@@ -1,6 +1,5 @@
 package hu.karaszi.ec.centralunit.controller.cep;
 
-import hu.karaszi.ec.centralunit.event.forwarder.api.EventSource;
 import systemmodel.Actuator;
 import systemmodel.ActuatorEffect;
 import systemmodel.ActuatorState;

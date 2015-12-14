@@ -48,7 +48,7 @@ public class SimpleActuator implements Actuator {
 		dto.state = state;
 		
 		dto.actuatorState = actuatorState;
-		dto.effect = "NEGATIVE";
+		dto.effect = "POSITIVE";
 		dto.performance = performance;
 		return dto;
 	}

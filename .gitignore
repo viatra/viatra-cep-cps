@@ -1,2 +1,5 @@
 hu.karaszi.ec.centralunit.event.processor.api/bin/
 hu.karaszi.ec.centralunit.persistence/bin/
+hu.karaszi.ec.piadapter/bin/
+hu.karaszi.ec.piadapter/build/
+hu.karaszi.ec.piadapter/.gradle/

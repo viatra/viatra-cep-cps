@@ -97,18 +97,39 @@ public class RestAdapter implements Adapter {
 		registerCommandListener();
 
 		String unitName = createUnit();
-		for (int i = 0; i < NUMBER_OF_SENSORS; i++) {
-			Sensor sensor = createSensor("sensor-" + i, unitName);
-			sensors.put(sensor.getAddress(), sensor);
-			
-			Actuator actuator = createActuator("actuator-" + i);
-			actuators.put(actuator.getAddress(), actuator);
-			
-			SensorDTO sensorDTO = sensor.getDTO();
-			sensorDTO.affectedBy = new ArrayList<>();
-			sensorDTO.affectedBy.add(actuator.getId());
-			restSensorManagement.updateSensor(sensor.getId(), sensorDTO);
-		}
+		
+		Sensor sutkerezo = createSensor("sutkerezo", unitName, 41, 35, 40, 43, 45);
+		Sensor melegOldal = createSensor("melegOldal", unitName, 32, 25, 30, 35, 40);
+		Sensor hidegOldal = createSensor("hidegOldal", unitName, 22, 15, 20, 25, 30);
+		
+		Actuator hosugarzo = createActuator("hosugarzo");
+		Actuator futokabel = createActuator("futokabel");
+		
+		SensorDTO sutkerezoDTO = sutkerezo.getDTO();
+		sutkerezoDTO.affectedBy = new ArrayList<>();
+		sutkerezoDTO.affectedBy.add(hosugarzo.getId());
+		restSensorManagement.updateSensor(sutkerezo.getId(), sutkerezoDTO);
+		
+		SensorDTO melegOldalDTO = melegOldal.getDTO();
+		melegOldalDTO.affectedBy = new ArrayList<>();
+		melegOldalDTO.affectedBy.add(futokabel.getId());
+		restSensorManagement.updateSensor(melegOldal.getId(), melegOldalDTO);
+		
+		SensorDTO hidegOldalDTO = hidegOldal.getDTO();
+		hidegOldalDTO.affectedBy = new ArrayList<>();
+		hidegOldalDTO.affectedBy.add(futokabel.getId());
+		restSensorManagement.updateSensor(hidegOldal.getId(), hidegOldalDTO);
+		
+//		for (int i = 0; i < NUMBER_OF_SENSORS; i++) {
+//			Sensor sensor = createSensor("sensor-" + i, unitName);
+//			
+//			Actuator actuator = createActuator("actuator-" + i);
+//			
+//			SensorDTO sensorDTO = sensor.getDTO();
+//			sensorDTO.affectedBy = new ArrayList<>();
+//			sensorDTO.affectedBy.add(actuator.getId());
+//			restSensorManagement.updateSensor(sensor.getId(), sensorDTO);
+//		}
 		
 		stopSenderThread();
 //		senderThread = new SenderThread(this, sensor);
@@ -190,12 +211,21 @@ public class RestAdapter implements Adapter {
 	private Sensor createSensor(String deviceId, String unitName){
 		Sensor sensor = new IncrementalSensor(deviceId, "IncrementalRestTestSensor" + UUID.randomUUID(), unitName, -1, 1, 0, 2, 4, 6, 1000, 5000);
 		restSensorManagement.newSensor(sensor.getDTO());
+		sensors.put(sensor.getAddress(), sensor);
+		return sensor;
+	}
+	
+	private Sensor createSensor(String deviceId, String unitName, double value, double lft, double lct, double uct, double uft){
+		Sensor sensor = new IncrementalSensor(deviceId, "IncrementalRestTestSensor" + UUID.randomUUID(), unitName, value, 1, lft, lct, uct, uft, 1000, 5000);
+		restSensorManagement.newSensor(sensor.getDTO());
+		sensors.put(sensor.getAddress(), sensor);
 		return sensor;
 	}
 	
 	private Actuator createActuator(String deviceId){
 		Actuator actuator = new SimpleActuator(deviceId, "SimpleRestTestActuator" + UUID.randomUUID(), 5000, 0, "OFF");
 		restActuatorManagement.newActuator(actuator.getDTO());
+		actuators.put(actuator.getAddress(), actuator);
 		return actuator;
 	}
 		
